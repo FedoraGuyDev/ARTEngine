@@ -1,0 +1,502 @@
+# depslib dependency file v1.0
+1784517075 source:d:\cpp projects\angelrisingtechnologyengine\main.cpp
+	<iostream>
+	<fstream>
+	"ThirdParty/JsonNlohmann/json.hpp"
+	<angelscript.h>
+	"scriptarray.h"
+	"scriptbuilder.h"
+	"scriptdictionary.h"
+	"scriptmath.h"
+	"scriptstdstring.h"
+	<raylib.h>
+
+1778173631 d:\cpp projects\angelrisingtechnologyengine\thirdparty\jsonnlohmann\json.hpp
+	<algorithm>
+	<cstddef>
+	<functional>
+	<initializer_list>
+	<iosfwd>
+	<iterator>
+	<memory>
+	<string>
+	<utility>
+	<vector>
+	<utility>
+	<algorithm>
+	<array>
+	<forward_list>
+	<iterator>
+	<map>
+	<optional>
+	<string>
+	<tuple>
+	<type_traits>
+	<unordered_map>
+	<utility>
+	<valarray>
+	<cstddef>
+	<exception>
+	<numeric>
+	<stdexcept>
+	<string>
+	<vector>
+	<array>
+	<cstddef>
+	<cstdint>
+	<string>
+	<utility>
+	<type_traits>
+	<stdint.h>
+	<stdint.h>
+	<version>
+	<cstdlib>
+	<cassert>
+	<compare>
+	<cstddef>
+	<array>
+	<cstddef>
+	<type_traits>
+	<utility>
+	<limits>
+	<string>
+	<tuple>
+	<type_traits>
+	<utility>
+	<iterator>
+	<cstdint>
+	<map>
+	<memory>
+	<string>
+	<vector>
+	<cstring>
+	<string>
+	<utility>
+	<experimental/filesystem>
+	<filesystem>
+	<optional>
+	<algorithm>
+	<iterator>
+	<string>
+	<tuple>
+	<type_traits>
+	<utility>
+	<valarray>
+	<vector>
+	<cstddef>
+	<iterator>
+	<tuple>
+	<utility>
+	<ranges>
+	<cstddef>
+	<string>
+	<cstdint>
+	<tuple>
+	<utility>
+	<cstdint>
+	<cstddef>
+	<functional>
+	<algorithm>
+	<array>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdio>
+	<cstring>
+	<iterator>
+	<limits>
+	<string>
+	<utility>
+	<vector>
+	<bit>
+	<array>
+	<cstddef>
+	<cstring>
+	<iterator>
+	<memory>
+	<numeric>
+	<string>
+	<type_traits>
+	<utility>
+	<cstdio>
+	<istream>
+	<cstddef>
+	<string>
+	<type_traits>
+	<utility>
+	<vector>
+	<array>
+	<clocale>
+	<cstddef>
+	<cstdio>
+	<cstdlib>
+	<initializer_list>
+	<string>
+	<utility>
+	<vector>
+	<cstdint>
+	<utility>
+	<string>
+	<cmath>
+	<cstdint>
+	<functional>
+	<string>
+	<utility>
+	<vector>
+	<cstddef>
+	<limits>
+	<iterator>
+	<type_traits>
+	<cstddef>
+	<iterator>
+	<utility>
+	<type_traits>
+	<algorithm>
+	<cctype>
+	<cerrno>
+	<cstdlib>
+	<iosfwd>
+	<limits>
+	<numeric>
+	<string>
+	<utility>
+	<vector>
+	<initializer_list>
+	<utility>
+	<algorithm>
+	<array>
+	<map>
+	<cmath>
+	<cstdint>
+	<cstring>
+	<limits>
+	<string>
+	<utility>
+	<vector>
+	<algorithm>
+	<cstddef>
+	<iterator>
+	<memory>
+	<string>
+	<vector>
+	<ios>
+	<ostream>
+	<algorithm>
+	<array>
+	<clocale>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdio>
+	<limits>
+	<string>
+	<iomanip>
+	<type_traits>
+	<utility>
+	<array>
+	<cmath>
+	<cstdint>
+	<cstring>
+	<limits>
+	<type_traits>
+	<functional>
+	<initializer_list>
+	<iterator>
+	<memory>
+	<stdexcept>
+	<type_traits>
+	<utility>
+	<vector>
+	<any>
+	<string_view>
+
+1783919426 d:\cpp projects\angelrisingtechnologyengine\thirdparty\angelscript\include\angelscript.h
+	<stddef.h>
+	<stdint.h>
+	<type_traits>
+
+1783919425 d:\cpp projects\angelrisingtechnologyengine\thirdparty\angelscript\include\scriptarray.h
+	<angelscript.h>
+
+1783919425 d:\cpp projects\angelrisingtechnologyengine\thirdparty\angelscript\include\scriptbuilder.h
+	<angelscript.h>
+	<string>
+	<map>
+	<set>
+	<vector>
+	<string.h>
+
+1783919425 d:\cpp projects\angelrisingtechnologyengine\thirdparty\angelscript\include\scriptdictionary.h
+	<angelscript.h>
+	<string>
+	<unordered_map>
+	<map>
+
+1783919426 d:\cpp projects\angelrisingtechnologyengine\thirdparty\angelscript\include\scriptmath.h
+	<angelscript.h>
+
+1783919426 d:\cpp projects\angelrisingtechnologyengine\thirdparty\angelscript\include\scriptstdstring.h
+	<angelscript.h>
+	<string>
+
+1776896320 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raylib\include\raylib.h
+	<stdarg.h>
+	<stdbool.h>
+
+1753455199 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\raymedia.h
+	<raylib.h>
+	<stdint.h>
+
+1784514115 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\rmedia.c
+	<assert.h>
+	"raymedia.h"
+	<avcodec.h>
+	<avformat.h>
+	<imgutils.h>
+	<swresample.h>
+	<swscale.h>
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavcodec\avcodec.h
+	"libavutil/samplefmt.h"
+	"libavutil/attributes.h"
+	"libavutil/avutil.h"
+	"libavutil/buffer.h"
+	"libavutil/channel_layout.h"
+	"libavutil/dict.h"
+	"libavutil/frame.h"
+	"libavutil/log.h"
+	"libavutil/pixfmt.h"
+	"libavutil/rational.h"
+	"codec.h"
+	"codec_id.h"
+	"defs.h"
+	"packet.h"
+	"version_major.h"
+	"version.h"
+	"codec_desc.h"
+	"codec_par.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\samplefmt.h
+	<stdint.h>
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\attributes.h
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\avutil.h
+	"common.h"
+	"rational.h"
+	"version.h"
+	"macros.h"
+	"mathematics.h"
+	"log.h"
+	"pixfmt.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\common.h
+	<errno.h>
+	<inttypes.h>
+	<limits.h>
+	<math.h>
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"attributes.h"
+	"error.h"
+	"macros.h"
+	"version.h"
+	"config.h"
+	"intmath.h"
+	"internal.h"
+	"mem.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\error.h
+	<errno.h>
+	<stddef.h>
+	"macros.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\macros.h
+	"libavutil/avconfig.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\avconfig.h
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\version.h
+	"macros.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\mem.h
+	<stddef.h>
+	<stdint.h>
+	"attributes.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\rational.h
+	<stdint.h>
+	<limits.h>
+	"attributes.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\mathematics.h
+	<stdint.h>
+	<math.h>
+	"attributes.h"
+	"rational.h"
+	"intfloat.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\intfloat.h
+	<stdint.h>
+	"attributes.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\log.h
+	<stdarg.h>
+	"attributes.h"
+	"version.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\pixfmt.h
+	"libavutil/avconfig.h"
+	"version.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\buffer.h
+	<stddef.h>
+	<stdint.h>
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\channel_layout.h
+	<stdint.h>
+	<stdlib.h>
+	"version.h"
+	"attributes.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\dict.h
+	<stdint.h>
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\frame.h
+	<stddef.h>
+	<stdint.h>
+	"avutil.h"
+	"buffer.h"
+	"channel_layout.h"
+	"dict.h"
+	"rational.h"
+	"samplefmt.h"
+	"pixfmt.h"
+	"version.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavcodec\codec.h
+	<stdint.h>
+	"libavutil/avutil.h"
+	"libavutil/hwcontext.h"
+	"libavutil/log.h"
+	"libavutil/pixfmt.h"
+	"libavutil/rational.h"
+	"libavutil/samplefmt.h"
+	"libavcodec/codec_id.h"
+	"libavcodec/version_major.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\hwcontext.h
+	"buffer.h"
+	"frame.h"
+	"log.h"
+	"pixfmt.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavcodec\codec_id.h
+	"libavutil/avutil.h"
+	"libavutil/samplefmt.h"
+	"version_major.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavcodec\version_major.h
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavcodec\defs.h
+	<stdint.h>
+	<stdlib.h>
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavcodec\packet.h
+	<stddef.h>
+	<stdint.h>
+	"libavutil/attributes.h"
+	"libavutil/buffer.h"
+	"libavutil/dict.h"
+	"libavutil/rational.h"
+	"libavutil/version.h"
+	"libavcodec/version_major.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavcodec\version.h
+	"libavutil/version.h"
+	"version_major.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavcodec\codec_desc.h
+	"libavutil/avutil.h"
+	"codec_id.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavcodec\codec_par.h
+	<stdint.h>
+	"libavutil/avutil.h"
+	"libavutil/channel_layout.h"
+	"libavutil/rational.h"
+	"libavutil/pixfmt.h"
+	"codec_id.h"
+	"defs.h"
+	"packet.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavformat\avformat.h
+	<stdio.h>
+	"libavcodec/codec_par.h"
+	"libavcodec/defs.h"
+	"libavcodec/packet.h"
+	"libavutil/dict.h"
+	"libavutil/log.h"
+	"avio.h"
+	"libavformat/version_major.h"
+	"libavformat/version.h"
+	"libavutil/frame.h"
+	"libavcodec/codec.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavformat\avio.h
+	<stdint.h>
+	<stdio.h>
+	"libavutil/attributes.h"
+	"libavutil/dict.h"
+	"libavutil/log.h"
+	"libavformat/version_major.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavformat\version_major.h
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavformat\version.h
+	"libavutil/version.h"
+	"version_major.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\imgutils.h
+	<stddef.h>
+	<stdint.h>
+	"pixdesc.h"
+	"pixfmt.h"
+	"rational.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libavutil\pixdesc.h
+	<inttypes.h>
+	"attributes.h"
+	"pixfmt.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libswresample\swresample.h
+	<stdint.h>
+	"libavutil/channel_layout.h"
+	"libavutil/frame.h"
+	"libavutil/samplefmt.h"
+	"libswresample/version_major.h"
+	"libswresample/version.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libswresample\version_major.h
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libswresample\version.h
+	"libavutil/version.h"
+	"version_major.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libswscale\swscale.h
+	<stdint.h>
+	"libavutil/avutil.h"
+	"libavutil/frame.h"
+	"libavutil/log.h"
+	"libavutil/pixfmt.h"
+	"version_major.h"
+	"version.h"
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libswscale\version_major.h
+
+1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libswscale\version.h
+	"libavutil/version.h"
+	"version_major.h"
+

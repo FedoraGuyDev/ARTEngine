@@ -1,0 +1,14 @@
+{
+	"name"			:	"Angel Rising Technology Engine",
+	"version"		:	"0.0.0.0",
+	"window_width"		:	640,
+	"window_height"		:	640,
+	"window_resize"		:	true,
+	"window_fullscreen"	:	false,
+	"window_icon_path"	:	"/gamefiles/icon.ico",	
+	"show_fps"			:	true,
+	"show_collisions"	:	false,
+	"target_fps"		:	600,
+	"block_mouse"		:	true,
+	"starting_scene"		:	"gamefiles/assets/scenes/sceneTest.json"
+}
