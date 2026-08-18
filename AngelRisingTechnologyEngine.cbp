@@ -22,17 +22,34 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add directory="ThirdParty/AngelScript/include" />
+			<Add directory="ThirdParty/GLAD/include/glad" />
+			<Add directory="ThirdParty/GLAD/include/KHR" />
+			<Add directory="ThirdParty/GLM/include/glm" />
+			<Add directory="ThirdParty/GLFW/include" />
 		</Compiler>
 		<Linker>
 			<Add library="ThirdParty/AngelScript/lib/libangelscript64.a" />
+			<Add library="ThirdParty/GLFW/lib/libglfw3.a" />
+			<Add library="ThirdParty/GLFW/lib/libglfw3dll.a" />
 			<Add directory="ThirdParty/AngelScript/lib" />
+			<Add directory="ThirdParty/GLFW/lib" />
 		</Linker>
 		<Unit filename="ThirdParty/AngelScript/include/scriptarray.h" />
 		<Unit filename="ThirdParty/AngelScript/include/scriptbuilder.h" />
 		<Unit filename="ThirdParty/AngelScript/include/scriptdictionary.h" />
 		<Unit filename="ThirdParty/AngelScript/include/scriptmath.h" />
 		<Unit filename="ThirdParty/AngelScript/include/scriptstdstring.h" />
+		<Unit filename="ThirdParty/GLAD/include/KHR/khrplatform.h" />
+		<Unit filename="ThirdParty/GLAD/include/glad/glad.h" />
+		<Unit filename="ThirdParty/GLAD/src/glad.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="ThirdParty/JsonNlohmann/json.hpp" />
+		<Unit filename="engineshader.cpp" />
+		<Unit filename="engineshader.h" />
+		<Unit filename="enginestring.h" />
+		<Unit filename="enginewindow.cpp" />
+		<Unit filename="enginewindow.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
