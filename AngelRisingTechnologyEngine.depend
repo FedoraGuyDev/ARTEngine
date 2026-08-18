@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1784517075 source:d:\cpp projects\angelrisingtechnologyengine\main.cpp
+1786900642 source:d:\cpp projects\angelrisingtechnologyengine\main.cpp
 	<iostream>
 	<fstream>
 	"ThirdParty/JsonNlohmann/json.hpp"
@@ -9,7 +9,11 @@
 	"scriptdictionary.h"
 	"scriptmath.h"
 	"scriptstdstring.h"
-	<raylib.h>
+	"glad.h"
+	"glfw3.h"
+	"enginewindow.h"
+	"engineshader.h"
+	"enginestring.h"
 
 1778173631 d:\cpp projects\angelrisingtechnologyengine\thirdparty\jsonnlohmann\json.hpp
 	<algorithm>
@@ -499,4 +503,63 @@
 1784465294 d:\cpp projects\angelrisingtechnologyengine\thirdparty\raymedia\include\libswscale\version.h
 	"libavutil/version.h"
 	"version_major.h"
+
+1786860917 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\glad\src\glad.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<glad.h>
+	<windows.h>
+	<winapifamily.h>
+	<dlfcn.h>
+
+1786837456 d:\cpp projects\angelrisingtechnologyengine\thirdparty\glad\include\glad\glad.h
+	<KHR/khrplatform.h>
+
+1785522331 d:\cpp projects\angelrisingtechnologyengine\thirdparty\glfw\include\glfw3.h
+	<stddef.h>
+	<stdint.h>
+	<vulkan/vulkan.h>
+	<GLES/gl.h>
+	<GLES/glext.h>
+	<GLES2/gl2.h>
+	<GLES2/gl2ext.h>
+	<GLES3/gl3.h>
+	<GLES2/gl2ext.h>
+	<GLES3/gl31.h>
+	<GLES2/gl2ext.h>
+	<GLES3/gl32.h>
+	<GLES2/gl2ext.h>
+	<OpenGL/gl3.h>
+	<OpenGL/gl3ext.h>
+	<GL/glcorearb.h>
+	<GL/glext.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+	<OpenGL/gl.h>
+	<GL/gl.h>
+	<GL/glext.h>
+
+1786865091 source:d:\cpp projects\angelrisingtechnologyengine\enginewindow.cpp
+	"enginewindow.h"
+	<iostream>
+	"glad.h"
+	"glfw3.h"
+
+1786864664 d:\cpp projects\angelrisingtechnologyengine\enginewindow.h
+	"glad.h"
+	"glfw3.h"
+	<iostream>
+
+1786866159 source:d:\cpp projects\angelrisingtechnologyengine\engineshader.cpp
+	"engineshader.h"
+	<iostream>
+
+1786866150 d:\cpp projects\angelrisingtechnologyengine\engineshader.h
+	"glad.h"
+
+1786900490 d:\cpp projects\angelrisingtechnologyengine\enginestring.h
+	<iostream>
+	<fstream>
+	<string>
 
