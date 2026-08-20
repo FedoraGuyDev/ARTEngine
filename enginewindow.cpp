@@ -1,6 +1,6 @@
 #include "enginewindow.h"
 #include <iostream>
-#include "glad.h"
+#include "glad/glad.h"
 #include "glfw3.h"
 
 Window::Window(int width, int height, const char* title){
