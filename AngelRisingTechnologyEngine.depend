@@ -555,7 +555,7 @@
 	"engineshader.h"
 	<iostream>
 
-1786866150 d:\cpp projects\angelrisingtechnologyengine\engineshader.h
+1787260069 d:\cpp projects\angelrisingtechnologyengine\engineshader.h
 	"glad.h"
 
 1786900490 d:\cpp projects\angelrisingtechnologyengine\enginestring.h
@@ -871,4 +871,16 @@
 	<stdint.h>
 	<inttypes.h>
 	<stdint.h>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glad\glad.h
+	<KHR/khrplatform.h>
+
+1787260111 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glad\glad.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<glad.h>
+	<windows.h>
+	<winapifamily.h>
+	<dlfcn.h>
 

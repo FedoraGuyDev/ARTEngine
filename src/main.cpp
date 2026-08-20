@@ -7,7 +7,7 @@
 #include <string>
 
 ///JSON
-#include "ThirdParty/JsonNlohmann/json.hpp"
+#include "json.hpp"
 using json = nlohmann::json;
 
 ///AngelScript
@@ -21,7 +21,7 @@ using json = nlohmann::json;
 #include "scriptstdstring.h"
 
 ///GL
-#include "glad/glad.h"
+#include "glad.h"
 #include "glfw3.h"
 
 
