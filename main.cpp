@@ -21,7 +21,7 @@ using json = nlohmann::json;
 #include "scriptstdstring.h"
 
 ///GL
-#include "glad.h"
+#include "glad/glad.h"
 #include "glfw3.h"
 
 
@@ -41,6 +41,7 @@ std::string window_name = "ART Engine";
 
 
 int main(){
+    std::cout << "[ARTENGINE] CPP VERSION: " << __cplusplus << std::endl;
     std::cout << "[ARTENGINE] STARTING ARTENGINE" << std::endl;
 
     ///Load Game Info
