@@ -5,13 +5,15 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
+#include <unordered_map>
 
 ///JSON
 #include "json.hpp"
 using json = nlohmann::json;
 
 ///AngelScript
-#include <angelscript.h>
+#include "angelscript.h"
 
 ///AngelScript Addons
 #include "scriptarray.h"
@@ -24,6 +26,8 @@ using json = nlohmann::json;
 #include "glad.h"
 #include "glfw3.h"
 
+///EnTT
+#include "entt.hpp"
 
 ///ARTENGINE
 #include "enginewindow.h"
@@ -54,33 +58,6 @@ int main(){
 
     Window window(window_width,window_height,window_name.c_str());
 
-    std::ifstream shadervs("gamefiles/engine/shaders/draw.vs");
-    std::ifstream shaderfs("gamefiles/engine/shaders/draw.fs");
-
-    std::string shadervss = FstreamGetString(shadervs);
-    std::string shaderfss = FstreamGetString(shaderfs);
-
-    const char* shadervscontent = shadervss.c_str();
-    const char* shaderfscontent = shaderfss.c_str();
-
-    Shader mainshader(shadervscontent,shaderfscontent);
-
-    float trianglevertex[] = {
-        -0.5,-0.5f,0.0f,
-        0.5f, -0.5f, 0.0f,
-        0.0f,0.5f,0.0f
-    };
-
-    unsigned int VAO, VBO;
-    glGenVertexArrays(1,&VAO);
-    glGenBuffers(1,&VBO);
-
-    glBindVertexArray(VAO);
-
-    glBindBuffer(GL_ARRAY_BUFFER,VBO);
-    glBufferData(GL_ARRAY_BUFFER,sizeof(trianglevertex),trianglevertex,GL_STATIC_DRAW);
-
-    glVertexAttribPointer(0,3,GL_FLOAT,GL_FALSE,3*sizeof(float),(void*)0);
     glEnableVertexAttribArray(0);
 
     while(!window.ShouldClose()){
@@ -91,16 +68,11 @@ int main(){
         glClearColor(0.1f,0.1f,0.1f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        mainshader.Use();
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES,0,3);
 
         window.SwapBuffers();
         window.PollEvents();
     }
 
-    glDeleteVertexArrays(1,&VAO);
-    glDeleteBuffers(1,&VBO);
 
 
     return 0;
