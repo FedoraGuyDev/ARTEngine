@@ -25,6 +25,7 @@ using json = nlohmann::json;
 ///GL
 #include "glad.h"
 #include "glfw3.h"
+#include "glm.hpp"
 
 ///EnTT
 #include "entt.hpp"
@@ -35,14 +36,16 @@ using json = nlohmann::json;
 #include "enginestring.h"
 
 ///===================================
-///                          OPENGL SETTINGS
+///                        INITIALIZE VARIABLES
 ///===================================
 
-///Window settings
+///Window variables
 int window_width = 800;
 int window_height = 600;
 std::string window_name = "ART Engine";
 
+///ECS
+entt::registry entity_registry;
 
 int main(){
     std::cout << "[ARTENGINE] CPP VERSION: " << __cplusplus << std::endl;

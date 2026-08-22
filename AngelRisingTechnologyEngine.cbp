@@ -28,16 +28,23 @@
 			<Add directory="ThirdParty/include/GLM" />
 			<Add directory="ThirdParty/include/JsonNlohmann" />
 			<Add directory="ThirdParty/include/TinyglTF" />
+			<Add directory="ThirdParty/include/AL" />
+			<Add directory="ThirdParty/include/ReactPhysics3D" />
+			<Add directory="ThirdParty/include/EnTT" />
 		</Compiler>
 		<Linker>
 			<Add library="ThirdParty/libs/win_x64/libangelscript64.a" />
 			<Add library="ThirdParty/libs/win_x64/libglfw3.a" />
 			<Add library="ThirdParty/libs/win_x64/libglfw3dll.a" />
+			<Add library="ThirdParty/libs/win_x64/libOpenAL32.dll.a" />
+			<Add library="ThirdParty/libs/win_x64/libreactphysics3d.a" />
 			<Add directory="ThirdParty/libs/win_x64" />
 		</Linker>
 		<Unit filename="ThirdParty/include/GLAD/glad.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src/artenttmodules.h" />
+		<Unit filename="src/engineentity.cpp" />
 		<Unit filename="src/engineshader.cpp" />
 		<Unit filename="src/engineshader.h" />
 		<Unit filename="src/enginestring.h" />
