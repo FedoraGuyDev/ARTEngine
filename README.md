@@ -1,4 +1,6 @@
-# ANGEL RISING TECHNOLOGY ENGINE
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d56155da-2b29-430d-91bd-7c1daadeef29" alt="ART Engine Logo" width="607" style="background-color: white; padding: 10px; border-radius: 8px;"/>
+</p>
 A lightweight C++ game engine built from the ground up.
 
 ## Introduction
