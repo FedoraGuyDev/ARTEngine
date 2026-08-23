@@ -33,7 +33,6 @@ using json = nlohmann::json;
 ///ARTENGINE
 #include "enginewindow.h"
 #include "engineshader.h"
-#include "enginestring.h"
 
 ///===================================
 ///                        INITIALIZE VARIABLES
@@ -46,6 +45,15 @@ std::string window_name = "ART Engine";
 
 ///ECS
 entt::registry entity_registry;
+
+///ASSETS
+json scripts_defs;
+json entity_defs;
+
+
+
+///ANGELSCRIPT
+asIScriptEngine *angelscript_engine;
 
 int main(){
     std::cout << "[ARTENGINE] CPP VERSION: " << __cplusplus << std::endl;

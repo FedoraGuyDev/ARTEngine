@@ -10,5 +10,5 @@
 	"show_collisions"	:	false,
 	"target_fps"		:	600,
 	"block_mouse"		:	true,
-	"starting_scene"		:	"gamefiles/assets/scenes/sceneTest.json"
+	"starting_scene"	:	"gamefiles/assets/scenes/scenetest.json"
 }

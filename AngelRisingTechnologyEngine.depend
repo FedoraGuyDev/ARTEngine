@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1787362400 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1787462958 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -946,6 +946,9 @@
 	"enginewindow.h"
 	"engineshader.h"
 	"enginestring.h"
+	"engineentity.h"
+	"engineregisterfunctions.h"
+	"enginelanguage.h"
 
 1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\jsonnlohmann\json.hpp
 	<algorithm>
@@ -3036,4 +3039,391 @@
 	"../simd/integer.h"
 
 1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\simd\integer.h
+
+1787376964 source:d:\cpp projects\angelrisingtechnologyengine\src\engineentity.cpp
+	<string>
+	"entt.hpp"
+	"glm.hpp"
+	"gtc/quaternion.hpp"
+	"gtc/matrix_transform.hpp"
+	"artenttmodules.h"
+	"engineentity.h"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\gtc\quaternion.hpp
+	"../gtc/constants.hpp"
+	"../gtc/matrix_transform.hpp"
+	"../ext/vector_relational.hpp"
+	"../ext/quaternion_common.hpp"
+	"../ext/quaternion_float.hpp"
+	"../ext/quaternion_float_precision.hpp"
+	"../ext/quaternion_double.hpp"
+	"../ext/quaternion_double_precision.hpp"
+	"../ext/quaternion_relational.hpp"
+	"../ext/quaternion_geometric.hpp"
+	"../ext/quaternion_trigonometric.hpp"
+	"../ext/quaternion_transform.hpp"
+	"../detail/type_mat3x3.hpp"
+	"../detail/type_mat4x4.hpp"
+	"../detail/type_vec3.hpp"
+	"../detail/type_vec4.hpp"
+	"quaternion.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\gtc\constants.hpp
+	"../ext/scalar_constants.hpp"
+	"constants.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\scalar_constants.hpp
+	"../detail/setup.hpp"
+	"scalar_constants.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\scalar_constants.inl
+	<limits>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\gtc\constants.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\gtc\matrix_transform.hpp
+	"../mat4x4.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../ext/matrix_projection.hpp"
+	"../ext/matrix_clip_space.hpp"
+	"../ext/matrix_transform.hpp"
+	"matrix_transform.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\matrix_projection.hpp
+	"../gtc/constants.hpp"
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"../matrix.hpp"
+	"matrix_projection.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\matrix_projection.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\matrix_clip_space.hpp
+	"../ext/scalar_constants.hpp"
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"matrix_clip_space.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\matrix_clip_space.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\matrix_transform.hpp
+	"../gtc/constants.hpp"
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"../matrix.hpp"
+	"matrix_transform.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\matrix_transform.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\gtc\matrix_transform.inl
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"../matrix.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\vector_relational.hpp
+	"../detail/qualifier.hpp"
+	"vector_relational.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\vector_relational.inl
+	"../vector_relational.hpp"
+	"../common.hpp"
+	"../detail/qualifier.hpp"
+	"../detail/type_float.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\detail\type_float.hpp
+	"setup.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_common.hpp
+	"../ext/scalar_constants.hpp"
+	"../ext/quaternion_geometric.hpp"
+	"../common.hpp"
+	"../trigonometric.hpp"
+	"../exponential.hpp"
+	<limits>
+	"quaternion_common.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_geometric.hpp
+	"../geometric.hpp"
+	"../exponential.hpp"
+	"../ext/vector_relational.hpp"
+	"quaternion_geometric.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_geometric.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_common.inl
+	"quaternion_common_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_common_simd.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_float.hpp
+	"../detail/type_quat.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\detail\type_quat.hpp
+	"../detail/type_mat3x3.hpp"
+	"../detail/type_mat4x4.hpp"
+	"../detail/type_vec3.hpp"
+	"../detail/type_vec4.hpp"
+	"../ext/vector_relational.hpp"
+	"../ext/quaternion_relational.hpp"
+	"../gtc/constants.hpp"
+	"../gtc/matrix_transform.hpp"
+	"type_quat.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_relational.hpp
+	"../vector_relational.hpp"
+	"quaternion_relational.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_relational.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\detail\type_quat.inl
+	"../trigonometric.hpp"
+	"../exponential.hpp"
+	"../ext/quaternion_common.hpp"
+	"../ext/quaternion_geometric.hpp"
+	<limits>
+	"type_quat_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\detail\type_quat_simd.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_float_precision.hpp
+	"../detail/type_quat.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_double.hpp
+	"../detail/type_quat.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_double_precision.hpp
+	"../detail/type_quat.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_trigonometric.hpp
+	"../trigonometric.hpp"
+	"../exponential.hpp"
+	"scalar_constants.hpp"
+	"vector_relational.hpp"
+	<limits>
+	"quaternion_trigonometric.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_trigonometric.inl
+	"scalar_constants.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_transform.hpp
+	"../common.hpp"
+	"../trigonometric.hpp"
+	"../geometric.hpp"
+	"quaternion_transform.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\ext\quaternion_transform.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\gtc\quaternion.inl
+	"../trigonometric.hpp"
+	"../geometric.hpp"
+	"../exponential.hpp"
+	"epsilon.hpp"
+	<limits>
+	"quaternion_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\gtc\epsilon.hpp
+	"../detail/setup.hpp"
+	"../detail/qualifier.hpp"
+	"epsilon.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\gtc\epsilon.inl
+	"../vector_relational.hpp"
+	"../common.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glm\gtc\quaternion_simd.inl
+
+1787377201 d:\cpp projects\angelrisingtechnologyengine\src\artenttmodules.h
+	<string>
+	"glm.hpp"
+	"entt.hpp"
+	"gtc/quaternion.hpp"
+	"gtc/matrix_transform.hpp"
+
+1787376893 d:\cpp projects\angelrisingtechnologyengine\src\engineentity.h
+	<string>
+	"entt.hpp"
+
+1787377931 source:d:\cpp projects\angelrisingtechnologyengine\src\artientity.cpp
+
+1787377931 source:d:\cpp projects\angelrisingtechnologyengine\src\artimain.cpp
+	<iostream>
+	"artIMain.h"
+
+1787377931 d:\cpp projects\angelrisingtechnologyengine\src\artimain.h
+	<iostream>
+
+1787378528 d:\cpp projects\angelrisingtechnologyengine\src\engineregisterfunctions.h
+	"angelscript.h"
+
+1787378596 source:d:\cpp projects\angelrisingtechnologyengine\src\engineregisterfunctions.cpp
+	"angelscript.h"
+	<iostream>
+	"artIMain.h"
+	"engineregisterfunctions.h"
+
+1787462213 source:d:\cpp projects\angelrisingtechnologyengine\src\api\artientity.cpp
+	<string>
+	"engineentity.h"
+
+1787377931 source:d:\cpp projects\angelrisingtechnologyengine\src\api\artimain.cpp
+	<iostream>
+	"artIMain.h"
+
+1787377931 d:\cpp projects\angelrisingtechnologyengine\src\api\artimain.h
+	<iostream>
+
+1787460338 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineentity.cpp
+	<string>
+	"entt.hpp"
+	"glm.hpp"
+	"gtc/quaternion.hpp"
+	"gtc/matrix_transform.hpp"
+	"artenttmodules.h"
+	"engineentity.h"
+
+1787377201 d:\cpp projects\angelrisingtechnologyengine\src\engine\artenttmodules.h
+	<string>
+	"glm.hpp"
+	"entt.hpp"
+	"gtc/quaternion.hpp"
+	"gtc/matrix_transform.hpp"
+
+1787376893 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineentity.h
+	<string>
+	"entt.hpp"
+
+1786866159 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.cpp
+	"engineshader.h"
+	<iostream>
+
+1787260069 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.h
+	"glad.h"
+
+1787260925 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
+	"enginewindow.h"
+	<iostream>
+	"glad.h"
+	"glfw3.h"
+
+1787260069 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.h
+	"glad.h"
+	"glfw3.h"
+	<iostream>
+
+1786900490 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginestring.h
+	<iostream>
+	<fstream>
+	<string>
+
+1787378528 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineregisterfunctions.h
+	"angelscript.h"
+
+1787459814 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineregisterfunctions.cpp
+	"angelscript.h"
+	<iostream>
+	"artIMain.h"
+	"engineregisterfunctions.h"
+
+1787460397 source:d:\cpp projects\angelrisingtechnologyengine\src\api\artitransform.cpp
+
+1787462400 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginelanguage.h
+	"enginewindow.h"
+	"engineshader.h"
+	"enginestring.h"
+	"engineentity.h"
+	"engineregisterfunctions.h"
+
+1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptany.cpp
+	"scriptany.h"
+	<new>
+	<assert.h>
+	<string.h>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptany.h
+	<angelscript.h>
+
+1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptarray.cpp
+	<new>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stdio.h>
+	<string>
+	<algorithm>
+	"scriptarray.h"
+
+1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptbuilder.cpp
+	"scriptbuilder.h"
+	<vector>
+	<assert.h>
+	<windows.h>
+	<stdio.h>
+	<direct.h>
+	<windows.h>
+	<unistd.h>
+
+1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptdictionary.cpp
+	<assert.h>
+	<string.h>
+	"scriptdictionary.h"
+	"scriptarray.h"
+
+1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptgrid.cpp
+	<new>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stdio.h>
+	"scriptgrid.h"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptgrid.h
+	<angelscript.h>
+
+1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scripthandle.cpp
+	"scripthandle.h"
+	<new>
+	<assert.h>
+	<string.h>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scripthandle.h
+	<angelscript.h>
+
+1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptmath.cpp
+	<assert.h>
+	<math.h>
+	<float.h>
+	<string.h>
+	"scriptmath.h"
+	<cmath>
+
+1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptmathcomplex.cpp
+	<assert.h>
+	<string.h>
+	<new>
+	<math.h>
+	"scriptmathcomplex.h"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptmathcomplex.h
+	<angelscript.h>
+
+1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptstdstring.cpp
+	"scriptstdstring.h"
+	<assert.h>
+	<sstream>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<regex>
+	<unordered_map>
+	<map>
+
+1787462970 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptstdstring_utils.cpp
+	<assert.h>
+	"scriptstdstring.h"
+	"scriptarray.h"
+	<stdio.h>
+	<string.h>
 

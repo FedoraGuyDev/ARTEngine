@@ -1,0 +1,10 @@
+{
+	"test" : {
+		"Settings" : {
+			"script" : "test"
+		},
+		"Modules" : [
+			
+		]
+	}
+}

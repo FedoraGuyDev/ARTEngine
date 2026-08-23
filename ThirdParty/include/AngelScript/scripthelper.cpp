@@ -5,7 +5,7 @@
 #include <fstream>
 #include <set>
 #include <stdlib.h>
-#include "../autowrapper/aswrappedcall.h"
+#include "aswrappedcall.h"
 
 using namespace std;
 
@@ -190,7 +190,7 @@ int ExecuteString(asIScriptEngine *engine, const char *code, void *ref, int refT
 			}
 			else if (refTypeId & asTYPEID_MASK_OBJECT)
 			{
-				// Use the registered assignment operator to do a value assign. 
+				// Use the registered assignment operator to do a value assign.
 				// This assumes that the ref is pointing to a valid object instance.
 				engine->AssignScriptObject(ref, execCtx->GetAddressOfReturnValue(), engine->GetTypeInfoById(refTypeId));
 			}
@@ -463,7 +463,7 @@ int WriteConfigToStream(asIScriptEngine *engine, ostream &strm)
 	};
 
 	// Write the members of the template types, so they can be fully registered before any other type uses them
-	// TODO: Order the template types based on dependency to avoid failure if one type uses instances of another 
+	// TODO: Order the template types based on dependency to avoid failure if one type uses instances of another
 	strm << "\n// Template type members\n";
 	for( set<asITypeInfo*>::iterator it = templateTypes.begin(); it != templateTypes.end(); ++it )
 	{
@@ -974,7 +974,7 @@ string ScriptGetExceptionInfo()
 	asIScriptContext *ctx = asGetActiveContext();
 	if (!ctx)
 		return "";
-	
+
 	const char *msg = ctx->GetExceptionString();
 	if (msg == 0)
 		return "";
