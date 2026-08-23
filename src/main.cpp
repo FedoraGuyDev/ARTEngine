@@ -31,43 +31,33 @@ using json = nlohmann::json;
 #include "entt.hpp"
 
 ///ARTENGINE
-#include "enginewindow.h"
-#include "engineshader.h"
+#include "engineWindow.h"
+#include "engineShader.h"
+#include "utilsJson.h"
+#include "utilsString.h"
 
 ///===================================
 ///                        INITIALIZE VARIABLES
 ///===================================
 
-///Window variables
-int window_width = 800;
-int window_height = 600;
-std::string window_name = "ART Engine";
-
-///ECS
-entt::registry entity_registry;
-
-///ASSETS
-json scripts_defs;
-json entity_defs;
-
-
-
-///ANGELSCRIPT
-asIScriptEngine *angelscript_engine;
+///Manifests
+json AssetsManifests;
+json EntityManifests;
+json GameManifests;
 
 int main(){
-    std::cout << "[ARTENGINE] CPP VERSION: " << __cplusplus << std::endl;
-    std::cout << "[ARTENGINE] STARTING ARTENGINE" << std::endl;
+    std::cout << "[ARTENGINE] Starting ARTEngine" << std::endl;
 
-    ///Load Game Info
-    std::ifstream game_f("gamefiles/game.json");
-    json game_data = json::parse(game_f);
+    ///Load Game Manifest
+    if(!utilLoadJson("gamefiles/game_manifest.json",GameManifests)){
+        return 0;
+    }
+    ///Load Assets
+    if(!utilLoadJson("gamefiles/assets_manifest.json",AssetsManifests)){
+        return 0;
+    }
 
-    window_width = game_data["window_width"];
-    window_height = game_data["window_height"];
-    window_name = game_data["name"];
-
-    Window window(window_width,window_height,window_name.c_str());
+    Window window(GameManifests["window_width"],GameManifests["window_height"],GameManifests["name"]);
 
     glEnableVertexAttribArray(0);
 

@@ -2,10 +2,11 @@
 #include "glad.h"
 #include "glfw3.h"
 #include <iostream>
+#include <string>
 
 class Window{
 public:
-    Window(int width, int height, const char* title);
+    Window(int width, int height, std::string name);
     ~Window();
 
     bool ShouldClose();

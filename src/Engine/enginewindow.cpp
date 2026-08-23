@@ -1,9 +1,13 @@
 #include "enginewindow.h"
 #include <iostream>
+#include <string>
 #include "glad.h"
 #include "glfw3.h"
 
-Window::Window(int width, int height, const char* title){
+Window::Window(int width, int height, std::string name){
+
+    const char* title = name.c_str();
+
     ///Start GL
     if (!glfwInit()){
         std::cout << "[GLFW] ERROR TRYING TO INITIALIZE... sorry :C" << std::endl;

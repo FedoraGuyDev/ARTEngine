@@ -33,6 +33,7 @@
 			<Add directory="ThirdParty/include/EnTT" />
 			<Add directory="src/API" />
 			<Add directory="src/Engine" />
+			<Add directory="src/Utils" />
 		</Compiler>
 		<Linker>
 			<Add library="ThirdParty/libs/win_x64/libangelscript64.a" />
@@ -45,24 +46,15 @@
 		<Unit filename="ThirdParty/include/GLAD/glad.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/API/artIEntity.cpp" />
-		<Unit filename="src/API/artIMain.cpp" />
-		<Unit filename="src/API/artIMain.h" />
-		<Unit filename="src/API/artITransform.cpp">
+		<Unit filename="src/Engine/engineAssetsDefinitions.h">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/Engine/artenttmodules.h" />
-		<Unit filename="src/Engine/engineassetstype.h" />
-		<Unit filename="src/Engine/engineentity.cpp" />
-		<Unit filename="src/Engine/engineentity.h" />
-		<Unit filename="src/Engine/enginelanguage.h" />
-		<Unit filename="src/Engine/engineregisterfunctions.cpp" />
-		<Unit filename="src/Engine/engineregisterfunctions.h" />
-		<Unit filename="src/Engine/engineshader.cpp" />
-		<Unit filename="src/Engine/engineshader.h" />
-		<Unit filename="src/Engine/enginestring.h" />
-		<Unit filename="src/Engine/enginewindow.cpp" />
-		<Unit filename="src/Engine/enginewindow.h" />
+		<Unit filename="src/Engine/engineShader.cpp" />
+		<Unit filename="src/Engine/engineShader.h" />
+		<Unit filename="src/Engine/engineWindow.cpp" />
+		<Unit filename="src/Engine/engineWindow.h" />
+		<Unit filename="src/Utils/utilsJson.h" />
+		<Unit filename="src/Utils/utilsString.h" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1787462958 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1787527795 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -943,12 +943,10 @@
 	"glfw3.h"
 	"glm.hpp"
 	"entt.hpp"
-	"enginewindow.h"
-	"engineshader.h"
-	"enginestring.h"
-	"engineentity.h"
-	"engineregisterfunctions.h"
-	"enginelanguage.h"
+	"engineWindow.h"
+	"engineShader.h"
+	"utilsJson.h"
+	"utilsString.h"
 
 1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\jsonnlohmann\json.hpp
 	<algorithm>
@@ -3301,16 +3299,18 @@
 1787260069 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.h
 	"glad.h"
 
-1787260925 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
+1787527125 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
 	"enginewindow.h"
 	<iostream>
+	<string>
 	"glad.h"
 	"glfw3.h"
 
-1787260069 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.h
+1787527125 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.h
 	"glad.h"
 	"glfw3.h"
 	<iostream>
+	<string>
 
 1786900490 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginestring.h
 	<iostream>
@@ -3426,4 +3426,21 @@
 	"scriptarray.h"
 	<stdio.h>
 	<string.h>
+
+1787526966 source:d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsjson.h
+	<string>
+	<fstream>
+	<iostream>
+	"json.hpp"
+
+1787527505 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsjson.h
+	<string>
+	<fstream>
+	<iostream>
+	"json.hpp"
+
+1787526456 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsstring.h
+	<iostream>
+	<fstream>
+	<string>
 
