@@ -1,48 +1,58 @@
 #include "enginewindow.h"
 #include <iostream>
 #include <string>
-#include "glad.h"
-#include "glfw3.h"
+#include "GLAD/glad.h"
+#include "SDL3/SDL.h"
 
 Window::Window(int width, int height, std::string name){
-
-    const char* title = name.c_str();
-
-    ///Start GL
-    if (!glfwInit()){
+    ///Start SDL
+    if (!SDL_Init(SDL_INIT_VIDEO)){
         std::cout << "[GLFW] ERROR TRYING TO INITIALIZE... sorry :C" << std::endl;
         return;
     }
-    //Set some hints
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR,3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR,3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    //Set SDL hints
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
     //Create a new window
-    m_handle = glfwCreateWindow(width,height,title,NULL,NULL);
-    if (!m_handle){
-        glfwTerminate();
-        std::cout << "[GLFW] ERROR TRYING TO INITIALIZE WINDOW... sorry :C" << std::endl;
+    m_handle = SDL_CreateWindow(name.c_str(), width, height, SDL_WINDOW_OPENGL);
+    if (!m_handle) {
+        std::cout << "[SDL] ERROR TRYING TO INITIALIZE WINDOW... sorry :C" << std::endl;
+        SDL_Quit();
         return;
     }
 
     //Set Context
-    glfwMakeContextCurrent(m_handle);
-    glfwSwapInterval(1);
+    m_glContext = SDL_GL_CreateContext(m_handle);
+    SDL_GL_MakeCurrent(m_handle, m_glContext);
+    SDL_GL_SetSwapInterval(1);
 
     //Load GLAD
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)){
+    if (!gladLoadGLLoader((GLADloadproc)SDL_GL_GetProcAddress)){
         std::cout << "[GLAD] ERROR TRYING TO LOADING GLAD... sorry :C" << std::endl;
         return;
     }
 }
 
 Window::~Window(){
-    glfwTerminate();
+    SDL_GL_DestroyContext(m_glContext);
+    SDL_DestroyWindow(m_handle);
+    SDL_Quit();
     std::cout << "[ARTENGINE] CLOSING ART ENGINE :D" << std::endl;
 }
 
-bool Window::ShouldClose() { return glfwWindowShouldClose(m_handle); }
-void Window::SwapBuffers() { glfwSwapBuffers(m_handle); }
-void Window::PollEvents() { glfwPollEvents(); }
-bool Window::IsKeyPressed(int key) { return glfwGetKey(m_handle,key) == GLFW_PRESS;}
+void Window::SwapBuffers() { SDL_GL_SwapWindow(m_handle); }
+bool Window::ShouldClose() { return m_shouldClose; }
+void Window::PollEvents() {
+    SDL_Event event;
+    while (SDL_PollEvent(&event)) {
+        if (event.type == SDL_EVENT_QUIT) {
+            m_shouldClose = true;
+        }
+    }
+}
+bool Window::IsKeyPressed(int key) {
+    const bool* state = SDL_GetKeyboardState(NULL);
+    return state[key];
+}

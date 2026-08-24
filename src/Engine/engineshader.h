@@ -1,5 +1,5 @@
 #pragma once
-#include "glad.h"
+#include "GLAD/glad.h"
 
 class Shader {
 public:

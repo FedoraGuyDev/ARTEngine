@@ -3296,19 +3296,19 @@
 	"engineshader.h"
 	<iostream>
 
-1787260069 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.h
-	"glad.h"
+1787536834 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.h
+	"GLAD/glad.h"
 
-1787527125 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
+1787536766 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
 	"enginewindow.h"
 	<iostream>
 	<string>
-	"glad.h"
-	"glfw3.h"
+	"GLAD/glad.h"
+	"SDL3/SDL.h"
 
-1787527125 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.h
-	"glad.h"
-	"glfw3.h"
+1787536906 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.h
+	"GLAD/glad.h"
+	"SDL3/SDL.h"
 	<iostream>
 	<string>
 
@@ -3443,4 +3443,494 @@
 	<iostream>
 	<fstream>
 	<string>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glad\glad.h
+	<KHR/khrplatform.h>
+
+1785804914 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_assert.h>
+	<SDL3/SDL_asyncio.h>
+	<SDL3/SDL_atomic.h>
+	<SDL3/SDL_audio.h>
+	<SDL3/SDL_bits.h>
+	<SDL3/SDL_blendmode.h>
+	<SDL3/SDL_camera.h>
+	<SDL3/SDL_clipboard.h>
+	<SDL3/SDL_cpuinfo.h>
+	<SDL3/SDL_dialog.h>
+	<SDL3/SDL_dlopennote.h>
+	<SDL3/SDL_endian.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_events.h>
+	<SDL3/SDL_filesystem.h>
+	<SDL3/SDL_gamepad.h>
+	<SDL3/SDL_gpu.h>
+	<SDL3/SDL_guid.h>
+	<SDL3/SDL_haptic.h>
+	<SDL3/SDL_hidapi.h>
+	<SDL3/SDL_hints.h>
+	<SDL3/SDL_init.h>
+	<SDL3/SDL_iostream.h>
+	<SDL3/SDL_joystick.h>
+	<SDL3/SDL_keyboard.h>
+	<SDL3/SDL_keycode.h>
+	<SDL3/SDL_loadso.h>
+	<SDL3/SDL_locale.h>
+	<SDL3/SDL_log.h>
+	<SDL3/SDL_messagebox.h>
+	<SDL3/SDL_metal.h>
+	<SDL3/SDL_misc.h>
+	<SDL3/SDL_mouse.h>
+	<SDL3/SDL_mutex.h>
+	<SDL3/SDL_pen.h>
+	<SDL3/SDL_pixels.h>
+	<SDL3/SDL_platform.h>
+	<SDL3/SDL_power.h>
+	<SDL3/SDL_process.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_rect.h>
+	<SDL3/SDL_render.h>
+	<SDL3/SDL_scancode.h>
+	<SDL3/SDL_sensor.h>
+	<SDL3/SDL_storage.h>
+	<SDL3/SDL_surface.h>
+	<SDL3/SDL_system.h>
+	<SDL3/SDL_thread.h>
+	<SDL3/SDL_time.h>
+	<SDL3/SDL_timer.h>
+	<SDL3/SDL_tray.h>
+	<SDL3/SDL_touch.h>
+	<SDL3/SDL_version.h>
+	<SDL3/SDL_video.h>
+	<SDL3/SDL_oldnames.h>
+
+1780206612 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_stdinc.h
+	<SDL3/SDL_platform_defines.h>
+	<stdarg.h>
+	<string.h>
+	<wchar.h>
+	<stdint.h>
+	<inttypes.h>
+	<stdbool.h>
+	<alloca.h>
+	<stdlib.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	<SDL3/SDL_begin_code.h>
+	<stdio.h>
+	<stdlib.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_platform_defines.h
+	<AvailabilityMacros.h>
+	<TargetConditionals.h>
+	<TargetConditionals.h>
+	<winapifamily.h>
+
+1771966148 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_begin_code.h
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_close_code.h
+
+1783992226 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_assert.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_begin_code.h>
+	<intrin.h>
+	<signal.h>
+	<SDL3/SDL_close_code.h>
+
+1771473084 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_asyncio.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1784655874 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_atomic.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_platform_defines.h>
+	<SDL3/SDL_begin_code.h>
+	<arm64intr.h>
+	<mbarrier.h>
+	<SDL3/SDL_close_code.h>
+
+1782247856 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_audio.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_endian.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_mutex.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_iostream.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1772069412 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_endian.h
+	<SDL3/SDL_stdinc.h>
+	<intrin.h>
+	<endian.h>
+	<sys/byteorder.h>
+	<endian.h>
+	<sys/endian.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_error.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771643012 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_mutex.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_atomic.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_thread.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771643012 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_thread.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_atomic.h>
+	<process.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771473084 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_properties.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_iostream.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1774237974 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_bits.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_blendmode.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1783139852 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_camera.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_pixels.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_surface.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_pixels.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_endian.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_surface.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_blendmode.h>
+	<SDL3/SDL_pixels.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_rect.h>
+	<SDL3/SDL_iostream.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771643012 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_rect.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1776607602 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_clipboard.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_cpuinfo.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_dialog.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_video.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_video.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_pixels.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_rect.h>
+	<SDL3/SDL_surface.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_dlopennote.h
+	<SDL3/SDL_stdinc.h>
+
+1778695962 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_events.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_audio.h>
+	<SDL3/SDL_camera.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_gamepad.h>
+	<SDL3/SDL_joystick.h>
+	<SDL3/SDL_keyboard.h>
+	<SDL3/SDL_keycode.h>
+	<SDL3/SDL_mouse.h>
+	<SDL3/SDL_pen.h>
+	<SDL3/SDL_power.h>
+	<SDL3/SDL_sensor.h>
+	<SDL3/SDL_scancode.h>
+	<SDL3/SDL_touch.h>
+	<SDL3/SDL_video.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1778571938 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_gamepad.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_guid.h>
+	<SDL3/SDL_iostream.h>
+	<SDL3/SDL_joystick.h>
+	<SDL3/SDL_power.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_sensor.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_guid.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_joystick.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_guid.h>
+	<SDL3/SDL_mutex.h>
+	<SDL3/SDL_power.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_sensor.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771613176 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_power.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_sensor.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_keyboard.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_keycode.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_rect.h>
+	<SDL3/SDL_scancode.h>
+	<SDL3/SDL_video.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_keycode.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_scancode.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_scancode.h
+	<SDL3/SDL_stdinc.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_mouse.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_surface.h>
+	<SDL3/SDL_video.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771643012 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_pen.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_mouse.h>
+	<SDL3/SDL_touch.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_touch.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_mouse.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771643012 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_filesystem.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1785798998 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_gpu.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_pixels.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_rect.h>
+	<SDL3/SDL_surface.h>
+	<SDL3/SDL_video.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771643012 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_haptic.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_joystick.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_hidapi.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1785724108 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_hints.h
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771473084 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_init.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_events.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_loadso.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771613176 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_locale.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771643012 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_log.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771613176 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_messagebox.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_video.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771613176 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_metal.h
+	<SDL3/SDL_video.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771613176 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_misc.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771473084 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_platform.h
+	<SDL3/SDL_platform_defines.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_process.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_iostream.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771643012 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_render.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_blendmode.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_events.h>
+	<SDL3/SDL_pixels.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_rect.h>
+	<SDL3/SDL_surface.h>
+	<SDL3/SDL_video.h>
+	<SDL3/SDL_gpu.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771643012 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_storage.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_filesystem.h>
+	<SDL3/SDL_properties.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771613176 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_system.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_keyboard.h>
+	<SDL3/SDL_video.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1771473084 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_time.h
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_timer.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1767300498 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_tray.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_error.h>
+	<SDL3/SDL_surface.h>
+	<SDL3/SDL_video.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1785804914 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_version.h
+	<SDL3/SDL_stdinc.h>
+	<SDL3/SDL_begin_code.h>
+	<SDL3/SDL_close_code.h>
+
+1772579442 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_oldnames.h
+	<SDL3/SDL_platform_defines.h>
 

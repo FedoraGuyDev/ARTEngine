@@ -1,6 +1,6 @@
 #pragma once
-#include "glad.h"
-#include "glfw3.h"
+#include "GLAD/glad.h"
+#include "SDL3/SDL.h"
 #include <iostream>
 #include <string>
 
@@ -14,8 +14,10 @@ public:
     void PollEvents();
     bool IsKeyPressed(int key);
 
-    GLFWwindow* GetHandle() { return m_handle; }
+    SDL_Window* GetHandle() { return m_handle; }
 
 private:
-    GLFWwindow* m_handle;
+    SDL_Window* m_handle;
+    SDL_GLContext m_glContext;
+    bool m_shouldClose;
 };

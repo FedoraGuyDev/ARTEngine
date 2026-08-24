@@ -4,7 +4,7 @@
 #include <fstream>
 #include <iostream>
 
-#include "json.hpp"
+#include "JsonNlohmann/json.hpp"
 
 inline bool utilLoadJson(std::string path, nlohmann::json& json_dir ){
     std::ifstream loaded_file(path);

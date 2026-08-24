@@ -9,26 +9,26 @@
 #include <unordered_map>
 
 ///JSON
-#include "json.hpp"
+#include "JsonNlohmann/json.hpp"
 using json = nlohmann::json;
 
 ///AngelScript
-#include "angelscript.h"
+#include "AngelScript/angelscript.h"
 
 ///AngelScript Addons
-#include "scriptarray.h"
-#include "scriptbuilder.h"
-#include "scriptdictionary.h"
-#include "scriptmath.h"
-#include "scriptstdstring.h"
+#include "AngelScript/scriptarray.h"
+#include "AngelScript/scriptbuilder.h"
+#include "AngelScript/scriptdictionary.h"
+#include "AngelScript/scriptmath.h"
+#include "AngelScript/scriptstdstring.h"
 
 ///GL
-#include "glad.h"
-#include "glfw3.h"
-#include "glm.hpp"
+#include "GLAD/glad.h"
+#include "SDL3/SDL.h"
+#include "GLM/glm.hpp"
 
 ///EnTT
-#include "entt.hpp"
+#include "EnTT/entt.hpp"
 
 ///ARTENGINE
 #include "engineWindow.h"
@@ -62,10 +62,6 @@ int main(){
     glEnableVertexAttribArray(0);
 
     while(!window.ShouldClose()){
-        if (window.IsKeyPressed(GLFW_KEY_ESCAPE)){
-            glfwSetWindowShouldClose(window.GetHandle(),true);
-        }
-
         glClearColor(0.1f,0.1f,0.1f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
