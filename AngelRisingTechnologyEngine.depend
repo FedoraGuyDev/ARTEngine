@@ -875,11 +875,11 @@
 1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glad\glad.h
 	<KHR/khrplatform.h>
 
-1787260111 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glad\glad.c
+1787541069 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\glad\glad.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	<glad.h>
+	<GLAD/glad.h>
 	<windows.h>
 	<winapifamily.h>
 	<dlfcn.h>
@@ -926,23 +926,23 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1787527795 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1787541052 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
 	<vector>
 	<unordered_map>
-	"json.hpp"
-	"angelscript.h"
-	"scriptarray.h"
-	"scriptbuilder.h"
-	"scriptdictionary.h"
-	"scriptmath.h"
-	"scriptstdstring.h"
-	"glad.h"
-	"glfw3.h"
-	"glm.hpp"
-	"entt.hpp"
+	"JsonNlohmann/json.hpp"
+	"AngelScript/angelscript.h"
+	"AngelScript/scriptarray.h"
+	"AngelScript/scriptbuilder.h"
+	"AngelScript/scriptdictionary.h"
+	"AngelScript/scriptmath.h"
+	"AngelScript/scriptstdstring.h"
+	"GLAD/glad.h"
+	"SDL3/SDL.h"
+	"GLM/glm.hpp"
+	"EnTT/entt.hpp"
 	"engineWindow.h"
 	"engineShader.h"
 	"utilsJson.h"
@@ -3299,7 +3299,7 @@
 1787536834 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.h
 	"GLAD/glad.h"
 
-1787536766 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
+1787538525 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
 	"enginewindow.h"
 	<iostream>
 	<string>
@@ -3433,11 +3433,11 @@
 	<iostream>
 	"json.hpp"
 
-1787527505 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsjson.h
+1787536919 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsjson.h
 	<string>
 	<fstream>
 	<iostream>
-	"json.hpp"
+	"JsonNlohmann/json.hpp"
 
 1787526456 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsstring.h
 	<iostream>
@@ -3933,4 +3933,1781 @@
 
 1772579442 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\sdl3\sdl_oldnames.h
 	<SDL3/SDL_platform_defines.h>
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\jsonnlohmann\json.hpp
+	<algorithm>
+	<cstddef>
+	<functional>
+	<initializer_list>
+	<iosfwd>
+	<iterator>
+	<memory>
+	<string>
+	<utility>
+	<vector>
+	<utility>
+	<algorithm>
+	<array>
+	<forward_list>
+	<iterator>
+	<map>
+	<optional>
+	<string>
+	<tuple>
+	<type_traits>
+	<unordered_map>
+	<utility>
+	<valarray>
+	<cstddef>
+	<exception>
+	<numeric>
+	<stdexcept>
+	<string>
+	<vector>
+	<array>
+	<cstddef>
+	<cstdint>
+	<string>
+	<utility>
+	<type_traits>
+	<stdint.h>
+	<stdint.h>
+	<version>
+	<cstdlib>
+	<cassert>
+	<compare>
+	<cstddef>
+	<array>
+	<cstddef>
+	<type_traits>
+	<utility>
+	<limits>
+	<string>
+	<tuple>
+	<type_traits>
+	<utility>
+	<iterator>
+	<cstdint>
+	<map>
+	<memory>
+	<string>
+	<vector>
+	<cstring>
+	<string>
+	<utility>
+	<experimental/filesystem>
+	<filesystem>
+	<optional>
+	<algorithm>
+	<iterator>
+	<string>
+	<tuple>
+	<type_traits>
+	<utility>
+	<valarray>
+	<vector>
+	<cstddef>
+	<iterator>
+	<tuple>
+	<utility>
+	<ranges>
+	<cstddef>
+	<string>
+	<cstdint>
+	<tuple>
+	<utility>
+	<cstdint>
+	<cstddef>
+	<functional>
+	<algorithm>
+	<array>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdio>
+	<cstring>
+	<iterator>
+	<limits>
+	<string>
+	<utility>
+	<vector>
+	<bit>
+	<array>
+	<cstddef>
+	<cstring>
+	<iterator>
+	<memory>
+	<numeric>
+	<string>
+	<type_traits>
+	<utility>
+	<cstdio>
+	<istream>
+	<cstddef>
+	<string>
+	<type_traits>
+	<utility>
+	<vector>
+	<array>
+	<clocale>
+	<cstddef>
+	<cstdio>
+	<cstdlib>
+	<initializer_list>
+	<string>
+	<utility>
+	<vector>
+	<cstdint>
+	<utility>
+	<string>
+	<cmath>
+	<cstdint>
+	<functional>
+	<string>
+	<utility>
+	<vector>
+	<cstddef>
+	<limits>
+	<iterator>
+	<type_traits>
+	<cstddef>
+	<iterator>
+	<utility>
+	<type_traits>
+	<algorithm>
+	<cctype>
+	<cerrno>
+	<cstdlib>
+	<iosfwd>
+	<limits>
+	<numeric>
+	<string>
+	<utility>
+	<vector>
+	<initializer_list>
+	<utility>
+	<algorithm>
+	<array>
+	<map>
+	<cmath>
+	<cstdint>
+	<cstring>
+	<limits>
+	<string>
+	<utility>
+	<vector>
+	<algorithm>
+	<cstddef>
+	<iterator>
+	<memory>
+	<string>
+	<vector>
+	<ios>
+	<ostream>
+	<algorithm>
+	<array>
+	<clocale>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdio>
+	<limits>
+	<string>
+	<iomanip>
+	<type_traits>
+	<utility>
+	<array>
+	<cmath>
+	<cstdint>
+	<cstring>
+	<limits>
+	<type_traits>
+	<functional>
+	<initializer_list>
+	<iterator>
+	<memory>
+	<stdexcept>
+	<type_traits>
+	<utility>
+	<vector>
+	<any>
+	<string_view>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\angelscript\angelscript.h
+	<stddef.h>
+	<stdint.h>
+	<type_traits>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\angelscript\scriptarray.h
+	<angelscript.h>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\angelscript\scriptbuilder.h
+	<angelscript.h>
+	<string>
+	<map>
+	<set>
+	<vector>
+	<string.h>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\angelscript\scriptdictionary.h
+	<angelscript.h>
+	<string>
+	<unordered_map>
+	<map>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\angelscript\scriptmath.h
+	<angelscript.h>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\angelscript\scriptstdstring.h
+	<angelscript.h>
+	<string>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\glm.hpp
+	"detail/_fixes.hpp"
+	"detail/setup.hpp"
+	<cmath>
+	<climits>
+	<cfloat>
+	<limits>
+	<cassert>
+	"fwd.hpp"
+	"vec2.hpp"
+	"vec3.hpp"
+	"vec4.hpp"
+	"mat2x2.hpp"
+	"mat2x3.hpp"
+	"mat2x4.hpp"
+	"mat3x2.hpp"
+	"mat3x3.hpp"
+	"mat3x4.hpp"
+	"mat4x2.hpp"
+	"mat4x3.hpp"
+	"mat4x4.hpp"
+	"trigonometric.hpp"
+	"exponential.hpp"
+	"common.hpp"
+	"packing.hpp"
+	"geometric.hpp"
+	"matrix.hpp"
+	"vector_relational.hpp"
+	"integer.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\_fixes.hpp
+	<cmath>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\setup.hpp
+	<cassert>
+	<cstddef>
+	<type_traits>
+	"../simd/platform.h"
+	<cstdint>
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\simd\platform.h
+	<cuda.h>
+	<immintrin.h>
+	<immintrin.h>
+	<popcntintrin.h>
+	<nmmintrin.h>
+	<smmintrin.h>
+	<tmmintrin.h>
+	<pmmintrin.h>
+	<emmintrin.h>
+	"neon.h"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\simd\neon.h
+	<arm_neon.h>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\fwd.hpp
+	"detail/qualifier.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\qualifier.hpp
+	"setup.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\vec2.hpp
+	"./ext/vector_bool2.hpp"
+	"./ext/vector_bool2_precision.hpp"
+	"./ext/vector_float2.hpp"
+	"./ext/vector_float2_precision.hpp"
+	"./ext/vector_double2.hpp"
+	"./ext/vector_double2_precision.hpp"
+	"./ext/vector_int2.hpp"
+	"./ext/vector_int2_sized.hpp"
+	"./ext/vector_uint2.hpp"
+	"./ext/vector_uint2_sized.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_bool2.hpp
+	"../detail/type_vec2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_vec2.hpp
+	"qualifier.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec2.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\_swizzle.hpp
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\_swizzle_func.hpp
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_vec2.inl
+	"./compute_vector_relational.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\compute_vector_relational.hpp
+	"setup.hpp"
+	<limits>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_bool2_precision.hpp
+	"../detail/type_vec2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_float2.hpp
+	"../detail/type_vec2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_float2_precision.hpp
+	"../detail/type_vec2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_double2.hpp
+	"../detail/type_vec2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_double2_precision.hpp
+	"../detail/type_vec2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_int2.hpp
+	"../detail/type_vec2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_int2_sized.hpp
+	"../ext/vector_int2.hpp"
+	"../ext/scalar_int_sized.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\scalar_int_sized.hpp
+	"../detail/setup.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_uint2.hpp
+	"../detail/type_vec2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_uint2_sized.hpp
+	"../ext/vector_uint2.hpp"
+	"../ext/scalar_uint_sized.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\scalar_uint_sized.hpp
+	"../detail/setup.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\vec3.hpp
+	"./ext/vector_bool3.hpp"
+	"./ext/vector_bool3_precision.hpp"
+	"./ext/vector_float3.hpp"
+	"./ext/vector_float3_precision.hpp"
+	"./ext/vector_double3.hpp"
+	"./ext/vector_double3_precision.hpp"
+	"./ext/vector_int3.hpp"
+	"./ext/vector_int3_sized.hpp"
+	"./ext/vector_uint3.hpp"
+	"./ext/vector_uint3_sized.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_bool3.hpp
+	"../detail/type_vec3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_vec3.hpp
+	"qualifier.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec3.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_vec3.inl
+	"compute_vector_relational.hpp"
+	"compute_vector_decl.hpp"
+	"type_vec_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\compute_vector_decl.hpp
+	<functional>
+	"_vectorize.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\_vectorize.hpp
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_vec_simd.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_bool3_precision.hpp
+	"../detail/type_vec3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_float3.hpp
+	"../detail/type_vec3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_float3_precision.hpp
+	"../detail/type_vec3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_double3.hpp
+	"../detail/type_vec3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_double3_precision.hpp
+	"../detail/type_vec3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_int3.hpp
+	"../detail/type_vec3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_int3_sized.hpp
+	"../ext/vector_int3.hpp"
+	"../ext/scalar_int_sized.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_uint3.hpp
+	"../detail/type_vec3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_uint3_sized.hpp
+	"../ext/vector_uint3.hpp"
+	"../ext/scalar_uint_sized.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\vec4.hpp
+	"./ext/vector_bool4.hpp"
+	"./ext/vector_bool4_precision.hpp"
+	"./ext/vector_float4.hpp"
+	"./ext/vector_float4_precision.hpp"
+	"./ext/vector_double4.hpp"
+	"./ext/vector_double4_precision.hpp"
+	"./ext/vector_int4.hpp"
+	"./ext/vector_int4_sized.hpp"
+	"./ext/vector_uint4.hpp"
+	"./ext/vector_uint4_sized.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_bool4.hpp
+	"../detail/type_vec4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_vec4.hpp
+	"qualifier.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec4.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_vec4.inl
+	"compute_vector_relational.hpp"
+	"compute_vector_decl.hpp"
+	"type_vec_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_bool4_precision.hpp
+	"../detail/type_vec4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_float4.hpp
+	"../detail/type_vec4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_float4_precision.hpp
+	"../detail/type_vec4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_double4.hpp
+	"../detail/type_vec4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_double4_precision.hpp
+	"../detail/setup.hpp"
+	"../detail/type_vec4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_int4.hpp
+	"../detail/type_vec4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_int4_sized.hpp
+	"../ext/vector_int4.hpp"
+	"../ext/scalar_int_sized.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_uint4.hpp
+	"../detail/type_vec4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\vector_uint4_sized.hpp
+	"../ext/vector_uint4.hpp"
+	"../ext/scalar_uint_sized.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\mat2x2.hpp
+	"./ext/matrix_double2x2.hpp"
+	"./ext/matrix_double2x2_precision.hpp"
+	"./ext/matrix_float2x2.hpp"
+	"./ext/matrix_float2x2_precision.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double2x2.hpp
+	"../detail/type_mat2x2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat2x2.hpp
+	"type_vec2.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x2.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat2x2.inl
+	"../matrix.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\matrix.hpp
+	"detail/qualifier.hpp"
+	"detail/setup.hpp"
+	"vec2.hpp"
+	"vec3.hpp"
+	"vec4.hpp"
+	"mat2x2.hpp"
+	"mat2x3.hpp"
+	"mat2x4.hpp"
+	"mat3x2.hpp"
+	"mat3x3.hpp"
+	"mat3x4.hpp"
+	"mat4x2.hpp"
+	"mat4x3.hpp"
+	"mat4x4.hpp"
+	"detail/func_matrix.inl"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\mat2x3.hpp
+	"./ext/matrix_double2x3.hpp"
+	"./ext/matrix_double2x3_precision.hpp"
+	"./ext/matrix_float2x3.hpp"
+	"./ext/matrix_float2x3_precision.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double2x3.hpp
+	"../detail/type_mat2x3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat2x3.hpp
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x3.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat2x3.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double2x3_precision.hpp
+	"../detail/type_mat2x3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float2x3.hpp
+	"../detail/type_mat2x3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float2x3_precision.hpp
+	"../detail/type_mat2x3.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\mat2x4.hpp
+	"./ext/matrix_double2x4.hpp"
+	"./ext/matrix_double2x4_precision.hpp"
+	"./ext/matrix_float2x4.hpp"
+	"./ext/matrix_float2x4_precision.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double2x4.hpp
+	"../detail/type_mat2x4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat2x4.hpp
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x4.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat2x4.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double2x4_precision.hpp
+	"../detail/type_mat2x4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float2x4.hpp
+	"../detail/type_mat2x4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float2x4_precision.hpp
+	"../detail/type_mat2x4.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\mat3x2.hpp
+	"./ext/matrix_double3x2.hpp"
+	"./ext/matrix_double3x2_precision.hpp"
+	"./ext/matrix_float3x2.hpp"
+	"./ext/matrix_float3x2_precision.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double3x2.hpp
+	"../detail/type_mat3x2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat3x2.hpp
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x2.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat3x2.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double3x2_precision.hpp
+	"../detail/type_mat3x2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float3x2.hpp
+	"../detail/type_mat3x2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float3x2_precision.hpp
+	"../detail/type_mat3x2.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\mat3x3.hpp
+	"./ext/matrix_double3x3.hpp"
+	"./ext/matrix_double3x3_precision.hpp"
+	"./ext/matrix_float3x3.hpp"
+	"./ext/matrix_float3x3_precision.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double3x3.hpp
+	"../detail/type_mat3x3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat3x3.hpp
+	"type_vec3.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x3.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat3x3.inl
+	"../matrix.hpp"
+	"../common.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\common.hpp
+	"detail/qualifier.hpp"
+	"detail/_fixes.hpp"
+	"detail/func_common.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_common.inl
+	"../vector_relational.hpp"
+	"compute_common.hpp"
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"_vectorize.hpp"
+	<limits>
+	"func_common_simd.inl"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\vector_relational.hpp
+	"detail/qualifier.hpp"
+	"detail/setup.hpp"
+	"detail/func_vector_relational.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_vector_relational.inl
+	"func_vector_relational_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_vector_relational_simd.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\compute_common.hpp
+	"setup.hpp"
+	<limits>
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_vec1.hpp
+	"qualifier.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec1.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_vec1.inl
+	"./compute_vector_relational.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_common_simd.inl
+	"../simd/common.h"
+	<immintrin.h>
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\simd\common.h
+	"platform.h"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double3x3_precision.hpp
+	"../detail/type_mat3x3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float3x3.hpp
+	"../detail/type_mat3x3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float3x3_precision.hpp
+	"../detail/type_mat3x3.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\mat3x4.hpp
+	"./ext/matrix_double3x4.hpp"
+	"./ext/matrix_double3x4_precision.hpp"
+	"./ext/matrix_float3x4.hpp"
+	"./ext/matrix_float3x4_precision.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double3x4.hpp
+	"../detail/type_mat3x4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat3x4.hpp
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x4.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat3x4.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double3x4_precision.hpp
+	"../detail/type_mat3x4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float3x4.hpp
+	"../detail/type_mat3x4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float3x4_precision.hpp
+	"../detail/type_mat3x4.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\mat4x2.hpp
+	"./ext/matrix_double4x2.hpp"
+	"./ext/matrix_double4x2_precision.hpp"
+	"./ext/matrix_float4x2.hpp"
+	"./ext/matrix_float4x2_precision.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double4x2.hpp
+	"../detail/type_mat4x2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat4x2.hpp
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x2.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat4x2.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double4x2_precision.hpp
+	"../detail/type_mat4x2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float4x2.hpp
+	"../detail/type_mat4x2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float4x2_precision.hpp
+	"../detail/type_mat2x2.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\mat4x3.hpp
+	"./ext/matrix_double4x3.hpp"
+	"./ext/matrix_double4x3_precision.hpp"
+	"./ext/matrix_float4x3.hpp"
+	"./ext/matrix_float4x3_precision.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double4x3.hpp
+	"../detail/type_mat4x3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat4x3.hpp
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x3.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat4x3.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double4x3_precision.hpp
+	"../detail/type_mat4x3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float4x3.hpp
+	"../detail/type_mat4x3.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float4x3_precision.hpp
+	"../detail/type_mat4x3.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\mat4x4.hpp
+	"./ext/matrix_double4x4.hpp"
+	"./ext/matrix_double4x4_precision.hpp"
+	"./ext/matrix_float4x4.hpp"
+	"./ext/matrix_float4x4_precision.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double4x4.hpp
+	"../detail/type_mat4x4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat4x4.hpp
+	"type_vec4.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x4.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat4x4.inl
+	"../matrix.hpp"
+	"../geometric.hpp"
+	"type_mat4x4_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\geometric.hpp
+	"detail/type_vec3.hpp"
+	"detail/func_geometric.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_geometric.inl
+	"../exponential.hpp"
+	"../common.hpp"
+	"func_geometric_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\exponential.hpp
+	"detail/type_vec1.hpp"
+	"detail/type_vec2.hpp"
+	"detail/type_vec3.hpp"
+	"detail/type_vec4.hpp"
+	<cmath>
+	"detail/func_exponential.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_exponential.inl
+	"../vector_relational.hpp"
+	"_vectorize.hpp"
+	<limits>
+	<cmath>
+	<cassert>
+	"func_exponential_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_exponential_simd.inl
+	"../simd/exponential.h"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\simd\exponential.h
+	"platform.h"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_geometric_simd.inl
+	"../simd/geometric.h"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\simd\geometric.h
+	"common.h"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_mat4x4_simd.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double4x4_precision.hpp
+	"../detail/type_mat4x4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float4x4.hpp
+	"../detail/type_mat4x4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float4x4_precision.hpp
+	"../detail/type_mat4x4.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_matrix.inl
+	"../geometric.hpp"
+	<limits>
+	"func_matrix_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_matrix_simd.inl
+	"type_mat4x4.hpp"
+	"../geometric.hpp"
+	"../simd/matrix.h"
+	<cstring>
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\simd\matrix.h
+	"geometric.h"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_double2x2_precision.hpp
+	"../detail/type_mat2x2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float2x2.hpp
+	"../detail/type_mat2x2.hpp"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\ext\matrix_float2x2_precision.hpp
+	"../detail/type_mat2x2.hpp"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\trigonometric.hpp
+	"detail/setup.hpp"
+	"detail/qualifier.hpp"
+	"detail/func_trigonometric.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_trigonometric.inl
+	"_vectorize.hpp"
+	<cmath>
+	<limits>
+	"func_trigonometric_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_trigonometric_simd.inl
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\packing.hpp
+	"./ext/vector_uint2.hpp"
+	"./ext/vector_float2.hpp"
+	"./ext/vector_float4.hpp"
+	"detail/func_packing.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_packing.inl
+	"../common.hpp"
+	"type_half.hpp"
+	"func_packing_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_half.hpp
+	"setup.hpp"
+	"type_half.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\type_half.inl
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_packing_simd.inl
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\integer.hpp
+	"detail/qualifier.hpp"
+	"common.hpp"
+	"vector_relational.hpp"
+	"detail/func_integer.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_integer.inl
+	"_vectorize.hpp"
+	<intrin.h>
+	<limits>
+	"func_integer_simd.inl"
+
+1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\detail\func_integer_simd.inl
+	"../simd/integer.h"
+
+1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\simd\integer.h
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entt.hpp
+	"config/config.h"
+	"config/macro.h"
+	"config/version.h"
+	"container/dense_map.hpp"
+	"container/dense_set.hpp"
+	"container/table.hpp"
+	"core/algorithm.hpp"
+	"core/any.hpp"
+	"core/bit.hpp"
+	"core/compressed_pair.hpp"
+	"core/concepts.hpp"
+	"core/enum.hpp"
+	"core/family.hpp"
+	"core/hashed_string.hpp"
+	"core/ident.hpp"
+	"core/iterator.hpp"
+	"core/memory.hpp"
+	"core/monostate.hpp"
+	"core/ranges.hpp"
+	"core/tuple.hpp"
+	"core/type_info.hpp"
+	"core/type_traits.hpp"
+	"core/utility.hpp"
+	"entity/component.hpp"
+	"entity/entity.hpp"
+	"entity/group.hpp"
+	"entity/handle.hpp"
+	"entity/helper.hpp"
+	"entity/mixin.hpp"
+	"entity/organizer.hpp"
+	"entity/ranges.hpp"
+	"entity/registry.hpp"
+	"entity/runtime_view.hpp"
+	"entity/snapshot.hpp"
+	"entity/sparse_set.hpp"
+	"entity/storage.hpp"
+	"entity/view.hpp"
+	"graph/adjacency_matrix.hpp"
+	"graph/dot.hpp"
+	"graph/flow.hpp"
+	"locator/locator.hpp"
+	"meta/adl_pointer.hpp"
+	"meta/container.hpp"
+	"meta/context.hpp"
+	"meta/factory.hpp"
+	"meta/meta.hpp"
+	"meta/node.hpp"
+	"meta/pointer.hpp"
+	"meta/policy.hpp"
+	"meta/range.hpp"
+	"meta/resolve.hpp"
+	"meta/template.hpp"
+	"meta/type_traits.hpp"
+	"meta/utility.hpp"
+	"poly/poly.hpp"
+	"process/process.hpp"
+	"process/scheduler.hpp"
+	"resource/cache.hpp"
+	"resource/loader.hpp"
+	"resource/resource.hpp"
+	"signal/delegate.hpp"
+	"signal/dispatcher.hpp"
+	"signal/emitter.hpp"
+	"signal/sigh.hpp"
+	"stl/algorithm.hpp"
+	"stl/array.hpp"
+	"stl/atomic.hpp"
+	"stl/bit.hpp"
+	"stl/cmath.hpp"
+	"stl/concepts.hpp"
+	"stl/cstddef.hpp"
+	"stl/cstdint.hpp"
+	"stl/functional.hpp"
+	"stl/ios.hpp"
+	"stl/iterator.hpp"
+	"stl/limits.hpp"
+	"stl/memory.hpp"
+	"stl/ostream.hpp"
+	"stl/sstream.hpp"
+	"stl/string.hpp"
+	"stl/string_view.hpp"
+	"stl/tuple.hpp"
+	"stl/type_traits.hpp"
+	"stl/utility.hpp"
+	"stl/vector.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\config\config.h
+	<entt/ext/config.h>
+	<version>
+	"version.h"
+	"../stl/atomic.hpp"
+	"../stl/cstdint.hpp"
+	"../stl/cstdint.hpp"
+	<cassert>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\config\version.h
+	"macro.h"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\config\macro.h
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\atomic.hpp
+	<entt/ext/stl/atomic.hpp>
+	<atomic>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\cstdint.hpp
+	<entt/ext/stl/cstdint.hpp>
+	<cstdint>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\container\dense_map.hpp
+	<compare>
+	"../config/config.h"
+	"../core/bit.hpp"
+	"../core/compressed_pair.hpp"
+	"../core/iterator.hpp"
+	"../core/memory.hpp"
+	"../core/type_traits.hpp"
+	"../stl/bit.hpp"
+	"../stl/cmath.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/functional.hpp"
+	"../stl/iterator.hpp"
+	"../stl/limits.hpp"
+	"../stl/memory.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"fwd.hpp"
+	<utility>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\bit.hpp
+	"../config/config.h"
+	"../stl/bit.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\bit.hpp
+	<entt/ext/stl/bit.hpp>
+	<bit>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\concepts.hpp
+	<entt/ext/stl/concepts.hpp>
+	<concepts>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\cstddef.hpp
+	<entt/ext/stl/cstddef.hpp>
+	<cstddef>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\compressed_pair.hpp
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+	"type_traits.hpp"
+	<utility>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\tuple.hpp
+	<entt/ext/stl/tuple.hpp>
+	<tuple>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\type_traits.hpp
+	<entt/ext/stl/type_traits.hpp>
+	<type_traits>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\utility.hpp
+	<entt/ext/stl/utility.hpp>
+	<utility>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\fwd.hpp
+	"../config/config.h"
+	"../stl/cstddef.hpp"
+	"../stl/cstdint.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\type_traits.hpp
+	"../config/config.h"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\iterator.hpp
+	<entt/ext/stl/iterator.hpp>
+	<iterator>
+	<version>
+	"../config/config.h"
+	<concepts>
+	<utility>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\iterator.hpp
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\memory.hpp
+	<entt/ext/stl/memory.hpp>
+	<memory>
+	<version>
+	"../config/config.h"
+	<type_traits>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\memory.hpp
+	"../config/config.h"
+	"../stl/cstddef.hpp"
+	"../stl/memory.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\cmath.hpp
+	<entt/ext/stl/cmath.hpp>
+	<cmath>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\functional.hpp
+	<entt/ext/stl/functional.hpp>
+	<functional>
+	<version>
+	"../config/config.h"
+	<utility>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\limits.hpp
+	<entt/ext/stl/limits.hpp>
+	<limits>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\vector.hpp
+	<entt/ext/stl/vector.hpp>
+	<vector>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\container\fwd.hpp
+	"../stl/functional.hpp"
+	"../stl/memory.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\container\dense_set.hpp
+	<compare>
+	"../config/config.h"
+	"../core/bit.hpp"
+	"../core/compressed_pair.hpp"
+	"../core/type_traits.hpp"
+	"../stl/bit.hpp"
+	"../stl/cmath.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/functional.hpp"
+	"../stl/iterator.hpp"
+	"../stl/limits.hpp"
+	"../stl/memory.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\container\table.hpp
+	"../config/config.h"
+	"../core/iterator.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/tuple.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+	<utility>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\algorithm.hpp
+	"../stl/algorithm.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/functional.hpp"
+	"../stl/iterator.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\algorithm.hpp
+	<entt/ext/stl/algorithm.hpp>
+	<algorithm>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\any.hpp
+	"../config/config.h"
+	"../core/concepts.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/cstdint.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+	"type_info.hpp"
+	"type_traits.hpp"
+	"utility.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\concepts.hpp
+	"../stl/type_traits.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\type_info.hpp
+	<compare>
+	"../config/config.h"
+	"../stl/string_view.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+	"hashed_string.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\string_view.hpp
+	<entt/ext/stl/string_view.hpp>
+	<string_view>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\hashed_string.hpp
+	"../stl/cstddef.hpp"
+	"../stl/cstdint.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\utility.hpp
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\enum.hpp
+	"../stl/concepts.hpp"
+	"../stl/type_traits.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\family.hpp
+	"../config/config.h"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\ident.hpp
+	"../stl/cstddef.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+	"type_traits.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\monostate.hpp
+	"../config/config.h"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\ranges.hpp
+	<version>
+	<ranges>
+	"iterator.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\core\tuple.hpp
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\component.hpp
+	"../config/config.h"
+	"../core/concepts.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/type_traits.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\fwd.hpp
+	"../config/config.h"
+	"../core/concepts.hpp"
+	"../core/fwd.hpp"
+	"../core/type_traits.hpp"
+	"../stl/cstdint.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\entity.hpp
+	"../config/config.h"
+	"../core/bit.hpp"
+	"../stl/bit.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/cstdint.hpp"
+	"../stl/type_traits.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\group.hpp
+	"../config/config.h"
+	"../core/algorithm.hpp"
+	"../core/fwd.hpp"
+	"../core/iterator.hpp"
+	"../core/type_info.hpp"
+	"../core/type_traits.hpp"
+	"../stl/array.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"entity.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\array.hpp
+	<entt/ext/stl/array.hpp>
+	<array>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\handle.hpp
+	"../config/config.h"
+	"../core/iterator.hpp"
+	"../core/type_traits.hpp"
+	"../stl/iterator.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"entity.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\helper.hpp
+	"../core/fwd.hpp"
+	"../core/type_traits.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"component.hpp"
+	"fwd.hpp"
+	"group.hpp"
+	"storage.hpp"
+	"view.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\storage.hpp
+	<compare>
+	"../config/config.h"
+	"../core/bit.hpp"
+	"../core/iterator.hpp"
+	"../core/memory.hpp"
+	"../core/type_info.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/memory.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"component.hpp"
+	"entity.hpp"
+	"fwd.hpp"
+	"sparse_set.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\sparse_set.hpp
+	<compare>
+	"../config/config.h"
+	"../core/algorithm.hpp"
+	"../core/any.hpp"
+	"../core/bit.hpp"
+	"../core/type_info.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"entity.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\view.hpp
+	"../config/config.h"
+	"../core/concepts.hpp"
+	"../core/iterator.hpp"
+	"../core/type_traits.hpp"
+	"../stl/array.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"entity.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\mixin.hpp
+	"../config/config.h"
+	"../core/any.hpp"
+	"../core/type_info.hpp"
+	"../signal/sigh.hpp"
+	"../stl/concepts.hpp"
+	"../stl/iterator.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"entity.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\signal\sigh.hpp
+	"../stl/cstddef.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"delegate.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\signal\delegate.hpp
+	"../config/config.h"
+	"../core/type_traits.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/functional.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\signal\fwd.hpp
+	"../stl/memory.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\organizer.hpp
+	"../core/type_info.hpp"
+	"../core/type_traits.hpp"
+	"../core/utility.hpp"
+	"../graph/adjacency_matrix.hpp"
+	"../graph/flow.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"fwd.hpp"
+	"helper.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\graph\adjacency_matrix.hpp
+	"../config/config.h"
+	"../core/iterator.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\graph\fwd.hpp
+	"../core/fwd.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/memory.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\graph\flow.hpp
+	"../config/config.h"
+	"../container/dense_map.hpp"
+	"../container/dense_set.hpp"
+	"../core/compressed_pair.hpp"
+	"../core/fwd.hpp"
+	"../core/iterator.hpp"
+	"../stl/algorithm.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/functional.hpp"
+	"../stl/iterator.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"adjacency_matrix.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\ranges.hpp
+	<version>
+	<ranges>
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\registry.hpp
+	<compare>
+	"../config/config.h"
+	"../container/dense_map.hpp"
+	"../core/algorithm.hpp"
+	"../core/any.hpp"
+	"../core/concepts.hpp"
+	"../core/fwd.hpp"
+	"../core/iterator.hpp"
+	"../core/memory.hpp"
+	"../core/type_info.hpp"
+	"../core/type_traits.hpp"
+	"../stl/algorithm.hpp"
+	"../stl/array.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/functional.hpp"
+	"../stl/iterator.hpp"
+	"../stl/memory.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"entity.hpp"
+	"fwd.hpp"
+	"group.hpp"
+	"mixin.hpp"
+	"sparse_set.hpp"
+	"storage.hpp"
+	"view.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\runtime_view.hpp
+	"../stl/algorithm.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"entity.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\entity\snapshot.hpp
+	"../config/config.h"
+	"../container/dense_map.hpp"
+	"../core/type_traits.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"entity.hpp"
+	"fwd.hpp"
+	"view.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\graph\dot.hpp
+	"../stl/concepts.hpp"
+	"../stl/ostream.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\ostream.hpp
+	<entt/ext/stl/ostream.hpp>
+	<ostream>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\locator\locator.hpp
+	"../config/config.h"
+	"../stl/concepts.hpp"
+	"../stl/memory.hpp"
+	"../stl/utility.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\adl_pointer.hpp
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\container.hpp
+	"../core/concepts.hpp"
+	"../core/type_traits.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"context.hpp"
+	"fwd.hpp"
+	"meta.hpp"
+	"type_traits.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\context.hpp
+	"../container/dense_map.hpp"
+	"../core/fwd.hpp"
+	"../stl/functional.hpp"
+	"../stl/memory.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\fwd.hpp
+	"../stl/cstddef.hpp"
+	"../stl/limits.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\meta.hpp
+	"../config/config.h"
+	"../core/any.hpp"
+	"../core/concepts.hpp"
+	"../core/fwd.hpp"
+	"../core/iterator.hpp"
+	"../core/type_info.hpp"
+	"../core/type_traits.hpp"
+	"../core/utility.hpp"
+	"../locator/locator.hpp"
+	"../stl/array.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/memory.hpp"
+	"../stl/string_view.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"adl_pointer.hpp"
+	"context.hpp"
+	"fwd.hpp"
+	"node.hpp"
+	"range.hpp"
+	"type_traits.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\node.hpp
+	"../config/config.h"
+	"../core/bit.hpp"
+	"../core/concepts.hpp"
+	"../core/enum.hpp"
+	"../core/fwd.hpp"
+	"../core/type_info.hpp"
+	"../core/type_traits.hpp"
+	"../core/utility.hpp"
+	"../stl/array.hpp"
+	"../stl/bit.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/cstdint.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"context.hpp"
+	"fwd.hpp"
+	"type_traits.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\type_traits.hpp
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\range.hpp
+	<compare>
+	"../core/fwd.hpp"
+	"../core/iterator.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/iterator.hpp"
+	"../stl/utility.hpp"
+	"context.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\factory.hpp
+	"../config/config.h"
+	"../core/bit.hpp"
+	"../core/fwd.hpp"
+	"../core/hashed_string.hpp"
+	"../core/type_info.hpp"
+	"../core/type_traits.hpp"
+	"../locator/locator.hpp"
+	"../stl/algorithm.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/cstdint.hpp"
+	"../stl/functional.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"context.hpp"
+	"fwd.hpp"
+	"meta.hpp"
+	"node.hpp"
+	"policy.hpp"
+	"range.hpp"
+	"utility.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\policy.hpp
+	"../stl/type_traits.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\utility.hpp
+	"../core/type_traits.hpp"
+	"../locator/locator.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/functional.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"meta.hpp"
+	"node.hpp"
+	"policy.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\pointer.hpp
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"type_traits.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\resolve.hpp
+	"../core/type_info.hpp"
+	"../locator/locator.hpp"
+	"../stl/type_traits.hpp"
+	"context.hpp"
+	"meta.hpp"
+	"node.hpp"
+	"range.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\meta\template.hpp
+	"../core/type_traits.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\poly\poly.hpp
+	"../core/any.hpp"
+	"../core/concepts.hpp"
+	"../core/type_info.hpp"
+	"../core/type_traits.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/functional.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\poly\fwd.hpp
+	"../stl/cstddef.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\process\process.hpp
+	"../core/compressed_pair.hpp"
+	"../core/type_traits.hpp"
+	"../stl/cstdint.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\process\fwd.hpp
+	"../stl/cstdint.hpp"
+	"../stl/memory.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\process\scheduler.hpp
+	"../config/config.h"
+	"../core/compressed_pair.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"fwd.hpp"
+	"process.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\resource\cache.hpp
+	<compare>
+	"../container/dense_map.hpp"
+	"../core/compressed_pair.hpp"
+	"../core/fwd.hpp"
+	"../core/iterator.hpp"
+	"../stl/concepts.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/functional.hpp"
+	"../stl/iterator.hpp"
+	"../stl/memory.hpp"
+	"../stl/tuple.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+	"loader.hpp"
+	"resource.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\resource\fwd.hpp
+	"../stl/memory.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\resource\loader.hpp
+	"../stl/memory.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\resource\resource.hpp
+	<compare>
+	"../stl/concepts.hpp"
+	"../stl/memory.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\signal\dispatcher.hpp
+	"../container/dense_map.hpp"
+	"../core/compressed_pair.hpp"
+	"../core/concepts.hpp"
+	"../core/fwd.hpp"
+	"../core/type_info.hpp"
+	"../stl/cstddef.hpp"
+	"../stl/functional.hpp"
+	"../stl/memory.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"../stl/vector.hpp"
+	"fwd.hpp"
+	"sigh.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\signal\emitter.hpp
+	"../container/dense_map.hpp"
+	"../core/compressed_pair.hpp"
+	"../core/fwd.hpp"
+	"../core/type_info.hpp"
+	"../stl/functional.hpp"
+	"../stl/type_traits.hpp"
+	"../stl/utility.hpp"
+	"fwd.hpp"
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\ios.hpp
+	<entt/ext/stl/ios.hpp>
+	<ios>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\sstream.hpp
+	<entt/ext/stl/sstream.hpp>
+	<sstream>
+
+1784737049 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\entt\stl\string.hpp
+	<entt/ext/stl/string.hpp>
+	<string>
 

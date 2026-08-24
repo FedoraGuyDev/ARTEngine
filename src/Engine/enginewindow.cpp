@@ -7,7 +7,7 @@
 Window::Window(int width, int height, std::string name){
     ///Start SDL
     if (!SDL_Init(SDL_INIT_VIDEO)){
-        std::cout << "[GLFW] ERROR TRYING TO INITIALIZE... sorry :C" << std::endl;
+        std::cout << "[GLFW] Error initializing... sorry :C" << std::endl;
         return;
     }
     //Set SDL hints
@@ -18,7 +18,7 @@ Window::Window(int width, int height, std::string name){
     //Create a new window
     m_handle = SDL_CreateWindow(name.c_str(), width, height, SDL_WINDOW_OPENGL);
     if (!m_handle) {
-        std::cout << "[SDL] ERROR TRYING TO INITIALIZE WINDOW... sorry :C" << std::endl;
+        std::cout << "[SDL] Error initializing the window... sorry :C" << std::endl;
         SDL_Quit();
         return;
     }
@@ -30,7 +30,7 @@ Window::Window(int width, int height, std::string name){
 
     //Load GLAD
     if (!gladLoadGLLoader((GLADloadproc)SDL_GL_GetProcAddress)){
-        std::cout << "[GLAD] ERROR TRYING TO LOADING GLAD... sorry :C" << std::endl;
+        std::cout << "[GLAD] Error loading GLAD... sorry :C" << std::endl;
         return;
     }
 }
@@ -39,7 +39,7 @@ Window::~Window(){
     SDL_GL_DestroyContext(m_glContext);
     SDL_DestroyWindow(m_handle);
     SDL_Quit();
-    std::cout << "[ARTENGINE] CLOSING ART ENGINE :D" << std::endl;
+    std::cout << "[ARTENGINE] Closing ARTEngine :D" << std::endl;
 }
 
 void Window::SwapBuffers() { SDL_GL_SwapWindow(m_handle); }

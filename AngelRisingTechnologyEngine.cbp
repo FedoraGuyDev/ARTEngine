@@ -22,25 +22,16 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-std=gnu++20" />
-			<Add directory="ThirdParty/include/AngelScript" />
-			<Add directory="ThirdParty/include/GLAD" />
-			<Add directory="ThirdParty/include/GLFW" />
-			<Add directory="ThirdParty/include/GLM" />
-			<Add directory="ThirdParty/include/JsonNlohmann" />
-			<Add directory="ThirdParty/include/TinyglTF" />
-			<Add directory="ThirdParty/include/AL" />
-			<Add directory="ThirdParty/include/ReactPhysics3D" />
-			<Add directory="ThirdParty/include/EnTT" />
+			<Add directory="ThirdParty/include/" />
 			<Add directory="src/API" />
 			<Add directory="src/Engine" />
 			<Add directory="src/Utils" />
 		</Compiler>
 		<Linker>
 			<Add library="ThirdParty/libs/win_x64/libangelscript64.a" />
-			<Add library="ThirdParty/libs/win_x64/libglfw3.a" />
-			<Add library="ThirdParty/libs/win_x64/libglfw3dll.a" />
 			<Add library="ThirdParty/libs/win_x64/libOpenAL32.dll.a" />
 			<Add library="ThirdParty/libs/win_x64/libreactphysics3d.a" />
+			<Add library="ThirdParty/libs/win_x64/libSDL3.dll.a" />
 			<Add directory="ThirdParty/libs/win_x64" />
 		</Linker>
 		<Unit filename="ThirdParty/include/GLAD/glad.c">

@@ -1,11 +1,11 @@
 {
 	"scripts" : {
-		"scripttest" : {
+		"scriptTest" : {
 			"path" : "gamefiles/assets/scripts/test.as"
 		}
 	},
 	"scenes" : {
-		"scenetest" : {
+		"sceneTest" : {
 			"path" : "gamefiles/assets/scenes/scenetest.json"
 		}
 	}
