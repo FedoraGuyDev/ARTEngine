@@ -11,7 +11,7 @@ ART Engine is written in **C++20**.
 ## Dependencies
 ART Engine relies on the following third-party libraries:
 
-* **[GLFW](https://www.glfw.org/)** - Window management and input.
+* **[SDL](https://www.libsdl.org/)** - Window management and input.
 * **[GLAD](https://glad.dav1d.de/)** - OpenGL API Loader.
 * **[GLM](https://github.com/g-truc/glm)** - OpenGL Mathematics library.
 * **[JSON](https://github.com/nlohmann/json)** - JSON parsing library.
