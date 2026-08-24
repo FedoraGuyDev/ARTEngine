@@ -10,7 +10,6 @@
 
 ///JSON
 #include "JsonNlohmann/json.hpp"
-using json = nlohmann::json;
 
 ///AngelScript
 #include "AngelScript/angelscript.h"
@@ -33,6 +32,9 @@ using json = nlohmann::json;
 ///ARTENGINE
 #include "engineWindow.h"
 #include "engineShader.h"
+#include "engineDefinitionsAssets.h"
+#include "engineDefinitionsComponents.h"
+
 #include "utilsJson.h"
 #include "utilsString.h"
 
@@ -41,12 +43,23 @@ using json = nlohmann::json;
 ///===================================
 
 ///Manifests
-json AssetsManifests;
-json EntityManifests;
-json GameManifests;
+nlohmann::json AssetsManifests;
+nlohmann::json EntityManifests;
+nlohmann::json GameManifests;
+
+///Assets
+
+///Components
+std::unordered_map<std::string, const entt::type_info*> EntityComponents;
 
 int main(){
     std::cout << "[ARTENGINE] Starting ARTEngine" << std::endl;
+
+    ///EnTT Set Definitions
+    defineEntityModules();
+
+
+
 
     ///Load Game Manifest
     if(!utilLoadJson("gamefiles/game_manifest.json",GameManifests)){
