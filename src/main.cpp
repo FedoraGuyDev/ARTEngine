@@ -52,25 +52,25 @@ int main(){
     if(!utilLoadJson("gamefiles/game_manifest.json",GameManifests)){
         return 0;
     }
-    ///Load Assets
+    ///Load Assets Manifest
     if(!utilLoadJson("gamefiles/assets_manifest.json",AssetsManifests)){
         return 0;
     }
-
+    ///Load Entities Manifest
+    if(!utilLoadJson("gamefiles/entity_manifest.json",EntityManifests)){
+        return 0;
+    }
     Window window(GameManifests["window_width"],GameManifests["window_height"],GameManifests["name"]);
 
     glEnableVertexAttribArray(0);
 
     while(!window.ShouldClose()){
-        glClearColor(0.5f,0.5f,0.5f,1.0f);
+        glClearColor(0.0f,0.2235f,0.4275f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
 
         window.SwapBuffers();
         window.PollEvents();
     }
-
-
-
     return 0;
 }

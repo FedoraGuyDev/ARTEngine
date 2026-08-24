@@ -19,5 +19,5 @@ public:
 private:
     SDL_Window* m_handle;
     SDL_GLContext m_glContext;
-    bool m_shouldClose;
+    bool m_shouldClose = false;
 };
