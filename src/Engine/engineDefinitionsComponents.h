@@ -8,7 +8,6 @@
 #include "AngelScript/angelscript.h"
 #include "JsonNlohmann/json.hpp"
 
-#include "utilsComponents.h"
 
 struct Transform{
     float x,y,z;
@@ -35,8 +34,19 @@ struct Script{
     asIScriptFunction* onDestroyFunc = nullptr;
     bool initialized = false;
 };
+struct Name{
+    std::string name;
 
-inline void defineEntityModules(){
-    registerComponent<Transform>("Transform");
-    registerComponent<Script>("Script");
-}
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE(Name,name)
+};
+struct Camera{
+    bool orthographic;
+    float fov;
+    float nearClip;
+    float farClip;
+    float orthoSize;
+
+    bool isActive;
+
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE(Camera,orthographic,fov,nearClip,farClip,orthoSize,isActive)
+};

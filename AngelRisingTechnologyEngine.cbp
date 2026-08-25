@@ -26,6 +26,7 @@
 			<Add directory="src/API" />
 			<Add directory="src/Engine" />
 			<Add directory="src/Utils" />
+			<Add directory="src/Debug" />
 		</Compiler>
 		<Linker>
 			<Add library="ThirdParty/libs/win_x64/libangelscript64.a" />
@@ -37,13 +38,18 @@
 		<Unit filename="ThirdParty/include/GLAD/glad.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/Engine/engineAssetsDefinitions.h">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="src/Debug/debugEntities.h" />
+		<Unit filename="src/Engine/engineComponents.h" />
+		<Unit filename="src/Engine/engineDefinitionsAssets.h" />
+		<Unit filename="src/Engine/engineDefinitionsComponents.h" />
+		<Unit filename="src/Engine/engineEntityLoader.cpp" />
+		<Unit filename="src/Engine/engineEntityLoader.h" />
+		<Unit filename="src/Engine/engineRegisterComponents.h" />
 		<Unit filename="src/Engine/engineShader.cpp" />
 		<Unit filename="src/Engine/engineShader.h" />
 		<Unit filename="src/Engine/engineWindow.cpp" />
 		<Unit filename="src/Engine/engineWindow.h" />
+		<Unit filename="src/Utils/utilsComponents.h" />
 		<Unit filename="src/Utils/utilsJson.h" />
 		<Unit filename="src/Utils/utilsString.h" />
 		<Unit filename="src/main.cpp" />

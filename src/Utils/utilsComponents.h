@@ -1,22 +1,34 @@
 #pragma once
-
+#include <entt/entt.hpp>
+#include <JsonNlohmann/json.hpp>
 #include <string>
+#include <variant>
 
-#include "EnTT/entt.hpp"
+#include "engineComponents.h"
 
-extern std::unordered_map<std::string, const entt::type_info*> EntityComponents;
-
-inline const entt::type_info* getComponent(const std::string& name){
-    auto it = EntityComponents.find(name);
-
-    if(it == EntityComponents.end()){
-        return nullptr;
-    }
-
-    return it->second;
-}
+extern std::vector<Components> EntityComponentsRegis;
+extern std::unordered_map<std::string, size_t>EntityComponentsRegisIndexes;
+extern entt::registry EntityRegistry;
 
 template<typename T>
-inline void registerComponent(const char* name){
-    EntityComponents[name] = &entt::type_id<T>();
+inline void RegisterComponent(std::string name) {
+    size_t componentIndex = EntityComponentsRegis.size();
+
+    EntityComponentsRegis.emplace_back(T{});
+
+
+    EntityComponentsRegisIndexes[name] = componentIndex;
+}
+
+inline void SetComponent(std::string& name, entt::entity entity, nlohmann::json& data){
+    const auto componentIndex = EntityComponentsRegisIndexes.at(name);
+
+    std::visit([&](auto& component){
+        using T = std::decay_t<decltype(component)>;
+
+        auto& newComponent = EntityRegistry.emplace<T>(entity);
+
+        newComponent = data.get<T>();
+    },
+    EntityComponentsRegis[componentIndex]);
 }

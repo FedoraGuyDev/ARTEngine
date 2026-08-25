@@ -1,12 +1,14 @@
 {
-	"scripts" : {
-		"scriptTest" : {
+	"scripts" : [
+		{
+			"name" : "scriptTest",
 			"path" : "gamefiles/assets/scripts/test.as"
 		}
-	},
-	"scenes" : {
-		"sceneTest" : {
+	],
+	"scenes" : [
+		{
+			"name" : "sceneTest",
 			"path" : "gamefiles/assets/scenes/scenetest.json"
 		}
-	}
+	]
 }

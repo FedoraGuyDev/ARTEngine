@@ -32,12 +32,19 @@
 ///ARTENGINE
 #include "engineWindow.h"
 #include "engineShader.h"
+
 #include "engineDefinitionsAssets.h"
 #include "engineDefinitionsComponents.h"
+#include "engineComponents.h"
+#include "engineRegisterComponents.h"
+
+#include "engineEntityLoader.h"
 
 #include "utilsJson.h"
 #include "utilsString.h"
 
+///ARTENGINE DEBUG
+#include "debugEntities.h"
 ///===================================
 ///                        INITIALIZE VARIABLES
 ///===================================
@@ -50,16 +57,17 @@ nlohmann::json GameManifests;
 ///Assets
 
 ///Components
-std::unordered_map<std::string, const entt::type_info*> EntityComponents;
+std::vector<Components> EntityComponentsRegis;
+std::unordered_map<std::string, size_t>EntityComponentsRegisIndexes;
+
+///Entity ECS
+entt::registry EntityRegistry;
 
 int main(){
     std::cout << "[ARTENGINE] Starting ARTEngine" << std::endl;
 
     ///EnTT Set Definitions
-    defineEntityModules();
-
-
-
+    defineEntityComponents();
 
     ///Load Game Manifest
     if(!utilLoadJson("gamefiles/game_manifest.json",GameManifests)){
@@ -76,6 +84,10 @@ int main(){
     Window window(GameManifests["window_width"],GameManifests["window_height"],GameManifests["name"]);
 
     glEnableVertexAttribArray(0);
+
+    CreateEntity("entityTest");
+    CreateEntity("entityTest");
+    CreateEntity("entityTest");
 
     while(!window.ShouldClose()){
         glClearColor(0.0f,0.2235f,0.4275f,1.0f);
