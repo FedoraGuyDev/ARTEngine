@@ -9,7 +9,7 @@ extern entt::registry EntityRegistry;
 extern std::vector<Components> EntityComponentsRegis;
 extern std::unordered_map<std::string, size_t> EntityComponentsRegisIndexes;
 
-inline void PrintEntity(entt::entity entity) {
+inline void DebugPrintEntity(entt::entity entity) {
     std::cout << "Entity [" << entt::to_integral(entity) << "]" << std::endl;
 
     for (auto& [name, index] : EntityComponentsRegisIndexes) {
@@ -18,7 +18,7 @@ inline void PrintEntity(entt::entity entity) {
 
             if (EntityRegistry.all_of<T>(entity)) {
                 auto& comp = EntityRegistry.get<T>(entity);
-                nlohmann::json j = comp; // usa el to_json generado por la macro
+                nlohmann::json j = comp;
                 std::cout << "  " << name << ": " << j.dump() << std::endl;
             }
         },
@@ -26,8 +26,8 @@ inline void PrintEntity(entt::entity entity) {
     }
 }
 
-inline void PrintAllEntities() {
+inline void DebugPrintAllEntities() {
     for (auto [entity] : EntityRegistry.storage<entt::entity>().each()) {
-        PrintEntity(entity);
+        DebugPrintEntity(entity);
     }
 }

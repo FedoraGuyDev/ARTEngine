@@ -4,6 +4,10 @@
 			{
 			  "type": "Transform",
 			  "data": { "x": 10, "y": 0, "z": 5, "rotw": 1, "rotx": 0, "roty": 0, "rotz": 0, "scax": 1, "scay": 1, "scaz": 1 }
+			},
+			{
+				"type" : "Name",
+				"data" : {"name" : "testEntity"}
 			}
 		]
 	}

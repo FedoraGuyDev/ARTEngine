@@ -39,12 +39,16 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src/Debug/debugEntities.h" />
+		<Unit filename="src/Engine/engineAssetsLoader.cpp" />
+		<Unit filename="src/Engine/engineAssetsLoader.h" />
 		<Unit filename="src/Engine/engineComponents.h" />
 		<Unit filename="src/Engine/engineDefinitionsAssets.h" />
 		<Unit filename="src/Engine/engineDefinitionsComponents.h" />
 		<Unit filename="src/Engine/engineEntityLoader.cpp" />
 		<Unit filename="src/Engine/engineEntityLoader.h" />
 		<Unit filename="src/Engine/engineRegisterComponents.h" />
+		<Unit filename="src/Engine/engineSceneLoader.cpp" />
+		<Unit filename="src/Engine/engineSceneLoader.h" />
 		<Unit filename="src/Engine/engineShader.cpp" />
 		<Unit filename="src/Engine/engineShader.h" />
 		<Unit filename="src/Engine/engineWindow.cpp" />

@@ -39,6 +39,7 @@
 #include "engineRegisterComponents.h"
 
 #include "engineEntityLoader.h"
+#include "engineSceneLoader.h"
 
 #include "utilsJson.h"
 #include "utilsString.h"
@@ -53,6 +54,7 @@
 nlohmann::json AssetsManifests;
 nlohmann::json EntityManifests;
 nlohmann::json GameManifests;
+nlohmann::json SceneManifests;
 
 ///Assets
 
@@ -81,15 +83,21 @@ int main(){
     if(!utilLoadJson("gamefiles/entity_manifest.json",EntityManifests)){
         return 0;
     }
+    ///Load Scenes Manifest
+    if(!utilLoadJson("gamefiles/scene_manifest.json",SceneManifests)){
+        return 0;
+    }
+
     Window window(GameManifests["window_width"],GameManifests["window_height"],GameManifests["name"]);
 
     glEnableVertexAttribArray(0);
 
-    CreateEntity("entityTest");
-    CreateEntity("entityTest");
-    CreateEntity("entityTest");
+    LoadScene("sceneTest");
 
     while(!window.ShouldClose()){
+        DebugPrintAllEntities();
+
+
         glClearColor(0.0f,0.2235f,0.4275f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 

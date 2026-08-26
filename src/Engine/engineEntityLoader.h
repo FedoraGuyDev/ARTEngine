@@ -2,4 +2,6 @@
 
 #include <string>
 
-void CreateEntity(std::string name);
+#include "JsonNlohmann/json.hpp"
+
+void CreateEntity(std::string name, nlohmann::json data_override = {});

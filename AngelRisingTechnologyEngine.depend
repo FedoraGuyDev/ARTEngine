@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1787642184 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1787722155 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -950,8 +950,10 @@
 	"engineComponents.h"
 	"engineRegisterComponents.h"
 	"engineEntityLoader.h"
+	"engineSceneLoader.h"
 	"utilsJson.h"
 	"utilsString.h"
+	"debugEntities.h"
 
 1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\jsonnlohmann\json.hpp
 	<algorithm>
@@ -8230,11 +8232,35 @@
 	<variant>
 	"engineComponents.h"
 
-1787642184 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineentityloader.h
+1787722178 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineentityloader.h
 	<string>
+	"JsonNlohmann/json.hpp"
 
-1787642198 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineentityloader.cpp
+1787720045 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineentityloader.cpp
 	<string>
 	"JsonNlohmann/json.hpp"
 	"utilsComponents.h"
+
+1787717361 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetsloader.cpp
+	"engineAssetsLoader.h"
+
+1787717361 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetsloader.h
+
+1787722513 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginesceneloader.cpp
+	<string>
+	<iostream>
+	"JsonNlohmann/json.hpp"
+	"utilsJson.h"
+	"engineEntityLoader.h"
+	"engineAssetsLoader.h"
+
+1787717382 d:\cpp projects\angelrisingtechnologyengine\src\debug\debugentities.h
+	<entt/entt.hpp>
+	<JsonNlohmann/json.hpp>
+	<string>
+	<iostream>
+	"utilsComponents.h"
+
+1787722155 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginesceneloader.h
+	<string>
 
