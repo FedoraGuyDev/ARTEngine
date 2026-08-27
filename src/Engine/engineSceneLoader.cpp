@@ -27,8 +27,11 @@ bool LoadScene(std::string name){
         return false;
     }
 
+    nlohmann::json AssetsToLoad = scene.at("assets");
+
+
     UnLoadAssets();
-    LoadAssets();
+    LoadAssets(AssetsToLoad);
 
     nlohmann::json entities = scene.at("entities");
 

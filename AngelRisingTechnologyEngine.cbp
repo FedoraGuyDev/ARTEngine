@@ -35,10 +35,16 @@
 			<Add library="ThirdParty/libs/win_x64/libSDL3.dll.a" />
 			<Add directory="ThirdParty/libs/win_x64" />
 		</Linker>
+		<Unit filename="ThirdParty/include/AngelScript/scriptarray.cpp" />
+		<Unit filename="ThirdParty/include/AngelScript/scriptbuilder.cpp" />
+		<Unit filename="ThirdParty/include/AngelScript/scriptdictionary.cpp" />
+		<Unit filename="ThirdParty/include/AngelScript/scriptmath.cpp" />
+		<Unit filename="ThirdParty/include/AngelScript/scriptstdstring.cpp" />
 		<Unit filename="ThirdParty/include/GLAD/glad.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src/Debug/debugEntities.h" />
+		<Unit filename="src/Engine/engineAngelScriptCallback.h" />
 		<Unit filename="src/Engine/engineAssetsLoader.cpp" />
 		<Unit filename="src/Engine/engineAssetsLoader.h" />
 		<Unit filename="src/Engine/engineComponents.h" />

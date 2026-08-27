@@ -18,6 +18,6 @@
 		}
 	],
 	"assets" : [
-	
+		{"type" : 0, "name" : "scriptTest"}
 	]
 }

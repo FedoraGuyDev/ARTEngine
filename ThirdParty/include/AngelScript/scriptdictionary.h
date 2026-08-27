@@ -7,7 +7,7 @@
 
 #ifndef ANGELSCRIPT_H
 // Avoid having to inform include path if header is already include before
-#include <angelscript.h>
+#include "angelscript.h"
 #endif
 
 // By default the CScriptDictionary use the std::string for the keys.
@@ -199,7 +199,7 @@ public:
 	// Iterator to support foreach in script
 	class CScriptDictIter
 	{
-	public: 
+	public:
 		// Reference counting
 		void AddRef() const;
 		void Release() const;

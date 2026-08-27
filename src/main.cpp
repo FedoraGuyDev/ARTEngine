@@ -32,6 +32,7 @@
 ///ARTENGINE
 #include "engineWindow.h"
 #include "engineShader.h"
+#include "engineAngelScriptCallback.h"
 
 #include "engineDefinitionsAssets.h"
 #include "engineDefinitionsComponents.h"
@@ -57,6 +58,7 @@ nlohmann::json GameManifests;
 nlohmann::json SceneManifests;
 
 ///Assets
+std::unordered_map<std::string, AssetScript> AssetMapScript;
 
 ///Components
 std::vector<Components> EntityComponentsRegis;
@@ -65,8 +67,21 @@ std::unordered_map<std::string, size_t>EntityComponentsRegisIndexes;
 ///Entity ECS
 entt::registry EntityRegistry;
 
+///AngelScript Engine
+asIScriptEngine* ASengine;
+
 int main(){
     std::cout << "[ARTENGINE] Starting ARTEngine" << std::endl;
+
+
+    std::cout << "[Angel Script] Starting Angel Script Engine" << std::endl;
+    ASengine = asCreateScriptEngine();
+    if(ASengine == nullptr){
+        std::cout << "[Angel Script] Something went wrong trying to initialize Angel Script Engine... :C" << std::endl;
+        return 0;
+    }
+
+    ASengine->SetMessageCallback(asFUNCTION(MessageCallback),0,asCALL_CDECL);
 
     ///EnTT Set Definitions
     defineEntityComponents();
@@ -92,7 +107,7 @@ int main(){
 
     glEnableVertexAttribArray(0);
 
-    LoadScene("sceneTest");
+    LoadScene(GameManifests["starting_scene"]);
 
     while(!window.ShouldClose()){
         DebugPrintAllEntities();

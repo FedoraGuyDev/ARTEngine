@@ -1,9 +1,9 @@
 #ifndef SCRIPTARRAY_H
 #define SCRIPTARRAY_H
 
-#ifndef ANGELSCRIPT_H 
+#ifndef ANGELSCRIPT_H
 // Avoid having to inform include path if header is already include before
-#include <angelscript.h>
+#include "angelscript.h"
 #endif
 
 // Sometimes it may be desired to use the same method names as used by C++ STL.
@@ -64,9 +64,9 @@ public:
 	void       *At(asUINT index);
 	const void *At(asUINT index) const;
 
-	// Set value of an element. 
+	// Set value of an element.
 	// The value arg should be a pointer to the value that will be copied to the element.
-	// Remember, if the array holds handles the value parameter should be the 
+	// Remember, if the array holds handles the value parameter should be the
 	// address of the handle. The refCount of the object will also be incremented
 	void  SetValue(asUINT index, void *value);
 

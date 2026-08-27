@@ -1,8 +1,8 @@
 {
-	"scripts" : [
-		{
-			"name" : "scriptTest",
-			"path" : "gamefiles/assets/scripts/test.as"
+	"scripts" : {
+		"scriptTest" : {
+			"path"  : "gamefiles/assets/scripts/test.as",
+			"class" : "EntityTest"
 		}
-	]
+	}
 }

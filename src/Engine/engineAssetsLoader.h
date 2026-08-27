@@ -1,4 +1,7 @@
 #pragma once
 
-bool LoadAssets();
-bool UnLoadAssets();
+#include <string>
+#include "JsonNlohmann/json.hpp"
+
+void LoadAssets(nlohmann::json load_data);
+void UnLoadAssets();

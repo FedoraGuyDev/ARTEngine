@@ -785,7 +785,7 @@ int CScriptBuilder::Build()
 				}
 
 				// If found, add it
-				if (idx >= 0) 
+				if (idx >= 0)
 					it->second.varMetadataMap.insert(map<int, vector<string> >::value_type(idx, decl->metadata));
 				else
 				{
@@ -970,9 +970,9 @@ int CScriptBuilder::ExtractDeclaration(int pos, string &name, string &declaratio
 		pos += len;
 		t = engine->ParseToken(&modifiedScript[pos], modifiedScript.size() - pos, &len);
 		token.assign(&modifiedScript[pos], len);
-	} while ( t == asTC_WHITESPACE || t == asTC_COMMENT || 
-	          token == "private" || token == "protected" || 
-	          token == "shared" || token == "external" || 
+	} while ( t == asTC_WHITESPACE || t == asTC_COMMENT ||
+	          token == "private" || token == "protected" ||
+	          token == "shared" || token == "external" ||
 	          token == "final" || token == "abstract" );
 
 	// We're expecting, either a class, interface, function, or variable declaration
@@ -998,7 +998,7 @@ int CScriptBuilder::ExtractDeclaration(int pos, string &name, string &declaratio
 		}
 		else
 		{
-			// For function declarations, store everything up to the start of the 
+			// For function declarations, store everything up to the start of the
 			// statement block, except for succeeding decorators (final, override, etc)
 
 			// For variable declaration store just the name as there can only be one
