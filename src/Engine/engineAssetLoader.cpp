@@ -3,25 +3,15 @@
 #include "AngelScript/angelscript.h"
 #include "AngelScript/scriptbuilder.h"
 
-#include "engineAssetsLoader.h"
+#include "engineAssetLoader.h"
 #include "engineDefinitionsAssets.h"
 
 extern asIScriptEngine* ASengine;
+extern nlohmann::json AssetsManifests;
 
 extern std::unordered_map<std::string, AssetScript> AssetMapScript;
 
-extern nlohmann::json AssetsManifests;
-    /* ASSETS TYPE THAT CAN APPEAR IN ASSETS PART IN SCENE JSON
-        Type 0 : Script
-        Type 1 : Sprite
-        Type 3 : Model
-        Type 4 : Font
-        Type 5 : Sound
-        Type 6 : Shader
-    */
-
-
-void ASSETLOADSCRIPT(std::string name){
+void LoadAssetScript(std::string name){
     nlohmann::json AssetList = AssetsManifests.at("scripts");
 
     if(!AssetList.contains(name)){
@@ -44,27 +34,15 @@ void ASSETLOADSCRIPT(std::string name){
         return;
     }
 
-    r =builder.BuildModule();
+    r = builder.BuildModule();
     if(r < 0){
         return;
     }
 
-    ///Aqui iria lo demas pero tengo sueÃ±o entonces lo hago maÃ±ana :v
-}
+    ///Aqui iria lo demas pero tengo sueño entonces lo hago mañana :v
+    ///Ya es el mañana, ahora a seguir programando
 
+    AssetScript& new_script = AssetMapScript[name];
 
-void LoadAssets(nlohmann::json load_data){
-    for(auto& asset : load_data){
-        int asset_type = asset.at("type").get<int>();
-
-        switch(asset_type){
-            case 0:
-                ASSETLOADSCRIPT(asset.at("name").get<std::string>());
-                break;
-        }
-    }
-}
-void UnLoadAssets(){
 
 }
-

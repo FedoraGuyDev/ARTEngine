@@ -5,7 +5,7 @@
 
 #include "utilsJson.h"
 #include "engineEntityLoader.h"
-#include "engineAssetsLoader.h"
+#include "engineAssetManager.h"
 
 extern nlohmann::json SceneManifests;
 

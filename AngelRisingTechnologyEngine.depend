@@ -1245,7 +1245,7 @@
 	<winapifamily.h>
 	<dlfcn.h>
 
-1787589971 source:c:\users\58291235\documents\github\artengine\src\main.cpp
+1787863519 source:c:\users\58291235\documents\github\artengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -1264,8 +1264,17 @@
 	"EnTT/entt.hpp"
 	"engineWindow.h"
 	"engineShader.h"
+	"engineAngelScriptCallback.h"
+	"engineDefinitionsAssets.h"
+	"engineDefinitionsComponents.h"
+	"engineComponents.h"
+	"engineRegisterComponents.h"
+	"engineEntityLoader.h"
+	"engineSceneLoader.h"
+	"engineAssetManager.h"
 	"utilsJson.h"
 	"utilsString.h"
+	"debugEntities.h"
 
 1787249813 c:\users\58291235\documents\github\artengine\thirdparty\include\jsonnlohmann\json.hpp
 	<algorithm>
@@ -1466,33 +1475,33 @@
 	<any>
 	<string_view>
 
-1787249812 c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\angelscript.h
+1787587367 c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\angelscript.h
 	<stddef.h>
 	<stdint.h>
 	<type_traits>
 
-1787249812 c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptarray.h
-	<angelscript.h>
+1787851963 c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptarray.h
+	"angelscript.h"
 
-1787249812 c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptbuilder.h
-	<angelscript.h>
+1787851963 c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptbuilder.h
+	"angelscript.h"
 	<string>
 	<map>
 	<set>
 	<vector>
 	<string.h>
 
-1787249812 c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptdictionary.h
-	<angelscript.h>
+1787851963 c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptdictionary.h
+	"angelscript.h"
 	<string>
 	<unordered_map>
 	<map>
 
-1787249812 c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptmath.h
-	<angelscript.h>
+1787851963 c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptmath.h
+	"angelscript.h"
 
-1787249812 c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptstdstring.h
-	<angelscript.h>
+1787851963 c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptstdstring.h
+	"angelscript.h"
 	<string>
 
 1787336580 c:\users\58291235\documents\github\artengine\src\enginestring.h
@@ -6438,28 +6447,28 @@
 	<stdint.h>
 	<type_traits>
 
-1787587367 c:\users\58291235\documents\github\artengine\thirdparty\include\\angelscript\scriptarray.h
-	<angelscript.h>
+1787851963 c:\users\58291235\documents\github\artengine\thirdparty\include\\angelscript\scriptarray.h
+	"angelscript.h"
 
-1787587367 c:\users\58291235\documents\github\artengine\thirdparty\include\\angelscript\scriptbuilder.h
-	<angelscript.h>
+1787851963 c:\users\58291235\documents\github\artengine\thirdparty\include\\angelscript\scriptbuilder.h
+	"angelscript.h"
 	<string>
 	<map>
 	<set>
 	<vector>
 	<string.h>
 
-1787587367 c:\users\58291235\documents\github\artengine\thirdparty\include\\angelscript\scriptdictionary.h
-	<angelscript.h>
+1787851963 c:\users\58291235\documents\github\artengine\thirdparty\include\\angelscript\scriptdictionary.h
+	"angelscript.h"
 	<string>
 	<unordered_map>
 	<map>
 
-1787587367 c:\users\58291235\documents\github\artengine\thirdparty\include\\angelscript\scriptmath.h
-	<angelscript.h>
+1787851963 c:\users\58291235\documents\github\artengine\thirdparty\include\\angelscript\scriptmath.h
+	"angelscript.h"
 
-1787587367 c:\users\58291235\documents\github\artengine\thirdparty\include\\angelscript\scriptstdstring.h
-	<angelscript.h>
+1787851963 c:\users\58291235\documents\github\artengine\thirdparty\include\\angelscript\scriptstdstring.h
+	"angelscript.h"
 	<string>
 
 1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\glm.hpp
@@ -8276,4 +8285,313 @@
 
 1787813483 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineangelscriptcallback.h
 	"AngelScript/angelscript.h"
+
+1787759865 source:c:\users\58291235\documents\github\artengine\src\engine\engineentityloader.cpp
+	<string>
+	"JsonNlohmann/json.hpp"
+	"utilsComponents.h"
+
+1787759865 c:\users\58291235\documents\github\artengine\src\utils\utilscomponents.h
+	<entt/entt.hpp>
+	<JsonNlohmann/json.hpp>
+	<string>
+	<variant>
+	"engineComponents.h"
+
+1787759865 c:\users\58291235\documents\github\artengine\src\engine\enginecomponents.h
+	<variant>
+	"engineDefinitionsComponents.h"
+
+1787759865 c:\users\58291235\documents\github\artengine\src\engine\enginedefinitionscomponents.h
+	<string>
+	<unordered_map>
+	"GLM/glm.hpp"
+	"GLM/gtc/quaternion.hpp"
+	"AngelScript/angelscript.h"
+	"JsonNlohmann/json.hpp"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\gtc\quaternion.hpp
+	"../gtc/constants.hpp"
+	"../gtc/matrix_transform.hpp"
+	"../ext/vector_relational.hpp"
+	"../ext/quaternion_common.hpp"
+	"../ext/quaternion_float.hpp"
+	"../ext/quaternion_float_precision.hpp"
+	"../ext/quaternion_double.hpp"
+	"../ext/quaternion_double_precision.hpp"
+	"../ext/quaternion_relational.hpp"
+	"../ext/quaternion_geometric.hpp"
+	"../ext/quaternion_trigonometric.hpp"
+	"../ext/quaternion_transform.hpp"
+	"../detail/type_mat3x3.hpp"
+	"../detail/type_mat4x4.hpp"
+	"../detail/type_vec3.hpp"
+	"../detail/type_vec4.hpp"
+	"quaternion.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\gtc\constants.hpp
+	"../ext/scalar_constants.hpp"
+	"constants.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\scalar_constants.hpp
+	"../detail/setup.hpp"
+	"scalar_constants.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\scalar_constants.inl
+	<limits>
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\gtc\constants.inl
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\gtc\matrix_transform.hpp
+	"../mat4x4.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../ext/matrix_projection.hpp"
+	"../ext/matrix_clip_space.hpp"
+	"../ext/matrix_transform.hpp"
+	"matrix_transform.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\matrix_projection.hpp
+	"../gtc/constants.hpp"
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"../matrix.hpp"
+	"matrix_projection.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\matrix_projection.inl
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\matrix_clip_space.hpp
+	"../ext/scalar_constants.hpp"
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"matrix_clip_space.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\matrix_clip_space.inl
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\matrix_transform.hpp
+	"../gtc/constants.hpp"
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"../matrix.hpp"
+	"matrix_transform.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\matrix_transform.inl
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\gtc\matrix_transform.inl
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"../matrix.hpp"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\vector_relational.hpp
+	"../detail/qualifier.hpp"
+	"vector_relational.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\vector_relational.inl
+	"../vector_relational.hpp"
+	"../common.hpp"
+	"../detail/qualifier.hpp"
+	"../detail/type_float.hpp"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\detail\type_float.hpp
+	"setup.hpp"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_common.hpp
+	"../ext/scalar_constants.hpp"
+	"../ext/quaternion_geometric.hpp"
+	"../common.hpp"
+	"../trigonometric.hpp"
+	"../exponential.hpp"
+	<limits>
+	"quaternion_common.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_geometric.hpp
+	"../geometric.hpp"
+	"../exponential.hpp"
+	"../ext/vector_relational.hpp"
+	"quaternion_geometric.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_geometric.inl
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_common.inl
+	"quaternion_common_simd.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_common_simd.inl
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_float.hpp
+	"../detail/type_quat.hpp"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\detail\type_quat.hpp
+	"../detail/type_mat3x3.hpp"
+	"../detail/type_mat4x4.hpp"
+	"../detail/type_vec3.hpp"
+	"../detail/type_vec4.hpp"
+	"../ext/vector_relational.hpp"
+	"../ext/quaternion_relational.hpp"
+	"../gtc/constants.hpp"
+	"../gtc/matrix_transform.hpp"
+	"type_quat.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_relational.hpp
+	"../vector_relational.hpp"
+	"quaternion_relational.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_relational.inl
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\detail\type_quat.inl
+	"../trigonometric.hpp"
+	"../exponential.hpp"
+	"../ext/quaternion_common.hpp"
+	"../ext/quaternion_geometric.hpp"
+	<limits>
+	"type_quat_simd.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\detail\type_quat_simd.inl
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_float_precision.hpp
+	"../detail/type_quat.hpp"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_double.hpp
+	"../detail/type_quat.hpp"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_double_precision.hpp
+	"../detail/type_quat.hpp"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_trigonometric.hpp
+	"../trigonometric.hpp"
+	"../exponential.hpp"
+	"scalar_constants.hpp"
+	"vector_relational.hpp"
+	<limits>
+	"quaternion_trigonometric.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_trigonometric.inl
+	"scalar_constants.hpp"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_transform.hpp
+	"../common.hpp"
+	"../trigonometric.hpp"
+	"../geometric.hpp"
+	"quaternion_transform.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\ext\quaternion_transform.inl
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\gtc\quaternion.inl
+	"../trigonometric.hpp"
+	"../geometric.hpp"
+	"../exponential.hpp"
+	"epsilon.hpp"
+	<limits>
+	"quaternion_simd.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\gtc\epsilon.hpp
+	"../detail/setup.hpp"
+	"../detail/qualifier.hpp"
+	"epsilon.inl"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\gtc\epsilon.inl
+	"../vector_relational.hpp"
+	"../common.hpp"
+
+1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glm\gtc\quaternion_simd.inl
+
+1787851963 c:\users\58291235\documents\github\artengine\src\engine\engineangelscriptcallback.h
+	"AngelScript/angelscript.h"
+
+1787860121 c:\users\58291235\documents\github\artengine\src\engine\enginedefinitionsassets.h
+	<string>
+	"AngelScript/angelscript.h"
+	"engineShader.h"
+
+1787759865 c:\users\58291235\documents\github\artengine\src\engine\engineregistercomponents.h
+	"utilsComponents.h"
+	"engineDefinitionsComponents.h"
+
+1787759865 c:\users\58291235\documents\github\artengine\src\engine\engineentityloader.h
+	<string>
+	"JsonNlohmann/json.hpp"
+
+1787759865 c:\users\58291235\documents\github\artengine\src\engine\enginesceneloader.h
+	<string>
+
+1787851963 c:\users\58291235\documents\github\artengine\src\engine\engineassetmanager.h
+	<string>
+	"JsonNlohmann/json.hpp"
+
+1787759865 c:\users\58291235\documents\github\artengine\src\debug\debugentities.h
+	<entt/entt.hpp>
+	<JsonNlohmann/json.hpp>
+	<string>
+	<iostream>
+	"utilsComponents.h"
+
+1787853764 source:c:\users\58291235\documents\github\artengine\src\engine\enginesceneloader.cpp
+	<string>
+	<iostream>
+	"JsonNlohmann/json.hpp"
+	"utilsJson.h"
+	"engineEntityLoader.h"
+	"engineAssetManager.h"
+
+1787587367 source:c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptarray.cpp
+	<new>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stdio.h>
+	<string>
+	<algorithm>
+	"scriptarray.h"
+
+1787851963 source:c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptbuilder.cpp
+	"scriptbuilder.h"
+	<vector>
+	<assert.h>
+	<windows.h>
+	<stdio.h>
+	<direct.h>
+	<windows.h>
+	<unistd.h>
+
+1787587367 source:c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptdictionary.cpp
+	<assert.h>
+	<string.h>
+	"scriptdictionary.h"
+	"scriptarray.h"
+
+1787587367 source:c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptmath.cpp
+	<assert.h>
+	<math.h>
+	<float.h>
+	<string.h>
+	"scriptmath.h"
+	<cmath>
+
+1787587367 source:c:\users\58291235\documents\github\artengine\thirdparty\include\angelscript\scriptstdstring.cpp
+	"scriptstdstring.h"
+	<assert.h>
+	<sstream>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<regex>
+	<unordered_map>
+	<map>
+
+1787860122 source:c:\users\58291235\documents\github\artengine\src\engine\engineassetmanager.cpp
+	<string>
+	"JsonNlohmann/json.hpp"
+	"engineAssetLoader.h"
+
+1787860122 c:\users\58291235\documents\github\artengine\src\engine\engineassetloader.h
+	<string>
+
+1787861855 source:c:\users\58291235\documents\github\artengine\src\engine\engineassetloader.cpp
+	<string>
+	"JsonNlohmann/json.hpp"
+	"AngelScript/angelscript.h"
+	"AngelScript/scriptbuilder.h"
+	"engineAssetLoader.h"
+	"engineDefinitionsAssets.h"
 

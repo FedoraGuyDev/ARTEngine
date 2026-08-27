@@ -4,6 +4,6 @@ class EntityTest{
     }
 
     void OnUpdate(float deltaTime) {
-        Print("test");
+        
     }
 }

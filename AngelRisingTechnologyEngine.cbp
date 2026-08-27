@@ -45,8 +45,10 @@
 		</Unit>
 		<Unit filename="src/Debug/debugEntities.h" />
 		<Unit filename="src/Engine/engineAngelScriptCallback.h" />
-		<Unit filename="src/Engine/engineAssetsLoader.cpp" />
-		<Unit filename="src/Engine/engineAssetsLoader.h" />
+		<Unit filename="src/Engine/engineAssetLoader.cpp" />
+		<Unit filename="src/Engine/engineAssetLoader.h" />
+		<Unit filename="src/Engine/engineAssetManager.cpp" />
+		<Unit filename="src/Engine/engineAssetManager.h" />
 		<Unit filename="src/Engine/engineComponents.h" />
 		<Unit filename="src/Engine/engineDefinitionsAssets.h" />
 		<Unit filename="src/Engine/engineDefinitionsComponents.h" />
