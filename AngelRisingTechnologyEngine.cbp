@@ -49,6 +49,8 @@
 		<Unit filename="src/Engine/engineAssetLoader.h" />
 		<Unit filename="src/Engine/engineAssetManager.cpp" />
 		<Unit filename="src/Engine/engineAssetManager.h" />
+		<Unit filename="src/Engine/engineAssetUnloader.cpp" />
+		<Unit filename="src/Engine/engineAssetUnloader.h" />
 		<Unit filename="src/Engine/engineComponents.h" />
 		<Unit filename="src/Engine/engineDefinitionsAssets.h" />
 		<Unit filename="src/Engine/engineDefinitionsComponents.h" />

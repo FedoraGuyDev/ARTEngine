@@ -6,4 +6,8 @@ class EntityTest{
     void OnUpdate(float deltaTime) {
         
     }
+
+    void OnDestroy(){
+        
+    }
 }

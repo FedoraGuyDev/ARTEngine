@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1787813483 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1787883896 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -952,6 +952,7 @@
 	"engineRegisterComponents.h"
 	"engineEntityLoader.h"
 	"engineSceneLoader.h"
+	"engineAssetManager.h"
 	"utilsJson.h"
 	"utilsString.h"
 	"debugEntities.h"
@@ -1157,33 +1158,33 @@
 
 1787334052 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\reactphysics3d\memory
 
-1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\angelscript.h
+1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\angelscript.h
 	<stddef.h>
 	<stdint.h>
 	<type_traits>
 
-1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptarray.h
-	<angelscript.h>
+1787814450 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptarray.h
+	"angelscript.h"
 
-1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptbuilder.h
-	<angelscript.h>
+1787814450 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptbuilder.h
+	"angelscript.h"
 	<string>
 	<map>
 	<set>
 	<vector>
 	<string.h>
 
-1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptdictionary.h
-	<angelscript.h>
+1787814450 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptdictionary.h
+	"angelscript.h"
 	<string>
 	<unordered_map>
 	<map>
 
-1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptmath.h
-	<angelscript.h>
+1787814450 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptmath.h
+	"angelscript.h"
 
-1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptstdstring.h
-	<angelscript.h>
+1787814450 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptstdstring.h
+	"angelscript.h"
 	<string>
 
 1786900490 d:\cpp projects\angelrisingtechnologyengine\src\enginestring.h
@@ -3366,7 +3367,7 @@
 1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptany.h
 	<angelscript.h>
 
-1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptarray.cpp
+1787546259 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptarray.cpp
 	<new>
 	<stdlib.h>
 	<string.h>
@@ -3376,7 +3377,7 @@
 	<algorithm>
 	"scriptarray.h"
 
-1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptbuilder.cpp
+1787813800 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptbuilder.cpp
 	"scriptbuilder.h"
 	<vector>
 	<assert.h>
@@ -3386,7 +3387,7 @@
 	<windows.h>
 	<unistd.h>
 
-1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptdictionary.cpp
+1787546259 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptdictionary.cpp
 	<assert.h>
 	<string.h>
 	"scriptdictionary.h"
@@ -3412,7 +3413,7 @@
 1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scripthandle.h
 	<angelscript.h>
 
-1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptmath.cpp
+1787546259 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptmath.cpp
 	<assert.h>
 	<math.h>
 	<float.h>
@@ -3430,7 +3431,7 @@
 1787259505 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptmathcomplex.h
 	<angelscript.h>
 
-1787259505 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptstdstring.cpp
+1787546259 source:d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\angelscript\scriptstdstring.cpp
 	"scriptstdstring.h"
 	<assert.h>
 	<sstream>
@@ -8031,7 +8032,7 @@
 	<fstream>
 	<string>
 
-1787813024 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionsassets.h
+1787875138 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionsassets.h
 	<string>
 	"AngelScript/angelscript.h"
 	"engineShader.h"
@@ -8265,13 +8266,13 @@
 	<string>
 	"JsonNlohmann/json.hpp"
 
-1787813483 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginesceneloader.cpp
+1787888881 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginesceneloader.cpp
 	<string>
 	<iostream>
 	"JsonNlohmann/json.hpp"
 	"utilsJson.h"
 	"engineEntityLoader.h"
-	"engineAssetsLoader.h"
+	"engineAssetManager.h"
 
 1787717382 d:\cpp projects\angelrisingtechnologyengine\src\debug\debugentities.h
 	<entt/entt.hpp>
@@ -8594,4 +8595,38 @@
 	"AngelScript/scriptbuilder.h"
 	"engineAssetLoader.h"
 	"engineDefinitionsAssets.h"
+
+1787899481 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetmanager.cpp
+	<string>
+	<unordered_map>
+	"JsonNlohmann/json.hpp"
+	"engineAssetLoader.h"
+	"engineAssetUnloader.h"
+	"engineDefinitionsAssets.h"
+
+1787875138 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.h
+	<string>
+
+1787875138 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetmanager.h
+	<string>
+	"JsonNlohmann/json.hpp"
+
+1787888124 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.cpp
+	<string>
+	"JsonNlohmann/json.hpp"
+	"AngelScript/angelscript.h"
+	"AngelScript/scriptbuilder.h"
+	"engineAssetLoader.h"
+	"engineDefinitionsAssets.h"
+
+1787899480 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetunloader.cpp
+	<string>
+	"JsonNlohmann/json.hpp"
+	"AngelScript/angelscript.h"
+	"AngelScript/scriptbuilder.h"
+	"engineAssetUnloader.h"
+	"engineDefinitionsAssets.h"
+
+1787888166 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetunloader.h
+	<string>
 

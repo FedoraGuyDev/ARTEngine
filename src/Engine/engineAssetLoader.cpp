@@ -44,5 +44,18 @@ void LoadAssetScript(std::string name){
 
     AssetScript& new_script = AssetMapScript[name];
 
+    new_script.path = path;
+    new_script.className = asclass;
+    new_script.scriptModule = builder.GetModule();
+    new_script.classType = new_script.scriptModule->GetTypeInfoByDecl(asclass.c_str());
 
+    std::string factoryDecl = asclass + "@" + asclass + "()";
+
+    new_script.factory = new_script.classType->GetFactoryByDecl(factoryDecl.c_str());
+    new_script.onCreate = new_script.classType->GetMethodByDecl("void OnCreate()");
+    new_script.onUpdate = new_script.classType->GetMethodByDecl("void OnUpdate(float)");
+    new_script.onDestroy = new_script.classType->GetMethodByDecl("void OnDestroy()");
 }
+
+
+

@@ -75,10 +75,10 @@ int main(){
     std::cout << "[ARTENGINE] Starting ARTEngine" << std::endl;
 
 
-    std::cout << "[Angel Script] Starting Angel Script Engine" << std::endl;
+    std::cout << "[AngelScript] Starting AngelScript Engine" << std::endl;
     ASengine = asCreateScriptEngine();
     if(ASengine == nullptr){
-        std::cout << "[Angel Script] Something went wrong trying to initialize Angel Script Engine... :C" << std::endl;
+        std::cout << "[AngelScript] Something went wrong trying to initialize AngelScript Engine... :C" << std::endl;
         return 0;
     }
 
