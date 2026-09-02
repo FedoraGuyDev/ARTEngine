@@ -4,4 +4,4 @@
 #include "JsonNlohmann/json.hpp"
 
 void LoadAssets(nlohmann::json load_data);
-void UnLoadAssets();
+void TotalUnLoadAssets();

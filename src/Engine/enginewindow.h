@@ -9,6 +9,8 @@ public:
     Window(int width, int height, std::string name);
     ~Window();
 
+    bool IsWindowValid();
+
     bool ShouldClose();
     void SwapBuffers();
     void PollEvents();
@@ -20,4 +22,5 @@ private:
     SDL_Window* m_handle;
     SDL_GLContext m_glContext;
     bool m_shouldClose = false;
+    bool window_is_valid = true;
 };

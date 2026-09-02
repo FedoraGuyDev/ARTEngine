@@ -1,4 +1,4 @@
-#include "enginewindow.h"
+#include "engineWindow.h"
 #include <iostream>
 #include <string>
 #include "GLAD/glad.h"
@@ -8,6 +8,7 @@ Window::Window(int width, int height, std::string name){
     ///Start SDL
     if (!SDL_Init(SDL_INIT_VIDEO)){
         std::cout << "[GLFW] Error initializing... sorry :C" << std::endl;
+        window_is_valid = false;
         return;
     }
     //Set SDL hints
@@ -19,6 +20,7 @@ Window::Window(int width, int height, std::string name){
     m_handle = SDL_CreateWindow(name.c_str(), width, height, SDL_WINDOW_OPENGL);
     if (!m_handle) {
         std::cout << "[SDL] Error initializing the window... sorry :C" << std::endl;
+        window_is_valid = false;
         SDL_Quit();
         return;
     }
@@ -31,6 +33,7 @@ Window::Window(int width, int height, std::string name){
     //Load GLAD
     if (!gladLoadGLLoader((GLADloadproc)SDL_GL_GetProcAddress)){
         std::cout << "[GLAD] Error loading GLAD... sorry :C" << std::endl;
+        window_is_valid = false;
         return;
     }
 }
@@ -41,6 +44,8 @@ Window::~Window(){
     SDL_Quit();
     std::cout << "[ARTENGINE] Closing ARTEngine :D" << std::endl;
 }
+
+bool Window::IsWindowValid(){return window_is_valid}
 
 void Window::SwapBuffers() { SDL_GL_SwapWindow(m_handle); }
 bool Window::ShouldClose() { return m_shouldClose; }

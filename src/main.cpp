@@ -106,6 +106,11 @@ int main(){
 
     Window window(GameManifests["window_width"],GameManifests["window_height"],GameManifests["name"]);
 
+    if(!window.IsWindowValid()){
+        std::cout << "[ARTENGINE] Closing ARTENGINE due to an error on initializing Window.. :C" << std::endl;
+        return 0;
+    }
+
     glEnableVertexAttribArray(0);
 
     LoadScene(GameManifests["starting_scene"]);
