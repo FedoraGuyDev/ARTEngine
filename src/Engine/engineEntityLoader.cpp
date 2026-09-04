@@ -1,6 +1,8 @@
+#include <iostream>
 #include <string>
 
 #include "JsonNlohmann/json.hpp"
+#include "EnTT/entt.hpp"
 
 #include "utilsComponents.h"
 
@@ -30,4 +32,15 @@ void CreateEntity(std::string name, nlohmann::json data_override){
             SetComponent(type,ent,override_data);
         }
     }
+}
+void DestroyEntity(entt::entity entity){
+    if(!EntityRegistry.valid(entity)){
+        std::cout << "[EnTT] Trying to delete an entity that does not valid" << std::endl;
+        return;
+    }
+    EntityRegistry.destroy(entity);
+}
+
+void DestroyAllEntities() {
+    EntityRegistry.clear();
 }

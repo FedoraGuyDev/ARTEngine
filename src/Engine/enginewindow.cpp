@@ -45,7 +45,7 @@ Window::~Window(){
     std::cout << "[ARTENGINE] Closing ARTEngine :D" << std::endl;
 }
 
-bool Window::IsWindowValid(){return window_is_valid}
+bool Window::IsWindowValid(){return window_is_valid;}
 
 void Window::SwapBuffers() { SDL_GL_SwapWindow(m_handle); }
 bool Window::ShouldClose() { return m_shouldClose; }
