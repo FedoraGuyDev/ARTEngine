@@ -50,6 +50,9 @@ bool Window::IsWindowValid(){return window_is_valid;}
 void Window::SwapBuffers() { SDL_GL_SwapWindow(m_handle); }
 bool Window::ShouldClose() { return m_shouldClose; }
 void Window::PollEvents() {
+    const bool* state = SDL_GetKeyboardState(NULL);
+    m_KeyLastPressed.assign(state, state + SDL_SCANCODE_COUNT);
+
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_EVENT_QUIT) {
@@ -60,4 +63,9 @@ void Window::PollEvents() {
 bool Window::IsKeyPressed(int key) {
     const bool* state = SDL_GetKeyboardState(NULL);
     return state[key];
+}
+
+bool Window::IsKeyJustPressed(int key) {
+    const bool* state = SDL_GetKeyboardState(NULL);
+    return state[key] && !m_KeyLastPressed[key];
 }

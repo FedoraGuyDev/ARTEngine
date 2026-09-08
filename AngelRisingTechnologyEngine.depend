@@ -1246,7 +1246,7 @@
 	<winapifamily.h>
 	<dlfcn.h>
 
-1788551896 source:c:\users\58291235\documents\github\artengine\src\main.cpp
+1788899508 source:c:\users\58291235\documents\github\artengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -5744,16 +5744,17 @@
 1787587368 c:\users\58291235\documents\github\artengine\thirdparty\include\\glad\glad.h
 	<KHR/khrplatform.h>
 
-1788553047 source:c:\users\58291235\documents\github\artengine\src\engine\enginewindow.cpp
+1788900032 source:c:\users\58291235\documents\github\artengine\src\engine\enginewindow.cpp
 	"engineWindow.h"
 	<iostream>
 	<string>
 	"GLAD/glad.h"
 	"SDL3/SDL.h"
 
-1788551896 c:\users\58291235\documents\github\artengine\src\engine\enginewindow.h
+1788899516 c:\users\58291235\documents\github\artengine\src\engine\enginewindow.h
 	"GLAD/glad.h"
 	"SDL3/SDL.h"
+	<vector>
 	<iostream>
 	<string>
 
@@ -8287,9 +8288,11 @@
 1787813483 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineangelscriptcallback.h
 	"AngelScript/angelscript.h"
 
-1787759865 source:c:\users\58291235\documents\github\artengine\src\engine\engineentityloader.cpp
+1788553140 source:c:\users\58291235\documents\github\artengine\src\engine\engineentityloader.cpp
+	<iostream>
 	<string>
 	"JsonNlohmann/json.hpp"
+	"EnTT/entt.hpp"
 	"utilsComponents.h"
 
 1787759865 c:\users\58291235\documents\github\artengine\src\utils\utilscomponents.h
@@ -8527,7 +8530,7 @@
 	<iostream>
 	"utilsComponents.h"
 
-1787940942 source:c:\users\58291235\documents\github\artengine\src\engine\enginesceneloader.cpp
+1788900164 source:c:\users\58291235\documents\github\artengine\src\engine\enginesceneloader.cpp
 	<string>
 	<iostream>
 	"JsonNlohmann/json.hpp"
@@ -8581,7 +8584,7 @@
 	<unordered_map>
 	<map>
 
-1787940942 source:c:\users\58291235\documents\github\artengine\src\engine\engineassetmanager.cpp
+1788898238 source:c:\users\58291235\documents\github\artengine\src\engine\engineassetmanager.cpp
 	<string>
 	<unordered_map>
 	"JsonNlohmann/json.hpp"

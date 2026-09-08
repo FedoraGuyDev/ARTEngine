@@ -116,8 +116,12 @@ int main(){
     LoadScene(GameManifests["starting_scene"]);
 
     while(!window.ShouldClose()){
-        //DebugPrintAllEntities();
-
+        if (window.IsKeyJustPressed(SDL_SCANCODE_F1)){
+            LoadScene("sceneTest");
+        }
+        if (window.IsKeyJustPressed(SDL_SCANCODE_F2)){
+            DebugPrintAllEntities();
+        }
 
         glClearColor(0.0f,0.2235f,0.4275f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT);

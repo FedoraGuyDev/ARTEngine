@@ -1,6 +1,8 @@
 #pragma once
 #include "GLAD/glad.h"
 #include "SDL3/SDL.h"
+
+#include <vector>
 #include <iostream>
 #include <string>
 
@@ -10,6 +12,7 @@ public:
     ~Window();
 
     bool IsWindowValid();
+    bool IsKeyJustPressed(int key);
 
     bool ShouldClose();
     void SwapBuffers();
@@ -23,4 +26,5 @@ private:
     SDL_GLContext m_glContext;
     bool m_shouldClose = false;
     bool window_is_valid = true;
+    std::vector<bool> m_KeyLastPressed;
 };
