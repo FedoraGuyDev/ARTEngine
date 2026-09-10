@@ -38,6 +38,7 @@
 #include "engineDefinitionsComponents.h"
 #include "engineComponents.h"
 #include "engineRegisterComponents.h"
+#include "engineDefineComponentsEvents.h"
 
 #include "engineEntityLoader.h"
 #include "engineSceneLoader.h"
@@ -85,7 +86,10 @@ int main(){
     ASengine->SetMessageCallback(asFUNCTION(MessageCallback),0,asCALL_CDECL);
 
     ///EnTT Set Definitions
-    defineEntityComponents();
+    DefineEntityComponents();
+
+    ///EnTT Define Components Events
+    DefineComponentsEvents();
 
     ///Load Game Manifest
     if(!utilLoadJson("gamefiles/game_manifest.json",GameManifests)){

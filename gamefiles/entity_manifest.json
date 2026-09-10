@@ -8,6 +8,9 @@
 			{
 				"type" : "Name",
 				"data" : {"name" : "testEntity"}
+			},{
+				"type" : "Script",
+				"data" : {"script_name" : "scriptTest", "script_mainclass" : "EntityTest"}
 			}
 		]
 	}

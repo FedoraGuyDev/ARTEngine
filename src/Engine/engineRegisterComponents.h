@@ -5,7 +5,7 @@
 
 //Transform, Script, Name, Camera
 
-inline void defineEntityComponents(){
+inline void DefineEntityComponents(){
     RegisterComponent<Transform>("Transform");
     RegisterComponent<Script>("Script");
     RegisterComponent<Name>("Name");

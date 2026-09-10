@@ -1246,7 +1246,7 @@
 	<winapifamily.h>
 	<dlfcn.h>
 
-1788899508 source:c:\users\58291235\documents\github\artengine\src\main.cpp
+1789062600 source:c:\users\58291235\documents\github\artengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -1270,6 +1270,7 @@
 	"engineDefinitionsComponents.h"
 	"engineComponents.h"
 	"engineRegisterComponents.h"
+	"engineDefineComponentsEvents.h"
 	"engineEntityLoader.h"
 	"engineSceneLoader.h"
 	"engineAssetManager.h"
@@ -8511,7 +8512,7 @@
 	"AngelScript/angelscript.h"
 	"engineShader.h"
 
-1787759865 c:\users\58291235\documents\github\artengine\src\engine\engineregistercomponents.h
+1789062555 c:\users\58291235\documents\github\artengine\src\engine\engineregistercomponents.h
 	"utilsComponents.h"
 	"engineDefinitionsComponents.h"
 
@@ -8651,4 +8652,14 @@
 	"AngelScript/scriptbuilder.h"
 	"engineAssetUnloader.h"
 	"engineDefinitionsAssets.h"
+
+1789062555 c:\users\58291235\documents\github\artengine\src\engine\enginedefinecomponentsevents.h
+	"EnTT/entt.hpp"
+	"engineComponentsEvents.h"
+	"engineDefinitionsComponents.h"
+
+1789067912 c:\users\58291235\documents\github\artengine\src\engine\enginecomponentsevents.h
+	<iostream>
+	"AngelScript/angelscript.h"
+	"EnTT/entt.hpp"
 
