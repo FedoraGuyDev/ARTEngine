@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1787883896 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1788903818 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -3315,23 +3315,24 @@
 	<string>
 	"entt.hpp"
 
-1787546260 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.cpp
-	"engineshader.h"
+1788224478 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.cpp
+	"engineShader.h"
 	<iostream>
 
 1787546260 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.h
 	"GLAD/glad.h"
 
-1787546260 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
-	"enginewindow.h"
+1788903818 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
+	"engineWindow.h"
 	<iostream>
 	<string>
 	"GLAD/glad.h"
 	"SDL3/SDL.h"
 
-1787547303 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.h
+1788903818 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.h
 	"GLAD/glad.h"
 	"SDL3/SDL.h"
+	<vector>
 	<iostream>
 	<string>
 
@@ -8246,13 +8247,16 @@
 	<variant>
 	"engineComponents.h"
 
-1787722178 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineentityloader.h
+1788903818 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineentityloader.h
 	<string>
 	"JsonNlohmann/json.hpp"
+	"EnTT/entt.hpp"
 
-1787722931 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineentityloader.cpp
+1788903818 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineentityloader.cpp
+	<iostream>
 	<string>
 	"JsonNlohmann/json.hpp"
+	"EnTT/entt.hpp"
 	"utilsComponents.h"
 
 1787813596 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetsloader.cpp
@@ -8267,7 +8271,7 @@
 	<string>
 	"JsonNlohmann/json.hpp"
 
-1787888881 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginesceneloader.cpp
+1788903818 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginesceneloader.cpp
 	<string>
 	<iostream>
 	"JsonNlohmann/json.hpp"
@@ -8614,7 +8618,7 @@
 1787875138 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.h
 	<string>
 
-1787875138 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetmanager.h
+1788224478 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetmanager.h
 	<string>
 	"JsonNlohmann/json.hpp"
 
