@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1788903818 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1789074605 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -950,6 +950,7 @@
 	"engineDefinitionsComponents.h"
 	"engineComponents.h"
 	"engineRegisterComponents.h"
+	"engineDefineComponentsEvents.h"
 	"engineEntityLoader.h"
 	"engineSceneLoader.h"
 	"engineAssetManager.h"
@@ -8237,7 +8238,7 @@
 	<variant>
 	"engineDefinitionsComponents.h"
 
-1787639215 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineregistercomponents.h
+1789074605 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineregistercomponents.h
 	"utilsComponents.h"
 	"engineDefinitionsComponents.h"
 
@@ -8659,6 +8660,16 @@
 	"engineDefinitionsComponents.h"
 
 1789067912 c:\users\58291235\documents\github\artengine\src\engine\enginecomponentsevents.h
+	<iostream>
+	"AngelScript/angelscript.h"
+	"EnTT/entt.hpp"
+
+1789074605 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinecomponentsevents.h
+	"EnTT/entt.hpp"
+	"engineComponentsEvents.h"
+	"engineDefinitionsComponents.h"
+
+1789074605 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
 	<iostream>
 	"AngelScript/angelscript.h"
 	"EnTT/entt.hpp"
