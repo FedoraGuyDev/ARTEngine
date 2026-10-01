@@ -38,6 +38,8 @@ inline void OnScriptConstructed(entt::registry& reg, entt::entity e){
     script.instance->AddRef();
 
     ctx->Release();
+
+    script.initialized = true;
 }
 inline void OnScriptDestroyed(entt::registry& reg, entt::entity e){
     std::cout << "Script destroyed" << std::endl;
