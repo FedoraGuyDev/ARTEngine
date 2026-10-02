@@ -7,14 +7,6 @@
 					"name" : "ThisIsAnEntity"
 				}
 			}
-		},
-		{
-			"entity_name" : "entityTest",
-			"override_components" : {
-				"Name" : {
-					"name" : "OMGIMASACRIFICE"
-				}
-			}
 		}
 	],
 	"assets" : [

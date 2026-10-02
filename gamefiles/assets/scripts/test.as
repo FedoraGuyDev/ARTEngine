@@ -4,7 +4,10 @@ class EntityTest{
     }
 
     void OnUpdate(float deltaTime) {
-        LogEngine("Hola Angel Rising Technology Engine :D");
+        //LogEngine(formatInt(Keyboard::A));
+        if(KeyboardIsJustPressed(Keyboard::A)){
+            LogEngine("Hola Mundo");
+        }
     }
 
     void OnDestroy(){

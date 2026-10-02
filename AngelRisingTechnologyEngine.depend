@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1790905177 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1790912893 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -958,6 +958,8 @@
 	"utilsJson.h"
 	"utilsString.h"
 	"apiRegisterEngineAPIBasics.h"
+	"apiRegisterEngineAPIEnums.h"
+	"apiRegisterEngineAPIKeyboard.h"
 	"debugEntities.h"
 
 1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\jsonnlohmann\json.hpp
@@ -3326,14 +3328,14 @@
 1787546260 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.h
 	"GLAD/glad.h"
 
-1788903818 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
+1790910160 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
 	"engineWindow.h"
 	<iostream>
 	<string>
 	"GLAD/glad.h"
 	"SDL3/SDL.h"
 
-1788903818 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.h
+1790910160 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.h
 	"GLAD/glad.h"
 	"SDL3/SDL.h"
 	<vector>
@@ -11396,17 +11398,43 @@
 	"EnTT/entt.hpp"
 	"engineDefinitionsComponents.h"
 
-1790905177 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapibasics.cpp
+1790910160 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapibasics.cpp
 	"apiEngineAPIBasics.h"
 	<iostream>
 
-1790905177 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapibasics.h
+1790910160 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapibasics.h
+	<iostream>
 
-1790905219 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapibasics.cpp
+1790910159 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapibasics.cpp
 	"apiRegisterEngineAPIBasics.h"
 	"apiEngineAPIBasics.h"
 	"AngelScript/angelscript.h"
 
 1790905219 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapibasics.h
+	"AngelScript/angelscript.h"
+
+1790908305 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapienums.h
+	<iostream>
+	"AngelScript/angelscript.h"
+	"SDL3/SDL.h"
+	"apiEngineAPIEnums.h"
+
+1790907773 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapienums.h
+
+1790912892 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapikeyboard.cpp
+	"apiRegisterEngineAPIKeyboard.h"
+	"apiEngineAPIKeyboard.h"
+	"AngelScript/angelscript.h"
+
+1790913024 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapikeyboard.cpp
+	"apiEngineAPIKeyboard.h"
+	"SDL3/SDL.h"
+	"engineWindow.h"
+
+1790910171 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapikeyboard.h
+	"SDL3/SDL.h"
+	"engineWindow.h"
+
+1790912888 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapikeyboard.h
 	"AngelScript/angelscript.h"
 

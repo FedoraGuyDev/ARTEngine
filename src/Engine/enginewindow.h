@@ -8,16 +8,17 @@
 
 class Window{
 public:
-    Window(int width, int height, std::string name);
+    void Initialize(int width, int height, std::string name);
     ~Window();
 
     bool IsWindowValid();
-    bool IsKeyJustPressed(int key);
 
     bool ShouldClose();
     void SwapBuffers();
     void PollEvents();
+
     bool IsKeyPressed(int key);
+    bool IsKeyJustPressed(int key);
 
     SDL_Window* GetHandle() { return m_handle; }
 

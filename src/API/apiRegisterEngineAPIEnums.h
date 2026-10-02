@@ -1,0 +1,156 @@
+#pragma once
+
+#include <iostream>
+
+#include "AngelScript/angelscript.h"
+#include "SDL3/SDL.h"
+
+#include "apiEngineAPIEnums.h"
+
+
+inline void RegisterEngineAPIEnums(asIScriptEngine* engine){
+    engine->RegisterEnum("Keyboard");
+    engine->RegisterEnumValue("Keyboard", "A", SDL_SCANCODE_A);
+    engine->RegisterEnumValue("Keyboard", "B", SDL_SCANCODE_B);
+    engine->RegisterEnumValue("Keyboard", "C", SDL_SCANCODE_C);
+    engine->RegisterEnumValue("Keyboard", "D", SDL_SCANCODE_D);
+    engine->RegisterEnumValue("Keyboard", "E", SDL_SCANCODE_E);
+    engine->RegisterEnumValue("Keyboard", "F", SDL_SCANCODE_F);
+    engine->RegisterEnumValue("Keyboard", "G", SDL_SCANCODE_G);
+    engine->RegisterEnumValue("Keyboard", "H", SDL_SCANCODE_H);
+    engine->RegisterEnumValue("Keyboard", "I", SDL_SCANCODE_I);
+    engine->RegisterEnumValue("Keyboard", "J", SDL_SCANCODE_J);
+    engine->RegisterEnumValue("Keyboard", "K", SDL_SCANCODE_K);
+    engine->RegisterEnumValue("Keyboard", "L", SDL_SCANCODE_L);
+    engine->RegisterEnumValue("Keyboard", "M", SDL_SCANCODE_M);
+    engine->RegisterEnumValue("Keyboard", "N", SDL_SCANCODE_N);
+    engine->RegisterEnumValue("Keyboard", "O", SDL_SCANCODE_O);
+    engine->RegisterEnumValue("Keyboard", "P", SDL_SCANCODE_P);
+    engine->RegisterEnumValue("Keyboard", "Q", SDL_SCANCODE_Q);
+    engine->RegisterEnumValue("Keyboard", "R", SDL_SCANCODE_R);
+    engine->RegisterEnumValue("Keyboard", "S", SDL_SCANCODE_S);
+    engine->RegisterEnumValue("Keyboard", "T", SDL_SCANCODE_T);
+    engine->RegisterEnumValue("Keyboard", "U", SDL_SCANCODE_U);
+    engine->RegisterEnumValue("Keyboard", "V", SDL_SCANCODE_V);
+    engine->RegisterEnumValue("Keyboard", "W", SDL_SCANCODE_W);
+    engine->RegisterEnumValue("Keyboard", "X", SDL_SCANCODE_X);
+    engine->RegisterEnumValue("Keyboard", "Y", SDL_SCANCODE_Y);
+    engine->RegisterEnumValue("Keyboard", "Z", SDL_SCANCODE_Z);
+    engine->RegisterEnumValue("Keyboard", "N1", SDL_SCANCODE_1);
+    engine->RegisterEnumValue("Keyboard", "N2", SDL_SCANCODE_2);
+    engine->RegisterEnumValue("Keyboard", "N3", SDL_SCANCODE_3);
+    engine->RegisterEnumValue("Keyboard", "N4", SDL_SCANCODE_4);
+    engine->RegisterEnumValue("Keyboard", "N5", SDL_SCANCODE_5);
+    engine->RegisterEnumValue("Keyboard", "N6", SDL_SCANCODE_6);
+    engine->RegisterEnumValue("Keyboard", "N7", SDL_SCANCODE_7);
+    engine->RegisterEnumValue("Keyboard", "N8", SDL_SCANCODE_8);
+    engine->RegisterEnumValue("Keyboard", "N9", SDL_SCANCODE_9);
+    engine->RegisterEnumValue("Keyboard", "N0", SDL_SCANCODE_0);
+    engine->RegisterEnumValue("Keyboard", "RETURN", SDL_SCANCODE_RETURN);
+    engine->RegisterEnumValue("Keyboard", "ESCAPE", SDL_SCANCODE_ESCAPE);
+    engine->RegisterEnumValue("Keyboard", "BACKSPACE", SDL_SCANCODE_BACKSPACE);
+    engine->RegisterEnumValue("Keyboard", "TAB", SDL_SCANCODE_TAB);
+    engine->RegisterEnumValue("Keyboard", "SPACE", SDL_SCANCODE_SPACE);
+    engine->RegisterEnumValue("Keyboard", "MINUS", SDL_SCANCODE_MINUS);
+    engine->RegisterEnumValue("Keyboard", "EQUALS", SDL_SCANCODE_EQUALS);
+    engine->RegisterEnumValue("Keyboard", "LEFTBRACKET", SDL_SCANCODE_LEFTBRACKET);
+    engine->RegisterEnumValue("Keyboard", "RIGHTBRACKET", SDL_SCANCODE_RIGHTBRACKET);
+    engine->RegisterEnumValue("Keyboard", "BACKSLASH", SDL_SCANCODE_BACKSLASH);
+    engine->RegisterEnumValue("Keyboard", "NONUSHASH", SDL_SCANCODE_NONUSHASH);
+    engine->RegisterEnumValue("Keyboard", "SEMICOLON", SDL_SCANCODE_SEMICOLON);
+    engine->RegisterEnumValue("Keyboard", "APOSTROPHE", SDL_SCANCODE_APOSTROPHE);
+    engine->RegisterEnumValue("Keyboard", "GRAVE", SDL_SCANCODE_GRAVE);
+    engine->RegisterEnumValue("Keyboard", "COMMA", SDL_SCANCODE_COMMA);
+    engine->RegisterEnumValue("Keyboard", "PERIOD", SDL_SCANCODE_PERIOD);
+    engine->RegisterEnumValue("Keyboard", "SLASH", SDL_SCANCODE_SLASH);
+    engine->RegisterEnumValue("Keyboard", "F1", SDL_SCANCODE_F1);
+    engine->RegisterEnumValue("Keyboard", "F2", SDL_SCANCODE_F2);
+    engine->RegisterEnumValue("Keyboard", "F3", SDL_SCANCODE_F3);
+    engine->RegisterEnumValue("Keyboard", "F4", SDL_SCANCODE_F4);
+    engine->RegisterEnumValue("Keyboard", "F5", SDL_SCANCODE_F5);
+    engine->RegisterEnumValue("Keyboard", "F6", SDL_SCANCODE_F6);
+    engine->RegisterEnumValue("Keyboard", "F7", SDL_SCANCODE_F7);
+    engine->RegisterEnumValue("Keyboard", "F8", SDL_SCANCODE_F8);
+    engine->RegisterEnumValue("Keyboard", "F9", SDL_SCANCODE_F9);
+    engine->RegisterEnumValue("Keyboard", "F10", SDL_SCANCODE_F10);
+    engine->RegisterEnumValue("Keyboard", "F11", SDL_SCANCODE_F11);
+    engine->RegisterEnumValue("Keyboard", "F12", SDL_SCANCODE_F12);
+    engine->RegisterEnumValue("Keyboard", "F13", SDL_SCANCODE_F13);
+    engine->RegisterEnumValue("Keyboard", "F14", SDL_SCANCODE_F14);
+    engine->RegisterEnumValue("Keyboard", "F15", SDL_SCANCODE_F15);
+    engine->RegisterEnumValue("Keyboard", "F16", SDL_SCANCODE_F16);
+    engine->RegisterEnumValue("Keyboard", "F17", SDL_SCANCODE_F17);
+    engine->RegisterEnumValue("Keyboard", "F18", SDL_SCANCODE_F18);
+    engine->RegisterEnumValue("Keyboard", "F19", SDL_SCANCODE_F19);
+    engine->RegisterEnumValue("Keyboard", "F20", SDL_SCANCODE_F20);
+    engine->RegisterEnumValue("Keyboard", "F21", SDL_SCANCODE_F21);
+    engine->RegisterEnumValue("Keyboard", "F22", SDL_SCANCODE_F22);
+    engine->RegisterEnumValue("Keyboard", "F23", SDL_SCANCODE_F23);
+    engine->RegisterEnumValue("Keyboard", "F24", SDL_SCANCODE_F24);
+    engine->RegisterEnumValue("Keyboard", "PRINTSCREEN", SDL_SCANCODE_PRINTSCREEN);
+    engine->RegisterEnumValue("Keyboard", "INSERT", SDL_SCANCODE_INSERT);
+    engine->RegisterEnumValue("Keyboard", "HOME", SDL_SCANCODE_HOME);
+    engine->RegisterEnumValue("Keyboard", "PAGEUP", SDL_SCANCODE_PAGEUP);
+    engine->RegisterEnumValue("Keyboard", "DELETE", SDL_SCANCODE_DELETE);
+    engine->RegisterEnumValue("Keyboard", "END", SDL_SCANCODE_END);
+    engine->RegisterEnumValue("Keyboard", "PAGEDOWN", SDL_SCANCODE_PAGEDOWN);
+    engine->RegisterEnumValue("Keyboard", "RIGHT", SDL_SCANCODE_RIGHT);
+    engine->RegisterEnumValue("Keyboard", "LEFT", SDL_SCANCODE_LEFT);
+    engine->RegisterEnumValue("Keyboard", "DOWN", SDL_SCANCODE_DOWN);
+    engine->RegisterEnumValue("Keyboard", "UP", SDL_SCANCODE_UP);
+    engine->RegisterEnumValue("Keyboard", "KP_DIVIDE", SDL_SCANCODE_KP_DIVIDE);
+    engine->RegisterEnumValue("Keyboard", "KP_MULTIPLY", SDL_SCANCODE_KP_MULTIPLY);
+    engine->RegisterEnumValue("Keyboard", "KP_MINUS", SDL_SCANCODE_KP_MINUS);
+    engine->RegisterEnumValue("Keyboard", "KP_PLUS", SDL_SCANCODE_KP_PLUS);
+    engine->RegisterEnumValue("Keyboard", "KP_ENTER", SDL_SCANCODE_KP_ENTER);
+    engine->RegisterEnumValue("Keyboard", "KP_1", SDL_SCANCODE_KP_1);
+    engine->RegisterEnumValue("Keyboard", "KP_2", SDL_SCANCODE_KP_2);
+    engine->RegisterEnumValue("Keyboard", "KP_3", SDL_SCANCODE_KP_3);
+    engine->RegisterEnumValue("Keyboard", "KP_4", SDL_SCANCODE_KP_4);
+    engine->RegisterEnumValue("Keyboard", "KP_5", SDL_SCANCODE_KP_5);
+    engine->RegisterEnumValue("Keyboard", "KP_6", SDL_SCANCODE_KP_6);
+    engine->RegisterEnumValue("Keyboard", "KP_7", SDL_SCANCODE_KP_7);
+    engine->RegisterEnumValue("Keyboard", "KP_8", SDL_SCANCODE_KP_8);
+    engine->RegisterEnumValue("Keyboard", "KP_9", SDL_SCANCODE_KP_9);
+    engine->RegisterEnumValue("Keyboard", "KP_0", SDL_SCANCODE_KP_0);
+    engine->RegisterEnumValue("Keyboard", "KP_PERIOD", SDL_SCANCODE_KP_PERIOD);
+    engine->RegisterEnumValue("Keyboard", "KP_EQUALS", SDL_SCANCODE_KP_EQUALS);
+    engine->RegisterEnumValue("Keyboard", "NONUSBACKSLASH", SDL_SCANCODE_NONUSBACKSLASH);
+    engine->RegisterEnumValue("Keyboard", "APPLICATION", SDL_SCANCODE_APPLICATION);
+
+    engine->RegisterEnum("GamepadButton");
+    engine->RegisterEnumValue("GamepadButton", "SOUTH", SDL_GAMEPAD_BUTTON_SOUTH);
+    engine->RegisterEnumValue("GamepadButton", "EAST", SDL_GAMEPAD_BUTTON_EAST);
+    engine->RegisterEnumValue("GamepadButton", "WEST", SDL_GAMEPAD_BUTTON_WEST);
+    engine->RegisterEnumValue("GamepadButton", "NORTH", SDL_GAMEPAD_BUTTON_NORTH);
+    engine->RegisterEnumValue("GamepadButton", "BACK", SDL_GAMEPAD_BUTTON_BACK);
+    engine->RegisterEnumValue("GamepadButton", "GUIDE", SDL_GAMEPAD_BUTTON_GUIDE);
+    engine->RegisterEnumValue("GamepadButton", "START", SDL_GAMEPAD_BUTTON_START);
+    engine->RegisterEnumValue("GamepadButton", "LEFT_STICK", SDL_GAMEPAD_BUTTON_LEFT_STICK);
+    engine->RegisterEnumValue("GamepadButton", "RIGHT_STICK", SDL_GAMEPAD_BUTTON_RIGHT_STICK);
+    engine->RegisterEnumValue("GamepadButton", "LEFT_SHOULDER", SDL_GAMEPAD_BUTTON_LEFT_SHOULDER);
+    engine->RegisterEnumValue("GamepadButton", "RIGHT_SHOULDER", SDL_GAMEPAD_BUTTON_RIGHT_SHOULDER);
+    engine->RegisterEnumValue("GamepadButton", "DPAD_UP", SDL_GAMEPAD_BUTTON_DPAD_UP);
+    engine->RegisterEnumValue("GamepadButton", "DPAD_DOWN", SDL_GAMEPAD_BUTTON_DPAD_DOWN);
+    engine->RegisterEnumValue("GamepadButton", "DPAD_LEFT", SDL_GAMEPAD_BUTTON_DPAD_LEFT);
+    engine->RegisterEnumValue("GamepadButton", "DPAD_RIGHT", SDL_GAMEPAD_BUTTON_DPAD_RIGHT);
+    engine->RegisterEnumValue("GamepadButton", "MISC1", SDL_GAMEPAD_BUTTON_MISC1);
+    engine->RegisterEnumValue("GamepadButton", "RIGHT_PADDLE1", SDL_GAMEPAD_BUTTON_RIGHT_PADDLE1);
+    engine->RegisterEnumValue("GamepadButton", "LEFT_PADDLE1", SDL_GAMEPAD_BUTTON_LEFT_PADDLE1);
+    engine->RegisterEnumValue("GamepadButton", "RIGHT_PADDLE2", SDL_GAMEPAD_BUTTON_RIGHT_PADDLE2);
+    engine->RegisterEnumValue("GamepadButton", "LEFT_PADDLE2", SDL_GAMEPAD_BUTTON_LEFT_PADDLE2);
+    engine->RegisterEnumValue("GamepadButton", "TOUCHPAD", SDL_GAMEPAD_BUTTON_TOUCHPAD);
+    engine->RegisterEnumValue("GamepadButton", "MISC2", SDL_GAMEPAD_BUTTON_MISC2);
+    engine->RegisterEnumValue("GamepadButton", "MISC3", SDL_GAMEPAD_BUTTON_MISC3);
+    engine->RegisterEnumValue("GamepadButton", "MISC4", SDL_GAMEPAD_BUTTON_MISC4);
+    engine->RegisterEnumValue("GamepadButton", "MISC5", SDL_GAMEPAD_BUTTON_MISC5);
+    engine->RegisterEnumValue("GamepadButton", "MISC6", SDL_GAMEPAD_BUTTON_MISC6);
+
+    engine->RegisterEnum("GamepadAxis");
+    engine->RegisterEnumValue("GamepadAxis", "LEFTX", SDL_GAMEPAD_AXIS_LEFTX);
+    engine->RegisterEnumValue("GamepadAxis", "LEFTY", SDL_GAMEPAD_AXIS_LEFTY);
+    engine->RegisterEnumValue("GamepadAxis", "RIGHTX", SDL_GAMEPAD_AXIS_RIGHTX);
+    engine->RegisterEnumValue("GamepadAxis", "RIGHTY", SDL_GAMEPAD_AXIS_RIGHTY);
+    engine->RegisterEnumValue("GamepadAxis", "LEFT_TRIGGER", SDL_GAMEPAD_AXIS_LEFT_TRIGGER);
+    engine->RegisterEnumValue("GamepadAxis", "RIGHT_TRIGGER", SDL_GAMEPAD_AXIS_RIGHT_TRIGGER);
+}

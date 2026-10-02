@@ -4,7 +4,7 @@
 #include "GLAD/glad.h"
 #include "SDL3/SDL.h"
 
-Window::Window(int width, int height, std::string name){
+void Window::Initialize(int width, int height, std::string name){
     ///Start SDL
     if (!SDL_Init(SDL_INIT_VIDEO)){
         std::cout << "[GLFW] Error initializing... sorry :C" << std::endl;

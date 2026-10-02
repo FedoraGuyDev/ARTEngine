@@ -6,7 +6,7 @@
 void RegisterEngineAPIBasics(asIScriptEngine* engine){
     engine->RegisterGlobalFunction(
         "void LogEngine(string)",
-        asFUNCTION(LogEngine),
+        asFUNCTION(APILogEngine),
         asCALL_CDECL
         );
 }

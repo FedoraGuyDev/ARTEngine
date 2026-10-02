@@ -2,4 +2,4 @@
 
 #include <iostream>
 
-void LogEngine(std::string message);
+void APILogEngine(std::string message);

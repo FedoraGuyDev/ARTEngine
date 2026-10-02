@@ -50,6 +50,8 @@
 #include "utilsString.h"
 
 #include "apiRegisterEngineAPIBasics.h"
+#include "apiRegisterEngineAPIEnums.h"
+#include "apiRegisterEngineAPIKeyboard.h"
 
 ///ARTENGINE DEBUG
 #include "debugEntities.h"
@@ -76,6 +78,9 @@ entt::registry EntityRegistry;
 ///AngelScript Engine
 asIScriptEngine* ASengine;
 
+///Initialize window class
+Window window;
+
 int main(){
     std::cout << "[ARTENGINE] Starting ARTEngine" << std::endl;
 
@@ -97,7 +102,10 @@ int main(){
     RegisterScriptMath(ASengine);
 
     ///AngelScript Define API Functions
+    RegisterEngineAPIEnums(ASengine);
+
     RegisterEngineAPIBasics(ASengine);
+    RegisterEngineAPIKeyboard(ASengine);
 
     ///EnTT Set Definitions
     DefineEntityComponents();
@@ -122,7 +130,7 @@ int main(){
         return 0;
     }
 
-    Window window(GameManifests["window_width"],GameManifests["window_height"],GameManifests["name"]);
+    window.Initialize(GameManifests["window_width"],GameManifests["window_height"],GameManifests["name"]);
 
     if(!window.IsWindowValid()){
         std::cout << "[ARTENGINE] Closing ARTENGINE due to an error on initializing Window.. :C" << std::endl;
