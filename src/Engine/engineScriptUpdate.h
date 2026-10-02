@@ -1,3 +1,3 @@
 #pragma once
 
-void UpdateScripts();
+void UpdateScripts(float dt);

@@ -140,8 +140,16 @@ int main(){
     glEnableVertexAttribArray(0);
 
     LoadScene(GameManifests["starting_scene"]);
+    ///Set the last time for Deltatime
+    Uint64 DTLastTime = SDL_GetTicks();
+
 
     while(!window.ShouldClose()){
+        ///Update DeltaTime
+        Uint64 DTCurrentTime = SDL_GetTicks();
+        float DeltaTime = (DTCurrentTime - DTLastTime) / 1000.0f;
+        DTLastTime = DTCurrentTime;
+
         if (window.IsKeyJustPressed(SDL_SCANCODE_F1)){
             LoadScene("sceneTest");
         }
@@ -149,7 +157,7 @@ int main(){
             DebugPrintAllEntities();
         }
 
-        UpdateScripts();
+        UpdateScripts(DeltaTime);
 
         glClearColor(0.0f,0.2235f,0.4275f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT);

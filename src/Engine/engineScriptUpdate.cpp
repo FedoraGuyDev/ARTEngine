@@ -10,7 +10,7 @@
 extern entt::registry EntityRegistry;
 extern asIScriptEngine* ASengine;
 
-void UpdateScripts(){
+void UpdateScripts(float dt){
     auto view = EntityRegistry.view<Script>();
 
     for(auto entity : view){
@@ -25,7 +25,7 @@ void UpdateScripts(){
 
         ctx->Prepare(comp_script.onUpdateFunc);
         ctx->SetObject(comp_script.instance);
-        ctx->SetArgFloat(0,0);
+        ctx->SetArgFloat(0,dt);
 
         int r = ctx->Execute();
 
