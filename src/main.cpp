@@ -44,8 +44,12 @@
 #include "engineSceneLoader.h"
 #include "engineAssetManager.h"
 
+#include "engineScriptUpdate.h"
+
 #include "utilsJson.h"
 #include "utilsString.h"
+
+#include "apiRegisterEngineAPIBasics.h"
 
 ///ARTENGINE DEBUG
 #include "debugEntities.h"
@@ -75,7 +79,7 @@ asIScriptEngine* ASengine;
 int main(){
     std::cout << "[ARTENGINE] Starting ARTEngine" << std::endl;
 
-
+    ///AngelScript Start Engine
     std::cout << "[AngelScript] Starting AngelScript Engine" << std::endl;
     ASengine = asCreateScriptEngine();
     if(ASengine == nullptr){
@@ -83,7 +87,17 @@ int main(){
         return 0;
     }
 
+    ///AngelScript Set Message Callback
     ASengine->SetMessageCallback(asFUNCTION(MessageCallback),0,asCALL_CDECL);
+
+    ///AngelScript Define Functions
+    RegisterStdString(ASengine);
+    RegisterScriptArray(ASengine,true);
+    RegisterScriptDictionary(ASengine);
+    RegisterScriptMath(ASengine);
+
+    ///AngelScript Define API Functions
+    RegisterEngineAPIBasics(ASengine);
 
     ///EnTT Set Definitions
     DefineEntityComponents();
@@ -126,6 +140,8 @@ int main(){
         if (window.IsKeyJustPressed(SDL_SCANCODE_F2)){
             DebugPrintAllEntities();
         }
+
+        UpdateScripts();
 
         glClearColor(0.0f,0.2235f,0.4275f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT);

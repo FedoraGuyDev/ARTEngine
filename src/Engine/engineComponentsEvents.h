@@ -14,12 +14,11 @@ extern asIScriptEngine* ASengine;
 extern std::unordered_map<std::string, AssetScript> AssetMapScript;
 
 inline void OnScriptConstructed(entt::registry& reg, entt::entity e){
-    std::cout << "Script created" << std::endl;
-
     auto& script = reg.get<Script>(e);
 
 
     if (!AssetMapScript.contains(script.script_name)){
+        std::cout << "[AngelScript] The script:" << script.script_name << " it doesn't exists on the AssetMapScript" << std::endl;
         return;
     }
     AssetScript& asset = AssetMapScript.at(script.script_name);

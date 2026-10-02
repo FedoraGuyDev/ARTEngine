@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1789074605 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1790905177 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -954,8 +954,10 @@
 	"engineEntityLoader.h"
 	"engineSceneLoader.h"
 	"engineAssetManager.h"
+	"engineScriptUpdate.h"
 	"utilsJson.h"
 	"utilsString.h"
+	"apiRegisterEngineAPIBasics.h"
 	"debugEntities.h"
 
 1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\jsonnlohmann\json.hpp
@@ -8242,7 +8244,7 @@
 	"utilsComponents.h"
 	"engineDefinitionsComponents.h"
 
-1787642184 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilscomponents.h
+1790906153 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilscomponents.h
 	<entt/entt.hpp>
 	<JsonNlohmann/json.hpp>
 	<string>
@@ -8669,10 +8671,13 @@
 	"engineComponentsEvents.h"
 	"engineDefinitionsComponents.h"
 
-1789074605 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
+1790906153 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
 	<iostream>
+	<unordered_map>
 	"AngelScript/angelscript.h"
 	"EnTT/entt.hpp"
+	"engineDefinitionsComponents.h"
+	"engineDefinitionsAssets.h"
 
 1789503244 source:c:\users\admin\documents\github\artengine\src\engine\engineassetloader.cpp
 	<string>
@@ -11381,4 +11386,27 @@
 	<windows.h>
 	<winapifamily.h>
 	<dlfcn.h>
+
+1790902852 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginescriptupdate.h
+
+1790905586 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginescriptupdate.cpp
+	"engineScriptUpdate.h"
+	<iostream>
+	"AngelScript/angelscript.h"
+	"EnTT/entt.hpp"
+	"engineDefinitionsComponents.h"
+
+1790905177 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapibasics.cpp
+	"apiEngineAPIBasics.h"
+	<iostream>
+
+1790905177 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapibasics.h
+
+1790905219 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapibasics.cpp
+	"apiRegisterEngineAPIBasics.h"
+	"apiEngineAPIBasics.h"
+	"AngelScript/angelscript.h"
+
+1790905219 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapibasics.h
+	"AngelScript/angelscript.h"
 
