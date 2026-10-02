@@ -81,6 +81,9 @@ asIScriptEngine* ASengine;
 ///Initialize window class
 Window window;
 
+///Actual update entity
+entt::entity script_update_actual_entity;
+
 int main(){
     std::cout << "[ARTENGINE] Starting ARTEngine" << std::endl;
 

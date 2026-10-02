@@ -9,6 +9,7 @@
 
 extern entt::registry EntityRegistry;
 extern asIScriptEngine* ASengine;
+extern entt::entity script_update_actual_entity;
 
 void UpdateScripts(float dt){
     auto view = EntityRegistry.view<Script>();
@@ -16,10 +17,9 @@ void UpdateScripts(float dt){
     for(auto entity : view){
         auto& comp_script = view.get<Script>(entity);
 
-        //std::cout << "init: " << comp_script.initialized << " update func: " << comp_script.onUpdateFunc << " instance: " << comp_script.instance << std::endl;
-
         if(!comp_script.initialized || !comp_script.onUpdateFunc || !comp_script.instance) continue;
 
+        script_update_actual_entity = comp_script.father_entity;
 
         asIScriptContext* ctx = ASengine->CreateContext();
 
@@ -34,5 +34,6 @@ void UpdateScripts(float dt){
         }
 
         ctx->Release();
+
     }
 }

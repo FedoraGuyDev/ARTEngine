@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1790916156 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1790917593 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -8045,13 +8045,14 @@
 	"AngelScript/angelscript.h"
 	"engineShader.h"
 
-1787639329 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionscomponents.h
+1790959973 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionscomponents.h
 	<string>
 	<unordered_map>
 	"GLM/glm.hpp"
 	"GLM/gtc/quaternion.hpp"
 	"AngelScript/angelscript.h"
 	"JsonNlohmann/json.hpp"
+	"EnTT/entt.hpp"
 
 1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\gtc\quaternion.hpp
 	"../gtc/constants.hpp"
@@ -8628,7 +8629,7 @@
 	<string>
 	"JsonNlohmann/json.hpp"
 
-1787888124 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.cpp
+1790959345 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.cpp
 	<string>
 	"JsonNlohmann/json.hpp"
 	"AngelScript/angelscript.h"
@@ -8673,7 +8674,7 @@
 	"engineComponentsEvents.h"
 	"engineDefinitionsComponents.h"
 
-1790906153 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
+1790959345 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
 	<iostream>
 	<unordered_map>
 	"AngelScript/angelscript.h"
@@ -11391,7 +11392,7 @@
 
 1790916176 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginescriptupdate.h
 
-1790916156 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginescriptupdate.cpp
+1790959986 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginescriptupdate.cpp
 	"engineScriptUpdate.h"
 	<iostream>
 	"AngelScript/angelscript.h"
@@ -11410,8 +11411,9 @@
 	"apiEngineAPIBasics.h"
 	"AngelScript/angelscript.h"
 
-1790905219 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapibasics.h
+1790959345 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapibasics.h
 	"AngelScript/angelscript.h"
+	"apiEngineAPIBasics.h"
 
 1790908305 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapienums.h
 	<iostream>
@@ -11435,6 +11437,9 @@
 	"SDL3/SDL.h"
 	"engineWindow.h"
 
-1790912888 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapikeyboard.h
+1790959345 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapikeyboard.h
 	"AngelScript/angelscript.h"
+	"apiEngineAPIKeyboard.h"
+
+1790959102 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapitransform.cpp
 

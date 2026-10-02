@@ -7,7 +7,7 @@
 #include "GLM/gtc/quaternion.hpp"
 #include "AngelScript/angelscript.h"
 #include "JsonNlohmann/json.hpp"
-
+#include "EnTT/entt.hpp"
 
 struct Transform{
     float x,y,z;
@@ -33,6 +33,8 @@ struct Script{
     asIScriptFunction* onUpdateFunc = nullptr;
     asIScriptFunction* onDestroyFunc = nullptr;
     bool initialized = false;
+
+    entt::entity father_entity;
 };
 struct Name{
     std::string name;

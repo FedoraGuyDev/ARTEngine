@@ -48,12 +48,12 @@
 		<Unit filename="src/API/apiEngineAPIEnums.h" />
 		<Unit filename="src/API/apiEngineAPIKeyboard.cpp" />
 		<Unit filename="src/API/apiEngineAPIKeyboard.h" />
-		<Unit filename="src/API/apiRegisterEngineAPIBasics.cpp" />
+		<Unit filename="src/API/apiEngineAPITransform.cpp" />
+		<Unit filename="src/API/apiEngineAPITransform.h" />
 		<Unit filename="src/API/apiRegisterEngineAPIBasics.h" />
 		<Unit filename="src/API/apiRegisterEngineAPIEnums.h">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/API/apiRegisterEngineAPIKeyboard.cpp" />
 		<Unit filename="src/API/apiRegisterEngineAPIKeyboard.h" />
 		<Unit filename="src/Debug/debugEntities.h" />
 		<Unit filename="src/Engine/engineAngelScriptCallback.h" />
