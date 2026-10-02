@@ -55,6 +55,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src/API/apiRegisterEngineAPIKeyboard.h" />
+		<Unit filename="src/API/apiRegisterEngineAPITransform.h" />
 		<Unit filename="src/Debug/debugEntities.h" />
 		<Unit filename="src/Engine/engineAngelScriptCallback.h" />
 		<Unit filename="src/Engine/engineAssetLoader.cpp" />

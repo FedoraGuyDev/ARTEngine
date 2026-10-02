@@ -1,7 +1,9 @@
-#include "apiRegisterEngineAPIKeyboard.h"
-#include "apiEngineAPIKeyboard.h"
+#pragma once
 
 #include "AngelScript/angelscript.h"
+
+#include "apiEngineAPITransform.h"
+
 
 void RegisterEngineAPIKeyboard(asIScriptEngine* engine){
     engine->RegisterGlobalFunction(

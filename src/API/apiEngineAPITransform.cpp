@@ -1,4 +1,4 @@
-#include "apiEngineAPITransform.h
+#include "apiEngineAPITransform.h"
 
 #include "EnTT/entt.hpp"
 #include "GLM/glm.hpp"
@@ -7,7 +7,7 @@
 
 #include "engineDefinitionsComponents.h"
 
-extern entt::entity script_update_actual_entity
+extern entt::entity script_update_actual_entity;
 extern entt::registry EntityRegistry;
 
 
