@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1790917593 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1791056239 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -960,6 +960,8 @@
 	"apiRegisterEngineAPIBasics.h"
 	"apiRegisterEngineAPIEnums.h"
 	"apiRegisterEngineAPIKeyboard.h"
+	"apiRegisterEngineAPITransform.h"
+	"apiRegisterengineAPIObjects.h"
 	"debugEntities.h"
 
 1787259506 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\jsonnlohmann\json.hpp
@@ -8674,7 +8676,7 @@
 	"engineComponentsEvents.h"
 	"engineDefinitionsComponents.h"
 
-1790959345 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
+1790960003 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
 	<iostream>
 	<unordered_map>
 	"AngelScript/angelscript.h"
@@ -11438,7 +11440,7 @@
 	"SDL3/SDL.h"
 	"engineWindow.h"
 
-1790959345 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapikeyboard.h
+1790979295 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapikeyboard.h
 	"AngelScript/angelscript.h"
 	"apiEngineAPIKeyboard.h"
 
@@ -11468,4 +11470,19 @@
 	"engineDefinitionsComponents.h"
 
 1790965323 c:\users\admin\documents\github\artengine\src\engine\enginescriptupdate.h
+
+1791056239 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapitransform.h
+	"AngelScript/angelscript.h"
+	"apiEngineAPITransform.h"
+
+1791056339 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapitransform.h
+	"GLM/glm.hpp"
+	"GLM/gtc/quaternion.hpp"
+	"GLM/gtc/matrix_transform.hpp"
+
+1791056239 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapiobjects.h
+	"AngelScript/angelscript.h"
+	"GLM/glm.hpp"
+	"GLM/gtc/quaternion.hpp"
+	"GLM/gtc/matrix_transform.hpp"
 

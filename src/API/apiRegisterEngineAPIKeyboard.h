@@ -5,7 +5,7 @@
 #include "apiEngineAPIKeyboard.h"
 
 
-void RegisterEngineAPIKeyboard(asIScriptEngine* engine){
+inline void RegisterEngineAPIKeyboard(asIScriptEngine* engine){
     engine->RegisterGlobalFunction(
         "bool KeyboardIsPressed(Keyboard)",
         asFUNCTION(APIKeyboardIsPressed),

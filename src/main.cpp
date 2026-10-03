@@ -52,6 +52,9 @@
 #include "apiRegisterEngineAPIBasics.h"
 #include "apiRegisterEngineAPIEnums.h"
 #include "apiRegisterEngineAPIKeyboard.h"
+#include "apiRegisterEngineAPITransform.h"
+#include "apiRegisterengineAPIObjects.h"
+
 
 ///ARTENGINE DEBUG
 #include "debugEntities.h"
@@ -106,9 +109,11 @@ int main(){
 
     ///AngelScript Define API Functions
     RegisterEngineAPIEnums(ASengine);
+    RegisterEngineAPIObjects(ASengine);
 
     RegisterEngineAPIBasics(ASengine);
     RegisterEngineAPIKeyboard(ASengine);
+    RegisterEngineAPITransform(ASengine);
 
     ///EnTT Set Definitions
     DefineEntityComponents();
