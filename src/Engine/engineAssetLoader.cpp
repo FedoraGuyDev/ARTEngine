@@ -40,7 +40,7 @@ void LoadAssetScript(std::string name){
     }
 
     ///Aqui iria lo demas pero tengo sueño entonces lo hago mañana :v
-    ///Ya es el mañana, ahora a seguir programando
+    ///Ya es el maniana, ahora a seguir programando
 
     AssetScript& new_script = AssetMapScript[name];
 

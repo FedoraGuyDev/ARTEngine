@@ -51,7 +51,7 @@
 
 #include "apiRegisterEngineAPIBasics.h"
 #include "apiRegisterEngineAPIEnums.h"
-#include "apiRegisterEngineAPIKeyboard.h"
+#include "apiRegisterEngineAPIInput.h"
 #include "apiRegisterEngineAPITransform.h"
 #include "apiRegisterengineAPIObjects.h"
 
@@ -112,7 +112,7 @@ int main(){
     RegisterEngineAPIObjects(ASengine);
 
     RegisterEngineAPIBasics(ASengine);
-    RegisterEngineAPIKeyboard(ASengine);
+    RegisterEngineAPIInput(ASengine);
     RegisterEngineAPITransform(ASengine);
 
     ///EnTT Set Definitions

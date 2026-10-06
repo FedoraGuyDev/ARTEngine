@@ -3,14 +3,23 @@
 		"components" : [
 			{
 			  "type": "Transform",
+			  "data": { "x": 0, "y": 0, "z": 0, "rotw": 1, "rotx": 0, "roty": 0, "rotz": 0, "scax": 1, "scay": 1, "scaz": 1 }
+			},
+			{
+				"type" : "Script",
+				"data" : {"script_name" : "scriptTest", "script_mainclass" : "EntityTest"}
+			}
+		]
+	},
+	"entityCamera" : {
+		"components" : [
+			{
+			  "type": "Transform",
 			  "data": { "x": 10, "y": 0, "z": 5, "rotw": 1, "rotx": 0, "roty": 0, "rotz": 0, "scax": 1, "scay": 1, "scaz": 1 }
 			},
 			{
-				"type" : "Name",
-				"data" : {"name" : "testEntity"}
-			},{
-				"type" : "Script",
-				"data" : {"script_name" : "scriptTest", "script_mainclass" : "EntityTest"}
+				"type": "Camera",
+				"data": {"orthographic" : false, "fov" : 70.0, "nearClip" : 0.1, "farClip" : 1000.0, "orthoSize" : 10.0, "isActive" : true, "xoffset" : 0, "yoffset" : 0, "zoffset" : 0, "rotw" : 1, "rotx" : 0, "roty" : 0, "rotz" : 0}
 			}
 		]
 	}

@@ -3,9 +3,11 @@
 		{
 			"entity_name" : "entityTest",
 			"override_components" : {
-				"Name" : {
-					"name" : "ThisIsAnEntity"
-				}
+			}
+		},
+		{
+			"entity_name" : "entityCamera",
+			"override_components" : {
 			}
 		}
 	],

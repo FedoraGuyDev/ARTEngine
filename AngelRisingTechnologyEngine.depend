@@ -8047,7 +8047,7 @@
 	"AngelScript/angelscript.h"
 	"engineShader.h"
 
-1790959973 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionscomponents.h
+1791066534 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionscomponents.h
 	<string>
 	<unordered_map>
 	"GLM/glm.hpp"
@@ -8631,7 +8631,7 @@
 	<string>
 	"JsonNlohmann/json.hpp"
 
-1790959345 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.cpp
+1791060291 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.cpp
 	<string>
 	"JsonNlohmann/json.hpp"
 	"AngelScript/angelscript.h"
@@ -11444,7 +11444,13 @@
 	"AngelScript/angelscript.h"
 	"apiEngineAPIKeyboard.h"
 
-1790959102 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapitransform.cpp
+1791056404 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapitransform.cpp
+	"apiEngineAPITransform.h"
+	"EnTT/entt.hpp"
+	"GLM/glm.hpp"
+	"GLM/gtc/quaternion.hpp"
+	"GLM/gtc/matrix_transform.hpp"
+	"engineDefinitionsComponents.h"
 
 1790965323 source:c:\users\admin\documents\github\artengine\src\api\apiengineapibasics.cpp
 	"apiEngineAPIBasics.h"
@@ -11485,4 +11491,13 @@
 	"GLM/glm.hpp"
 	"GLM/gtc/quaternion.hpp"
 	"GLM/gtc/matrix_transform.hpp"
+
+1791066504 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapiinput.cpp
+	"apiEngineAPIInput.h"
+	"SDL3/SDL.h"
+	"engineWindow.h"
+
+1790910171 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapiinput.h
+	"SDL3/SDL.h"
+	"engineWindow.h"
 

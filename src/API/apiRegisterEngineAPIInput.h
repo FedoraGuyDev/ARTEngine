@@ -2,10 +2,10 @@
 
 #include "AngelScript/angelscript.h"
 
-#include "apiEngineAPIKeyboard.h"
+#include "apiEngineAPIInput.h"
 
 
-inline void RegisterEngineAPIKeyboard(asIScriptEngine* engine){
+inline void RegisterEngineAPIInput(asIScriptEngine* engine){
     engine->RegisterGlobalFunction(
         "bool KeyboardIsPressed(Keyboard)",
         asFUNCTION(APIKeyboardIsPressed),

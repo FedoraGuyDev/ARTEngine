@@ -9,6 +9,12 @@
 #include "JsonNlohmann/json.hpp"
 #include "EnTT/entt.hpp"
 
+struct Name{
+    std::string name;
+
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE(Name,name)
+};
+
 struct Transform{
     float x,y,z;
     float rotw,rotx,roty,rotz;
@@ -36,11 +42,6 @@ struct Script{
 
     entt::entity father_entity;
 };
-struct Name{
-    std::string name;
-
-    NLOHMANN_DEFINE_TYPE_INTRUSIVE(Name,name)
-};
 struct Camera{
     bool orthographic;
     float fov;
@@ -50,5 +51,11 @@ struct Camera{
 
     bool isActive;
 
-    NLOHMANN_DEFINE_TYPE_INTRUSIVE(Camera,orthographic,fov,nearClip,farClip,orthoSize,isActive)
+    float xoffset,yoffset,zoffset;
+    float rotw,rotx,roty,rotz;
+
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE(Camera,orthographic,fov,nearClip,farClip,orthoSize,isActive,xoffset,yoffset,zoffset,rotw,rotx,roty,rotz)
+
+    glm::vec3 GetOffset(){ return glm::vec3(xoffset,yoffset,zoffset); }
+    glm::quat GetRotation(){ return glm::quat(rotw,rotx,roty,rotz); }
 };
