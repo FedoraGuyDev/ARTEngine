@@ -1,0 +1,13 @@
+{
+	"shaders" : [
+		{
+			"name" : "StandardShader",
+			"paths" : {
+				"330" : {
+					"fs" : "gamefiles/engine/shaders/StandardShader/330/StandardShader.fs",
+					"vs" : "gamefiles/engine/shaders/StandardShader/330/StandardShader.vs"
+				}
+			}
+		}
+	]
+}

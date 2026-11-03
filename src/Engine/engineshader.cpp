@@ -45,6 +45,5 @@ unsigned int Shader::CompileShader(unsigned int type, const char* source){
         std::string typeName = (type == GL_VERTEX_SHADER) ? "VERTEX" : "FRAGMENT";
         std::cout << "[SHADER] ERROR COMPILING " << typeName << ": " << infolog << std::endl;
     }
-
     return shader;
 }

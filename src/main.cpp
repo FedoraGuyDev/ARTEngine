@@ -43,6 +43,7 @@
 #include "engineEntityLoader.h"
 #include "engineSceneLoader.h"
 #include "engineAssetManager.h"
+#include "engineShaderLoad.h"
 
 #include "engineScriptUpdate.h"
 
@@ -67,9 +68,11 @@ nlohmann::json AssetsManifests;
 nlohmann::json EntityManifests;
 nlohmann::json GameManifests;
 nlohmann::json SceneManifests;
+nlohmann::json ShaderManifests;
 
 ///Assets
 std::unordered_map<std::string, AssetScript> AssetMapScript;
+std::unordered_map<std::string, Shader> AssetMapShader;
 
 ///Components
 std::vector<Components> EntityComponentsRegis;
@@ -86,6 +89,9 @@ Window window;
 
 ///Actual update entity
 entt::entity script_update_actual_entity;
+
+///GL Version
+const char* shaderVersion = "";
 
 int main(){
     std::cout << "[ARTENGINE] Starting ARTEngine" << std::endl;
@@ -137,6 +143,10 @@ int main(){
     if(!utilLoadJson("gamefiles/scene_manifest.json",SceneManifests)){
         return 0;
     }
+    ///Load Shaders Manifest
+    if(!utilLoadJson("gamefiles/shader_manifest.json",ShaderManifests)){
+        return 0;
+    }
 
     window.Initialize(GameManifests["window_width"],GameManifests["window_height"],GameManifests["name"]);
 
@@ -144,6 +154,12 @@ int main(){
         std::cout << "[ARTENGINE] Closing ARTENGINE due to an error on initializing Window.. :C" << std::endl;
         return 0;
     }
+
+    ///Get Shader Version
+    shaderVersion = (const char*)glGetString(GL_SHADING_LANGUAGE_VERSION);
+
+    ///Load All Shaders
+    ShaderLoad();
 
     glEnableVertexAttribArray(0);
 

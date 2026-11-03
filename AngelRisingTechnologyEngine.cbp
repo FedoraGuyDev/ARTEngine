@@ -79,6 +79,7 @@
 		<Unit filename="src/Engine/engineScriptUpdate.h" />
 		<Unit filename="src/Engine/engineShader.cpp" />
 		<Unit filename="src/Engine/engineShader.h" />
+		<Unit filename="src/Engine/engineShaderLoad.h" />
 		<Unit filename="src/Engine/engineWindow.cpp" />
 		<Unit filename="src/Engine/engineWindow.h" />
 		<Unit filename="src/Utils/utilsComponents.h" />
