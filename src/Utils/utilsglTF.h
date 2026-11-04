@@ -57,8 +57,7 @@ inline bool ModelReadIndices(const tg3_model& m, int ai, std::vector<unsigned in
     return true;
 }
 
-inline void ModelAddNode(const tg3_model& model, int nodeIndex, const glm::mat4& parent,
-                         std::vector<float>& data, std::vector<unsigned int>& indices, int depth = 0){
+inline void ModelAddNode(const tg3_model& model, int nodeIndex, const glm::mat4& parent, std::vector<float>& data, std::vector<unsigned int>& indices, int depth = 0){
     if(nodeIndex < 0 || nodeIndex >= (int)model.nodes_count || depth > 64) return;
     const tg3_node& node = model.nodes[nodeIndex];
 

@@ -100,37 +100,6 @@ void LoadAssetModel(std::string name){
             tg3_error_stack_free(&errors);
         }
     }
-/*
-    std::vector<float> pos,nor,data;
-    std::vector<unsigned int> indices;
-    bool found = false;
-
-    for(uint32_t mi = 0; mi < model.meshes_count && !found; mi++){
-        const tg3_mesh& mesh = model.meshes[mi];
-        for(uint32_t pi = 0; pi < mesh.primitives_count && !found; pi++){
-            const tg3_primitive& prim = mesh.primitives[pi];
-            if(prim.mode != -1 && prim.mode != TG3_MODE_TRIANGLES) continue;
-
-            int posAcc = -1, norAcc = -1;
-
-            for(uint32_t a = 0; a < prim.attributes_count; a++){
-                if(tg3_str_equals_cstr(prim.attributes[a].key,"POSITION")) posAcc = prim.attributes[a].value;
-                if(tg3_str_equals_cstr(prim.attributes[a].key,"NORMAL")) norAcc = prim.attributes[a].value;
-            }
-
-            if(!ModelReadFloats(model,posAcc,3,pos)) continue;
-            if(!ModelReadFloats(model,norAcc,3,nor)) nor.assign(pos.size(),0.0f);
-            if(!ModelReadIndices(model,prim.indices,indices)) continue;
-            found = true;
-        }
-    }
-    tg3_model_free(&model);
-    tg3_error_stack_free(&errors);
-
-    if(!found){
-        std::cout << "[MODEL LOADER] " << path << ": without a valid triangle primitive" << std::endl;
-        return;
-    }*/
     std::vector<float> data;
     std::vector<unsigned int> indices;
 
@@ -155,12 +124,6 @@ void LoadAssetModel(std::string name){
         std::cout << "[MODEL LOADER] " << path << ": without a valid triangle geometry" << std::endl;
         return;
     }
-/*
-    data.reserve(pos.size()*2);
-    for(size_t i = 0; i < pos.size() / 3; i++){
-        data.insert(data.end(),&pos[i*3],&pos[i*3]+3);
-        data.insert(data.end(),&nor[i*3],&nor[i*3]+3);
-    }*/
 
     AssetModel& m = AssetMapModel[name];
     m.path = path;
