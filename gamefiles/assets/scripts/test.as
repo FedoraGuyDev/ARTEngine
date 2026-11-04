@@ -33,7 +33,7 @@ class EntityTest{
         }
         vec3 pos = TransformGetRotation();
 
-        LogEngine("x: " + formatFloat(pos.x,"",2)+" y: " + formatFloat(pos.y,"",2)+" z: " + formatFloat(pos.z,"",2));
+        //LogEngine("x: " + formatFloat(pos.x,"",2)+" y: " + formatFloat(pos.y,"",2)+" z: " + formatFloat(pos.z,"",2));
     }
 
     void OnDestroy(){
