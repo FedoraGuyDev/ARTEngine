@@ -43,6 +43,9 @@
 		<Unit filename="ThirdParty/include/GLAD/glad.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="ThirdParty/include/TinyglTF/tiny_gltf_v3.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src/API/apiEngineAPIBasics.cpp" />
 		<Unit filename="src/API/apiEngineAPIBasics.h" />
 		<Unit filename="src/API/apiEngineAPIEnums.h" />
@@ -75,16 +78,17 @@
 		<Unit filename="src/Engine/engineRegisterComponents.h" />
 		<Unit filename="src/Engine/engineSceneLoader.cpp" />
 		<Unit filename="src/Engine/engineSceneLoader.h" />
-		<Unit filename="src/Engine/engineScriptUpdate.cpp" />
-		<Unit filename="src/Engine/engineScriptUpdate.h" />
 		<Unit filename="src/Engine/engineShader.cpp" />
 		<Unit filename="src/Engine/engineShader.h" />
 		<Unit filename="src/Engine/engineShaderLoad.h" />
+		<Unit filename="src/Engine/engineUpdateComponents.cpp" />
+		<Unit filename="src/Engine/engineUpdateComponents.h" />
 		<Unit filename="src/Engine/engineWindow.cpp" />
 		<Unit filename="src/Engine/engineWindow.h" />
 		<Unit filename="src/Utils/utilsComponents.h" />
 		<Unit filename="src/Utils/utilsJson.h" />
 		<Unit filename="src/Utils/utilsString.h" />
+		<Unit filename="src/Utils/utilsglTF.h" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

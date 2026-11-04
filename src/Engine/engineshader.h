@@ -6,6 +6,12 @@ public:
     Shader(const char* vertexSource, const char* fragmentSource);
     ~Shader();
 
+    Shader(const Shader&) = delete;
+    Shader& operator=(const Shader&) = delete;
+
+    Shader(Shader&& other) noexcept;
+    Shader& operator=(Shader&& other) noexcept;
+
     void Use();
     unsigned int GetID() { return m_programID; }
 

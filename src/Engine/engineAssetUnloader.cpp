@@ -1,7 +1,9 @@
 #include <string>
+
 #include "JsonNlohmann/json.hpp"
 #include "AngelScript/angelscript.h"
 #include "AngelScript/scriptbuilder.h"
+#include "GLAD/glad.h"
 
 #include "engineAssetUnloader.h"
 #include "engineDefinitionsAssets.h"
@@ -10,6 +12,7 @@ extern asIScriptEngine* ASengine;
 extern nlohmann::json AssetsManifests;
 
 extern std::unordered_map<std::string, AssetScript> AssetMapScript;
+extern std::unordered_map<std::string, AssetModel> AssetMapModel;
 
 void UnloadAssetScript(std::string name){
     if(AssetMapScript.contains(name)){
@@ -19,4 +22,12 @@ void UnloadAssetScript(std::string name){
             asset.scriptModule->Discard();
         }
     }
+}
+
+void UnloadAssetModel(std::string name){
+    auto it = AssetMapModel.find(name);
+    if(it == AssetMapModel.end()) return;
+    glDeleteVertexArrays(1, &it->second.VAO);
+    glDeleteBuffers(1, &it->second.VBO);
+    glDeleteBuffers(1, &it->second.EBO);
 }

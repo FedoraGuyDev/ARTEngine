@@ -19,13 +19,31 @@ Shader::Shader(const char* vertexSource, const char* fragmentSource){
         glGetProgramInfoLog(m_programID,512,NULL,infolog);
         std::cout << "[GLAD] ERROR LINKING THE PROGRAM: " << infolog << std::endl;
 
-        glDeleteShader(vertexShader);
-        glDeleteShader(fragmentShader);
+        glDeleteProgram(m_programID);
+        m_programID = 0;
     }
+    glDeleteShader(vertexShader);
+    glDeleteShader(fragmentShader);
 }
 
 Shader::~Shader(){
-    glDeleteProgram(m_programID);
+    if(m_programID != 0){
+            glDeleteProgram(m_programID);
+            std::cout << "d" << std::endl;
+    }
+}
+
+Shader::Shader(Shader&& other) noexcept : m_programID(other.m_programID) {
+    other.m_programID = 0;
+}
+
+Shader& Shader::operator=(Shader&& other) noexcept {
+    if(this != &other){
+        if(m_programID != 0) glDeleteProgram(m_programID);
+        m_programID = other.m_programID;
+        other.m_programID = 0;
+    }
+    return *this;
 }
 
 void Shader::Use(){

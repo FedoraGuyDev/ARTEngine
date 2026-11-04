@@ -9,6 +9,7 @@
 extern nlohmann::json AssetsManifests;
 
 extern std::unordered_map<std::string, AssetScript> AssetMapScript;
+extern std::unordered_map<std::string, AssetModel> AssetMapModel;
 
     /* ASSETS TYPE THAT CAN APPEAR IN ASSETS PART IN SCENE JSON
         Type 0 : Script
@@ -26,14 +27,21 @@ void LoadAssets(nlohmann::json load_data){
             case 0:
                 LoadAssetScript(asset.at("name").get<std::string>());
                 break;
+            case 3:
+                LoadAssetModel(asset.at("name").get<std::string>());
+                break;
         }
     }
 }
 void TotalUnLoadAssets(){
-    for(auto& [name, scripts] : AssetMapScript){
+    for(auto& [name,script] : AssetMapScript){
         UnloadAssetScript(name);
     }
     AssetMapScript.clear();
+    for(auto& [name,model] : AssetMapModel){
+        UnloadAssetModel(name);
+    }
+    AssetMapModel.clear();
 }
 void IntelligentUnLoadAssets(nlohmann::json load_data){
 

@@ -3,8 +3,12 @@
 #include <string>
 #include <unordered_map>
 
+#include "GLAD/glad.h"
 #include "GLM/glm.hpp"
+#include "GLM/gtc/matrix_transform.hpp"
 #include "GLM/gtc/quaternion.hpp"
+#include "GLM/gtc/type_ptr.hpp"
+
 #include "AngelScript/angelscript.h"
 #include "JsonNlohmann/json.hpp"
 #include "EnTT/entt.hpp"
@@ -58,4 +62,10 @@ struct Camera{
 
     glm::vec3 GetOffset(){ return glm::vec3(xoffset,yoffset,zoffset); }
     glm::quat GetRotation(){ return glm::quat(rotw,rotx,roty,rotz); }
+};
+struct MeshRenderer{
+    std::string model_name;
+    std::string shader_override;
+
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE(MeshRenderer,model_name,shader_override)
 };

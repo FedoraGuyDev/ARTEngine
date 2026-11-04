@@ -1,8 +1,11 @@
 #pragma once
 
 #include <string>
+#include <vector>
+
 
 #include "AngelScript/angelscript.h"
+
 
 #include "engineShader.h"
 
@@ -26,4 +29,14 @@ struct AssetScript{
     asIScriptFunction* onCreate = nullptr;
     asIScriptFunction* onUpdate = nullptr;
     asIScriptFunction* onDestroy = nullptr;
+};
+
+struct AssetModel{
+    std::string path;
+
+    unsigned int VAO = 0;
+    unsigned int VBO = 0;
+    unsigned int EBO = 0;
+
+    int indexCount = 0;
 };

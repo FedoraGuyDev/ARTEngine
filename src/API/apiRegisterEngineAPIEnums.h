@@ -117,6 +117,20 @@ inline void RegisterEngineAPIEnums(asIScriptEngine* engine){
     engine->RegisterEnumValue("Keyboard", "KP_EQUALS", SDL_SCANCODE_KP_EQUALS);
     engine->RegisterEnumValue("Keyboard", "NONUSBACKSLASH", SDL_SCANCODE_NONUSBACKSLASH);
     engine->RegisterEnumValue("Keyboard", "APPLICATION", SDL_SCANCODE_APPLICATION);
+    engine->RegisterEnumValue("Keyboard", "LCTRL",  SDL_SCANCODE_LCTRL);
+    engine->RegisterEnumValue("Keyboard", "LSHIFT", SDL_SCANCODE_LSHIFT);
+    engine->RegisterEnumValue("Keyboard", "LALT",   SDL_SCANCODE_LALT);
+    engine->RegisterEnumValue("Keyboard", "LGUI",   SDL_SCANCODE_LGUI);
+    engine->RegisterEnumValue("Keyboard", "RCTRL",  SDL_SCANCODE_RCTRL);
+    engine->RegisterEnumValue("Keyboard", "RSHIFT", SDL_SCANCODE_RSHIFT);
+    engine->RegisterEnumValue("Keyboard", "RALT",   SDL_SCANCODE_RALT);
+    engine->RegisterEnumValue("Keyboard", "RGUI",   SDL_SCANCODE_RGUI);
+
+    engine->RegisterEnumValue("Keyboard", "CAPSLOCK",    SDL_SCANCODE_CAPSLOCK);
+    engine->RegisterEnumValue("Keyboard", "SCROLLLOCK",  SDL_SCANCODE_SCROLLLOCK);
+    engine->RegisterEnumValue("Keyboard", "PAUSE",       SDL_SCANCODE_PAUSE);
+    engine->RegisterEnumValue("Keyboard", "NUMLOCK",     SDL_SCANCODE_NUMLOCKCLEAR);
+
 
     engine->RegisterEnum("GamepadButton");
     engine->RegisterEnumValue("GamepadButton", "SOUTH", SDL_GAMEPAD_BUTTON_SOUTH);

@@ -3,6 +3,25 @@
 		{
 			"entity_name" : "entityTest",
 			"override_components" : {
+				"Transform" : {"x": -10, "y": 0, "z": 0, "rotw": 1, "rotx": 0, "roty": 0, "rotz": 0, "scax": 1, "scay": 1, "scaz": 1}
+			}
+		},
+		{
+			"entity_name" : "entityTest",
+			"override_components" : {
+				"Transform" : {"x": 10, "y": 0, "z": 0, "rotw": 1, "rotx": 0, "roty": 0, "rotz": 0, "scax": 1, "scay": 1, "scaz": 1}
+			}
+		},
+		{
+			"entity_name" : "entityTest",
+			"override_components" : {
+				"Transform" : {"x": 0, "y": 0, "z": 10, "rotw": 1, "rotx": 0, "roty": 0, "rotz": 0, "scax": 1, "scay": 1, "scaz": 1}
+			}
+		},
+		{
+			"entity_name" : "entityTest",
+			"override_components" : {
+				"Transform" : {"x": 0, "y": 0, "z": -10, "rotw": 1, "rotx": 0, "roty": 0, "rotz": 0, "scax": 1, "scay": 1, "scaz": 1}
 			}
 		},
 		{
@@ -12,6 +31,7 @@
 		}
 	],
 	"assets" : [
-		{"type" : 0, "name" : "scriptTest"}
+		{"type" : 0, "name" : "scriptTest"},
+		{"type" : 3, "name" : "robot"}
 	]
 }

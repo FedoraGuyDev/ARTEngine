@@ -19,10 +19,21 @@ class EntityTest{
         if(KeyboardIsPressed(Keyboard::S)){
             TransformMove(0,0,-velocity);
         }
+        if(KeyboardIsPressed(Keyboard::SPACE)){
+            TransformMove(0,-velocity,0);
+        }
+        if(KeyboardIsPressed(Keyboard::LSHIFT)){
+            TransformMove(0,velocity,0);
+        }
+        if(KeyboardIsPressed(Keyboard::LEFT)){
+            TransformRotate(0,1,0);
+        }
+        if(KeyboardIsPressed(Keyboard::RIGHT)){
+            TransformRotate(0,-1,0);
+        }
+        vec3 pos = TransformGetRotation();
 
-        vec3 pos = TransformGetPosition();
-
-        //LogEngine("x: " + formatFloat(pos.x,"",2)+" y: " + formatFloat(pos.y,"",2)+" z: " + formatFloat(pos.z,"",2));
+        LogEngine("x: " + formatFloat(pos.x,"",2)+" y: " + formatFloat(pos.y,"",2)+" z: " + formatFloat(pos.z,"",2));
     }
 
     void OnDestroy(){

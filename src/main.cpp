@@ -29,6 +29,9 @@
 ///EnTT
 #include "EnTT/entt.hpp"
 
+///TinyglTF
+#include "TinyglTF/tiny_gltf_v3.h"
+
 ///ARTENGINE
 #include "engineWindow.h"
 #include "engineShader.h"
@@ -45,7 +48,7 @@
 #include "engineAssetManager.h"
 #include "engineShaderLoad.h"
 
-#include "engineScriptUpdate.h"
+#include "engineUpdateComponents.h"
 
 #include "utilsJson.h"
 #include "utilsString.h"
@@ -72,6 +75,7 @@ nlohmann::json ShaderManifests;
 
 ///Assets
 std::unordered_map<std::string, AssetScript> AssetMapScript;
+std::unordered_map<std::string, AssetModel> AssetMapModel;
 std::unordered_map<std::string, Shader> AssetMapShader;
 
 ///Components
@@ -162,6 +166,7 @@ int main(){
     ShaderLoad();
 
     glEnableVertexAttribArray(0);
+    glEnable(GL_DEPTH_TEST);
 
     LoadScene(GameManifests["starting_scene"]);
     ///Set the last time for Deltatime
@@ -184,8 +189,9 @@ int main(){
         UpdateScripts(DeltaTime);
 
         glClearColor(0.0f,0.2235f,0.4275f,1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+        UpdateDrawMeshes(1);
 
         window.SwapBuffers();
         window.PollEvents();

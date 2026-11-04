@@ -1,5 +1,7 @@
+#define TINYGLTF3_ENABLE_FS
+
 #ifndef TINYGLTF3_SOURCE_INCLUDED_FROM_HEADER
-#include "tiny_gltf_v3.h"
+#include "TinyglTF/tiny_gltf_v3.h"
 #endif
 #ifdef TINYGLTF3_NO_STDLIB
 #ifndef TINYGLTF_JSON_NO_STDLIB
@@ -16,7 +18,7 @@
 #define TINYGLTF_JSON_FREE(ptr) TINYGLTF3_FREE(ptr)
 #endif
 #define TINYGLTF_JSON_C_IMPLEMENTATION
-#include "tinygltf_json_c.h"
+#include "TinyglTF/tinygltf_json_c.h"
 
 #include <inttypes.h>
 #ifndef TINYGLTF3_NO_STDLIB

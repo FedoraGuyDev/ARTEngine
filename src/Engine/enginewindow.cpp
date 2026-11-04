@@ -15,6 +15,7 @@ void Window::Initialize(int width, int height, std::string name){
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+    SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
 
     //Create a new window
     m_handle = SDL_CreateWindow(name.c_str(), width, height, SDL_WINDOW_OPENGL);
