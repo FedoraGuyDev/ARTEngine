@@ -33,6 +33,7 @@
 			<Add library="ThirdParty/libs/win_x64/libOpenAL32.dll.a" />
 			<Add library="ThirdParty/libs/win_x64/libreactphysics3d.a" />
 			<Add library="ThirdParty/libs/win_x64/libSDL3.dll.a" />
+			<Add library="ws2_32" />
 			<Add directory="ThirdParty/libs/win_x64" />
 		</Linker>
 		<Unit filename="ThirdParty/include/AngelScript/scriptarray.cpp" />
@@ -88,6 +89,8 @@
 		<Unit filename="src/Utils/utilsComponents.h" />
 		<Unit filename="src/Utils/utilsJson.h" />
 		<Unit filename="src/Utils/utilsString.h" />
+		<Unit filename="src/Utils/utilsUDP.hpp" />
+		<Unit filename="src/Utils/utilsUUID.h" />
 		<Unit filename="src/Utils/utilsglTF.h" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>

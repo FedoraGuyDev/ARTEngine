@@ -52,6 +52,8 @@
 
 #include "utilsJson.h"
 #include "utilsString.h"
+#include "utilsUDP.hpp"
+#include "utilsUUID.h"
 
 #include "apiRegisterEngineAPIBasics.h"
 #include "apiRegisterEngineAPIEnums.h"
@@ -97,8 +99,17 @@ entt::entity script_update_actual_entity;
 ///GL Version
 const char* shaderVersion = "";
 
+///Initialize logger
+udp::Socket loggerSock;
+std::string loggerUUID = "";
+
 int main(){
     std::cout << "[ARTENGINE] Starting ARTEngine" << std::endl;
+
+    ///Start LOGGER socket
+    loggerSock.set_nonblocking(true);
+
+    loggerUUID = GenerateUUID();
 
     ///AngelScript Start Engine
     std::cout << "[AngelScript] Starting AngelScript Engine" << std::endl;

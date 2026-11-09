@@ -27,7 +27,12 @@ void UnloadAssetScript(std::string name){
 void UnloadAssetModel(std::string name){
     auto it = AssetMapModel.find(name);
     if(it == AssetMapModel.end()) return;
-    glDeleteVertexArrays(1, &it->second.VAO);
-    glDeleteBuffers(1, &it->second.VBO);
-    glDeleteBuffers(1, &it->second.EBO);
+    for(auto& p : it->second.parts){
+        glDeleteVertexArrays(1, &p.VAO);
+        glDeleteBuffers(1, &p.VBO);
+        glDeleteBuffers(1, &p.EBO);
+    }
+    for(unsigned int t : it->second.textures) glDeleteTextures(1, &t);
+    AssetMapModel.erase(it);
 }
+

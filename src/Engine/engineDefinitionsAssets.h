@@ -31,12 +31,16 @@ struct AssetScript{
     asIScriptFunction* onDestroy = nullptr;
 };
 
-struct AssetModel{
-    std::string path;
-
-    unsigned int VAO = 0;
-    unsigned int VBO = 0;
-    unsigned int EBO = 0;
+struct AssetModelPart{
+    unsigned int VAO = 0, VBO = 0, EBO = 0;
 
     int indexCount = 0;
+    unsigned int texture = 0;
+    float color[4] = {1,1,1,1};
+};
+
+struct AssetModel{
+    std::string path;
+    std::vector<AssetModelPart> parts;
+    std::vector<unsigned int> textures;
 };

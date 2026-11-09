@@ -31,6 +31,9 @@ class EntityTest{
         if(KeyboardIsPressed(Keyboard::RIGHT)){
             TransformRotate(0,-1,0);
         }
+        if(KeyboardIsPressed(Keyboard::F1)){
+            Log("HOLA MUNDO", 0);
+        }
         vec3 pos = TransformGetRotation();
 
         //LogEngine("x: " + formatFloat(pos.x,"",2)+" y: " + formatFloat(pos.y,"",2)+" z: " + formatFloat(pos.z,"",2));

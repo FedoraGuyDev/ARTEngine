@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1793771616 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1794035561 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -959,6 +959,8 @@
 	"engineUpdateComponents.h"
 	"utilsJson.h"
 	"utilsString.h"
+	"utilsUDP.hpp"
+	"utilsUUID.h"
 	"apiRegisterEngineAPIBasics.h"
 	"apiRegisterEngineAPIEnums.h"
 	"apiRegisterEngineAPIInput.h"
@@ -8044,7 +8046,7 @@
 	<fstream>
 	<string>
 
-1793754127 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionsassets.h
+1793824620 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionsassets.h
 	<string>
 	<vector>
 	"AngelScript/angelscript.h"
@@ -8637,22 +8639,26 @@
 	<string>
 	"JsonNlohmann/json.hpp"
 
-1793769648 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.cpp
+1793829498 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.cpp
 	<string>
 	<vector>
 	<unordered_map>
 	<iostream>
 	<cstring>
+	<map>
 	"JsonNlohmann/json.hpp"
 	"AngelScript/angelscript.h"
 	"AngelScript/scriptbuilder.h"
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/quaternion.hpp>
 	"TinyglTF/tiny_gltf_v3.h"
 	"GLAD/glad.h"
 	"engineAssetLoader.h"
 	"engineDefinitionsAssets.h"
 	"utilsglTF.h"
 
-1793754184 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetunloader.cpp
+1793828723 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetunloader.cpp
 	<string>
 	"JsonNlohmann/json.hpp"
 	"AngelScript/angelscript.h"
@@ -11416,11 +11422,14 @@
 	"EnTT/entt.hpp"
 	"engineDefinitionsComponents.h"
 
-1790910160 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapibasics.cpp
+1794035479 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapibasics.cpp
 	"apiEngineAPIBasics.h"
+	<string>
 	<iostream>
+	"JsonNlohmann/json.hpp"
+	"utilsUDP.hpp"
 
-1790910160 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapibasics.h
+1794035404 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapibasics.h
 	<iostream>
 
 1790910159 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapibasics.cpp
@@ -11428,7 +11437,7 @@
 	"apiEngineAPIBasics.h"
 	"AngelScript/angelscript.h"
 
-1790959345 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapibasics.h
+1794035969 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapibasics.h
 	"AngelScript/angelscript.h"
 	"apiEngineAPIBasics.h"
 
@@ -11602,7 +11611,7 @@
 	<stdio.h>
 	<float.h>
 
-1793754127 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsgltf.h
+1793824620 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsgltf.h
 	<string>
 	<vector>
 	<unordered_map>
@@ -11610,7 +11619,11 @@
 	<cstring>
 	"glad/glad.h"
 	"TinyglTF/tiny_gltf_v3.h"
+	"TinyglTF/stb_image.h"
 	"JsonNlohmann/json.hpp"
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/quaternion.hpp>
 	"engineDefinitionsAssets.h"
 
 1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\gtc\type_ptr.hpp
@@ -11680,7 +11693,7 @@
 
 1793769832 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.h
 
-1793769700 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.cpp
+1793829084 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.cpp
 	"engineUpdateComponents.h"
 	<iostream>
 	<string>
@@ -11695,4 +11708,71 @@
 	"engineDefinitionsComponents.h"
 	"engineDefinitionsAssets.h"
 	"engineShader.h"
+
+1793834875 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\tinygltf\stb_image.h
+	"stb_image.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<assert.h>
+	<stdint.h>
+	<emmintrin.h>
+	<intrin.h>
+	<arm_neon.h>
+
+1794030438 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsudp.hpp
+	<cstddef>
+	<cstdint>
+	<optional>
+	<stdexcept>
+	<string>
+	<system_error>
+	<utility>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<arpa/inet.h>
+	<cerrno>
+	<fcntl.h>
+	<netdb.h>
+	<netinet/in.h>
+	<poll.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<unistd.h>
+
+1794035404 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsuuid.h
+	<algorithm>
+	<array>
+	<functional>
+	<random>
+	"stdUUID/uuid.h"
+
+1794021950 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\stduuid\uuid.h
+	<cstring>
+	<string>
+	<sstream>
+	<iomanip>
+	<array>
+	<string_view>
+	<iterator>
+	<random>
+	<memory>
+	<functional>
+	<type_traits>
+	<optional>
+	<chrono>
+	<numeric>
+	<atomic>
+	<span>
+	<gsl/span>
+	<objbase.h>
+	<iphlpapi.h>
+	<uuid/uuid.h>
+	<CoreFoundation/CFUUID.h>
 

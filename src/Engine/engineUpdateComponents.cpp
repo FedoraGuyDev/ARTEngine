@@ -101,6 +101,7 @@ void UpdateDrawMeshes(float aspect){
             currentShader = shader;
             glUniformMatrix4fv(glGetUniformLocation(shader->GetID(), "view"),       1, GL_FALSE, glm::value_ptr(viewMat));
             glUniformMatrix4fv(glGetUniformLocation(shader->GetID(), "projection"), 1, GL_FALSE, glm::value_ptr(projMat));
+            glUniform1i(glGetUniformLocation(shader->GetID(), "uTexture"), 0);
         }
 
         glm::mat4 model = glm::translate(glm::mat4(1.0f),glm::vec3(comp_transform.x,comp_transform.y,comp_transform.z))
@@ -109,8 +110,16 @@ void UpdateDrawMeshes(float aspect){
 
         glUniformMatrix4fv(glGetUniformLocation(shader->GetID(),"model"),1,GL_FALSE,glm::value_ptr(model));
 
-        glBindVertexArray(modelIt->second.VAO);
-        glDrawElements(GL_TRIANGLES,modelIt->second.indexCount,GL_UNSIGNED_INT,0);
+        for(const AssetModelPart& part : modelIt->second.parts){
+            glUniform4fv(glGetUniformLocation(shader->GetID(), "uColor"), 1, part.color);
+            glUniform1i(glGetUniformLocation(shader->GetID(), "uHasTexture"), part.texture != 0 ? 1 : 0);
+            if(part.texture != 0){
+                glActiveTexture(GL_TEXTURE0);
+                glBindTexture(GL_TEXTURE_2D, part.texture);
+            }
+            glBindVertexArray(part.VAO);
+            glDrawElements(GL_TRIANGLES, part.indexCount, GL_UNSIGNED_INT, 0);
+        }
     }
     glBindVertexArray(0);
 }

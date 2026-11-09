@@ -11,4 +11,10 @@ inline void RegisterEngineAPIBasics(asIScriptEngine* engine){
         asFUNCTION(APILogEngine),
         asCALL_CDECL
         );
+    engine->RegisterGlobalFunction(
+        "void Log(string,int)",
+        asFUNCTION(APILogLogger),
+        asCALL_CDECL
+        );
 }
+
