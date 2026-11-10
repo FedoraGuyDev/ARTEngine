@@ -20,6 +20,7 @@ ART Engine relies on the following third-party libraries:
 * **[ReactPhysics3D](https://www.reactphysics3d.com/)** - Physics library.
 * **[EnTT](https://github.com/skypjack/entt)** - ECS library.
 * **[TinyglTF](https://github.com/syoyo/tinygltf/)** - glTF loading library.
+* **[stdUUID](https://github.com/mariusbancila/stduuid/)** - UUID generator library.
 
 ## Building
 The project is currently in **early development**. 
