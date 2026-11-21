@@ -28,10 +28,17 @@
 			"entity_name" : "entityCamera",
 			"override_components" : {
 			}
+		},
+		{
+			"entity_name" : "entitySun",
+			"override_components" : {
+			}
 		}
 	],
 	"assets" : [
 		{"type" : 0, "name" : "scriptTest"},
+		{"type" : 0, "name" : "scriptSun"},
+		{"type" : 0, "name" : "scriptRobot"},
 		{"type" : 3, "name" : "robot"}
 	]
 }

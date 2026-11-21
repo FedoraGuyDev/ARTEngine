@@ -3,6 +3,7 @@
 #include <string>
 #include "GLAD/glad.h"
 #include "SDL3/SDL.h"
+#include "GLM/glm.hpp"
 
 void Window::Initialize(int width, int height, std::string name){
     ///Start SDL
@@ -51,16 +52,28 @@ bool Window::IsWindowValid(){return window_is_valid;}
 void Window::SwapBuffers() { SDL_GL_SwapWindow(m_handle); }
 bool Window::ShouldClose() { return m_shouldClose; }
 void Window::PollEvents() {
+
     const bool* state = SDL_GetKeyboardState(NULL);
     m_KeyLastPressed.assign(state, state + SDL_SCANCODE_COUNT);
+
+    m_MouseDeltaX = 0.0f;
+    m_MouseDeltaY = 0.0f;
 
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_EVENT_QUIT) {
             m_shouldClose = true;
         }
+        if(event.type == SDL_EVENT_MOUSE_MOTION){
+            m_MouseDeltaX -= event.motion.xrel;
+            m_MouseDeltaY -= event.motion.yrel;
+        }
     }
 }
+void Window::UpdateMousePos(){
+    SDL_PumpEvents();
+}
+
 bool Window::IsKeyPressed(int key) {
     const bool* state = SDL_GetKeyboardState(NULL);
     return state[key];
@@ -69,4 +82,24 @@ bool Window::IsKeyPressed(int key) {
 bool Window::IsKeyJustPressed(int key) {
     const bool* state = SDL_GetKeyboardState(NULL);
     return state[key] && !m_KeyLastPressed[key];
+}
+
+bool Window::IsKeyJustReleased(int key) {
+    const bool* state = SDL_GetKeyboardState(NULL);
+    return !state[key] && m_KeyLastPressed[key];
+}
+
+
+void Window::SetMouseCaptured(bool captured){
+    SDL_SetWindowRelativeMouseMode(m_handle, captured);
+}
+glm::vec2 Window::GetMousePos(){
+    float x,y;
+
+    SDL_GetMouseState(&x,&y);
+
+    return {x,y};
+}
+glm::vec2 Window::GetMouseDelta(){
+    return glm::vec2(m_MouseDeltaX, m_MouseDeltaY);
 }

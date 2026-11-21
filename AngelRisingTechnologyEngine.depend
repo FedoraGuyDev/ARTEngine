@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1794035561 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1795233543 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -965,6 +965,7 @@
 	"apiRegisterEngineAPIEnums.h"
 	"apiRegisterEngineAPIInput.h"
 	"apiRegisterEngineAPITransform.h"
+	"apiRegisterEngineAPIAnimation.h"
 	"apiRegisterengineAPIObjects.h"
 	"debugEntities.h"
 
@@ -3327,23 +3328,25 @@
 	<string>
 	"entt.hpp"
 
-1793684865 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.cpp
+1795232578 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.cpp
 	"engineShader.h"
 	<iostream>
 
 1793683323 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.h
 	"GLAD/glad.h"
 
-1793771613 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
+1795233591 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
 	"engineWindow.h"
 	<iostream>
 	<string>
 	"GLAD/glad.h"
 	"SDL3/SDL.h"
+	"GLM/glm.hpp"
 
-1790910160 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.h
+1795233391 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.h
 	"GLAD/glad.h"
 	"SDL3/SDL.h"
+	"GLM/glm.hpp"
 	<vector>
 	<iostream>
 	<string>
@@ -8046,13 +8049,15 @@
 	<fstream>
 	<string>
 
-1793824620 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionsassets.h
+1795230385 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionsassets.h
 	<string>
 	<vector>
+	"GLM/glm.hpp"
+	"GLM/gtc/quaternion.hpp"
 	"AngelScript/angelscript.h"
 	"engineShader.h"
 
-1793769648 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionscomponents.h
+1795230424 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionscomponents.h
 	<string>
 	<unordered_map>
 	"GLAD/glad.h"
@@ -8249,11 +8254,11 @@
 
 1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\gtc\quaternion_simd.inl
 
-1793761978 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponents.h
+1795226708 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponents.h
 	<variant>
 	"engineDefinitionsComponents.h"
 
-1793769648 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineregistercomponents.h
+1795226708 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineregistercomponents.h
 	"utilsComponents.h"
 	"engineDefinitionsComponents.h"
 
@@ -8639,7 +8644,7 @@
 	<string>
 	"JsonNlohmann/json.hpp"
 
-1793829498 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.cpp
+1795230385 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.cpp
 	<string>
 	<vector>
 	<unordered_map>
@@ -8696,7 +8701,7 @@
 	"engineComponentsEvents.h"
 	"engineDefinitionsComponents.h"
 
-1790960003 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
+1795232534 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
 	<iostream>
 	<unordered_map>
 	"AngelScript/angelscript.h"
@@ -11509,19 +11514,21 @@
 	"GLM/gtc/quaternion.hpp"
 	"GLM/gtc/matrix_transform.hpp"
 
-1791056239 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapiobjects.h
+1795216575 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapiobjects.h
 	"AngelScript/angelscript.h"
 	"GLM/glm.hpp"
 	"GLM/gtc/quaternion.hpp"
 	"GLM/gtc/matrix_transform.hpp"
 
-1791066504 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapiinput.cpp
+1795232419 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapiinput.cpp
 	"apiEngineAPIInput.h"
 	"SDL3/SDL.h"
+	"GLM/glm.hpp"
 	"engineWindow.h"
 
-1790910171 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapiinput.h
+1795232419 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapiinput.h
 	"SDL3/SDL.h"
+	"GLM/glm.hpp"
 	"engineWindow.h"
 
 1793680098 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshaderload.h
@@ -11534,7 +11541,7 @@
 	"engineShader.h"
 	"utilsString.h"
 
-1791066504 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapiinput.h
+1795232419 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapiinput.h
 	"AngelScript/angelscript.h"
 	"apiEngineAPIInput.h"
 
@@ -11611,12 +11618,14 @@
 	<stdio.h>
 	<float.h>
 
-1793824620 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsgltf.h
+1795232170 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsgltf.h
 	<string>
 	<vector>
 	<unordered_map>
 	<iostream>
 	<cstring>
+	<map>
+	<algorithm>
 	"glad/glad.h"
 	"TinyglTF/tiny_gltf_v3.h"
 	"TinyglTF/stb_image.h"
@@ -11691,9 +11700,9 @@
 1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\gtc\type_ptr.inl
 	<cstring>
 
-1793769832 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.h
+1795208364 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.h
 
-1793829084 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.cpp
+1795232170 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.cpp
 	"engineUpdateComponents.h"
 	<iostream>
 	<string>
@@ -11708,6 +11717,8 @@
 	"engineDefinitionsComponents.h"
 	"engineDefinitionsAssets.h"
 	"engineShader.h"
+	"engineAnimation.h"
+	"engineLighting.h"
 
 1793834875 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\tinygltf\stb_image.h
 	"stb_image.h"
@@ -11775,4 +11786,44 @@
 	<iphlpapi.h>
 	<uuid/uuid.h>
 	<CoreFoundation/CFUUID.h>
+
+1795208364 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapianimation.cpp
+	"apiEngineAPIAnimation.h"
+	<string>
+	<unordered_map>
+	"EnTT/entt.hpp"
+	"engineDefinitionsComponents.h"
+	"engineDefinitionsAssets.h"
+	"engineAnimation.h"
+
+1795208364 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapianimation.h
+	<string>
+
+1795208364 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineanimation.h
+	<string>
+	<vector>
+	"GLM/glm.hpp"
+	"GLM/gtc/quaternion.hpp"
+	"engineDefinitionsAssets.h"
+	"engineDefinitionsComponents.h"
+
+1795232419 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineanimation.cpp
+	"engineAnimation.h"
+	<algorithm>
+	<cmath>
+	"GLM/gtc/matrix_transform.hpp"
+
+1795208364 d:\cpp projects\angelrisingtechnologyengine\src\api\apiregisterengineapianimation.h
+	"AngelScript/angelscript.h"
+	"apiEngineAPIAnimation.h"
+
+1795232170 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginelighting.cpp
+	"engineLighting.h"
+	<algorithm>
+
+1795226708 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginelighting.h
+	<vector>
+	"GLM/glm.hpp"
+	"GLM/gtc/quaternion.hpp"
+	"engineDefinitionsComponents.h"
 

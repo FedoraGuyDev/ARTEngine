@@ -29,7 +29,6 @@ Shader::Shader(const char* vertexSource, const char* fragmentSource){
 Shader::~Shader(){
     if(m_programID != 0){
             glDeleteProgram(m_programID);
-            std::cout << "d" << std::endl;
     }
 }
 

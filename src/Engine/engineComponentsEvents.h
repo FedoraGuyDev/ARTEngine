@@ -12,6 +12,7 @@
 extern asIScriptEngine* ASengine;
 
 extern std::unordered_map<std::string, AssetScript> AssetMapScript;
+extern entt::entity script_update_actual_entity;
 
 inline void OnScriptConstructed(entt::registry& reg, entt::entity e){
     auto& script = reg.get<Script>(e);
@@ -40,10 +41,26 @@ inline void OnScriptConstructed(entt::registry& reg, entt::entity e){
 
     script.initialized = true;
     script.father_entity = e;
+
+    if(!script.initialized || !script.onCreateFunc || !script.instance) return;
+
+    script_update_actual_entity = e;
+
+    asIScriptContext* createctx = ASengine->CreateContext();
+
+    createctx->Prepare(script.onCreateFunc);
+    createctx->SetObject(script.instance);
+
+    int r = createctx->Execute();
+
+    if(r == asEXECUTION_EXCEPTION){
+        std::cout << "[AngelScript EXCEPTION] " << createctx->GetExceptionString() << std::endl;
+    }
+
+    createctx->Release();
+
 }
 inline void OnScriptDestroyed(entt::registry& reg, entt::entity e){
-    std::cout << "Script destroyed" << std::endl;
-
     auto& script = EntityRegistry.get<Script>(e);
 
     if(script.instance){

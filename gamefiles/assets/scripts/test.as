@@ -1,42 +1,35 @@
+const float PI = 3.14159265f;
+
 class EntityTest{
+    float yaw = 0;
+    float pitch = 0;
+
     void OnStart() {
 
     }
 
     void OnUpdate(float deltaTime) {
-        float velocity = 5.0 * deltaTime;
+        float speed = 5.0 * deltaTime;
+        float turn  = 90.0 * deltaTime;
 
+        float rad = yaw * PI / 180.0;
+        float fx = -sin(rad);  float fz = -cos(rad);
+        float rx =  cos(rad);  float rz = -sin(rad);
 
-        if(KeyboardIsPressed(Keyboard::A)){
-            TransformMove(-velocity,0,0);
-        }
-        if(KeyboardIsPressed(Keyboard::D)){
-            TransformMove(velocity,0,0);
-        }
-        if(KeyboardIsPressed(Keyboard::W)){
-            TransformMove(0,0,velocity);
-        }
-        if(KeyboardIsPressed(Keyboard::S)){
-            TransformMove(0,0,-velocity);
-        }
-        if(KeyboardIsPressed(Keyboard::SPACE)){
-            TransformMove(0,-velocity,0);
-        }
-        if(KeyboardIsPressed(Keyboard::LSHIFT)){
-            TransformMove(0,velocity,0);
-        }
-        if(KeyboardIsPressed(Keyboard::LEFT)){
-            TransformRotate(0,1,0);
-        }
-        if(KeyboardIsPressed(Keyboard::RIGHT)){
-            TransformRotate(0,-1,0);
-        }
-        if(KeyboardIsPressed(Keyboard::F1)){
-            Log("HOLA MUNDO", 0);
-        }
-        vec3 pos = TransformGetRotation();
+        if(KeyboardIsPressed(Keyboard::W)) TransformMove( fx*speed, 0,  fz*speed);
+        if(KeyboardIsPressed(Keyboard::S)) TransformMove(-fx*speed, 0, -fz*speed);
+        if(KeyboardIsPressed(Keyboard::D)) TransformMove( rx*speed, 0,  rz*speed);
+        if(KeyboardIsPressed(Keyboard::A)) TransformMove(-rx*speed, 0, -rz*speed);
 
-        //LogEngine("x: " + formatFloat(pos.x,"",2)+" y: " + formatFloat(pos.y,"",2)+" z: " + formatFloat(pos.z,"",2));
+        if(KeyboardIsPressed(Keyboard::SPACE))  TransformMove(0,  speed, 0);
+        if(KeyboardIsPressed(Keyboard::LSHIFT)) TransformMove(0, -speed, 0);
+
+        vec2 mousedelta = MouseGetDelta();
+
+        yaw += turn * mousedelta.x;
+        pitch += turn * mousedelta.y;
+
+        TransformSetRotation(pitch, yaw, 0);
     }
 
     void OnDestroy(){

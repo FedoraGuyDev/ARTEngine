@@ -9,4 +9,5 @@ inline void DefineEntityComponents(){
     RegisterComponent<Name>("Name");
     RegisterComponent<Camera>("Camera");
     RegisterComponent<MeshRenderer>("MeshRenderer");
+    RegisterComponent<Light>("Light");
 }

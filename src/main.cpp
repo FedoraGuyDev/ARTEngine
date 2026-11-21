@@ -59,6 +59,7 @@
 #include "apiRegisterEngineAPIEnums.h"
 #include "apiRegisterEngineAPIInput.h"
 #include "apiRegisterEngineAPITransform.h"
+#include "apiRegisterEngineAPIAnimation.h"
 #include "apiRegisterengineAPIObjects.h"
 
 
@@ -135,6 +136,7 @@ int main(){
     RegisterEngineAPIBasics(ASengine);
     RegisterEngineAPIInput(ASengine);
     RegisterEngineAPITransform(ASengine);
+    RegisterEngineAPIAnimation(ASengine);
 
     ///EnTT Set Definitions
     DefineEntityComponents();
@@ -169,6 +171,8 @@ int main(){
         std::cout << "[ARTENGINE] Closing ARTENGINE due to an error on initializing Window.. :C" << std::endl;
         return 0;
     }
+    ///If in the Game Manifest is mentioned that the game has the mouse blocked it activates it
+    window.SetMouseCaptured(GameManifests["block_mouse"].get<bool>());
 
     ///Get Shader Version
     shaderVersion = (const char*)glGetString(GL_SHADING_LANGUAGE_VERSION);
@@ -190,14 +194,10 @@ int main(){
         float DeltaTime = (DTCurrentTime - DTLastTime) / 1000.0f;
         DTLastTime = DTCurrentTime;
 
-        if (window.IsKeyJustPressed(SDL_SCANCODE_F1)){
-            LoadScene("sceneTest");
-        }
-        if (window.IsKeyJustPressed(SDL_SCANCODE_F2)){
-            DebugPrintAllEntities();
-        }
+        window.UpdateMousePos();
 
         UpdateScripts(DeltaTime);
+        UpdateAnimations(DeltaTime);
 
         glClearColor(0.0f,0.2235f,0.4275f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

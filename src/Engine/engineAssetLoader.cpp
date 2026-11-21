@@ -58,9 +58,6 @@ void LoadAssetScript(std::string name){
         return;
     }
 
-    ///Aqui iria lo demas pero tengo sueño entonces lo hago mañana :v
-    ///Ya es el maniana, ahora a seguir programando
-
     AssetScript& new_script = AssetMapScript[name];
 
     new_script.path = path;
@@ -71,7 +68,7 @@ void LoadAssetScript(std::string name){
     std::string factoryDecl = asclass + "@" + asclass + "()";
 
     new_script.factory = new_script.classType->GetFactoryByDecl(factoryDecl.c_str());
-    new_script.onCreate = new_script.classType->GetMethodByDecl("void OnCreate()");
+    new_script.onCreate = new_script.classType->GetMethodByDecl("void OnStart()");
     new_script.onUpdate = new_script.classType->GetMethodByDecl("void OnUpdate(float)");
     new_script.onDestroy = new_script.classType->GetMethodByDecl("void OnDestroy()");
 }
@@ -104,7 +101,15 @@ void LoadAssetModel(std::string name){
         return;
     }
 
-    std::map<int,ModelPartData> groups;
+    AssetModel asset;
+    asset.path = path;
+
+    ///Esqueleto y animaciones (si el modelo las trae). Va antes de la geometria.
+    std::vector<int> nodeToBone;
+    asset.hasSkeleton = ModelLoadSkeleton(model, asset.skeleton, nodeToBone);
+    if(asset.hasSkeleton) ModelLoadAnimations(model, nodeToBone, asset.animations);
+
+    std::map<std::pair<int,int>,ModelPartData> groups;
 
     if(model.scenes_count > 0){
         int sc = (model.default_scene >= 0 && model.default_scene < (int)model.scenes_count) ? model.default_scene : 0;
@@ -127,18 +132,23 @@ void LoadAssetModel(std::string name){
         }
     }
 
-    AssetModel asset;
-    asset.path = path;
     std::vector<unsigned int> texCache(model.textures_count,0);
 
-    for(auto& [matIndex, g] : groups){
+    for(auto& [key, g] : groups){
         if(g.indices.empty()) continue;
+        const int matIndex = key.first;
         AssetModelPart part;
+        part.skinned = (key.second == 1);
 
         if(matIndex >= 0 && matIndex < (int)model.materials_count){
             const tg3_pbr_metallic_roughness& pbr = model.materials[matIndex].pbr_metallic_roughness;
             for(int i = 0; i < 4;i++) part.color[i] = (float)pbr.base_color_factor[i];
             part.texture = ModelLoadTexture(model,pbr.base_color_texture.index,baseDir,texCache);
+
+            ///glTF no trae "brillo" sino rugosidad: la convertimos a los parametros de Blinn-Phong
+            const float rough = std::min(std::max((float)pbr.roughness_factor, 0.05f), 1.0f);
+            part.shininess = std::min(std::max(2.0f / (rough * rough * rough * rough) - 2.0f, 4.0f), 256.0f);
+            part.specular  = (1.0f - rough) * 0.6f + 0.04f;
         }
         part.indexCount = (int)g.indices.size();
 
@@ -152,16 +162,24 @@ void LoadAssetModel(std::string name){
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, part.EBO);   // queda guardado dentro del VAO
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, g.indices.size() * sizeof(unsigned int), g.indices.data(), GL_STATIC_DRAW);
 
-        const GLsizei stride = 8 * sizeof(float);
+        const GLsizei stride = MODEL_VERTEX_FLOATS * sizeof(float);
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, stride, (void*)0);                      // posicion
         glEnableVertexAttribArray(0);
         glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, stride, (void*)(3 * sizeof(float)));    // normal
         glEnableVertexAttribArray(1);
         glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, stride, (void*)(6 * sizeof(float)));    // uv
         glEnableVertexAttribArray(2);
+        glVertexAttribPointer(3, 4, GL_FLOAT, GL_FALSE, stride, (void*)(8 * sizeof(float)));    // indices de huesos (como float)
+        glEnableVertexAttribArray(3);
+        glVertexAttribPointer(4, 4, GL_FLOAT, GL_FALSE, stride, (void*)(12 * sizeof(float)));   // pesos
+        glEnableVertexAttribArray(4);
         glBindVertexArray(0);
 
         asset.parts.push_back(part);
+    }
+
+    for(unsigned int t : texCache){
+        if(t != 0 && t != ~0u) asset.textures.push_back(t);     // para borrarlas en UnloadAssetModel
     }
 
     tg3_model_free(&model);

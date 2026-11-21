@@ -5,5 +5,5 @@
 #include "engineDefinitionsComponents.h"
 
 using Components = std::variant<
-    Transform, Script, Name, Camera, MeshRenderer
+    Transform, Script, Name, Camera, MeshRenderer, Light
 >;

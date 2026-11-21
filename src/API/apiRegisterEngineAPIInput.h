@@ -16,4 +16,20 @@ inline void RegisterEngineAPIInput(asIScriptEngine* engine){
         asFUNCTION(APIKeyboardIsJustPressed),
         asCALL_CDECL
         );
+    engine->RegisterGlobalFunction(
+        "bool KeyboardIsJustReleased(Keyboard)",
+        asFUNCTION(APIKeyboardIsJustReleased),
+        asCALL_CDECL
+        );
+
+    engine->RegisterGlobalFunction(
+        "vec2 MouseGetPosition()",
+        asFUNCTION(APIMouseGetPosition),
+        asCALL_CDECL
+        );
+    engine->RegisterGlobalFunction(
+        "vec2 MouseGetDelta()",
+        asFUNCTION(APIMouseGetDelta),
+        asCALL_CDECL
+        );
 }

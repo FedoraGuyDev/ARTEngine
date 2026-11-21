@@ -3,6 +3,14 @@
 		"scriptTest" : {
 			"path"  : "gamefiles/assets/scripts/test.as",
 			"class" : "EntityTest"
+		},
+		"scriptRobot" : {
+			"path"  : "gamefiles/assets/scripts/robot.as",
+			"class" : "Robot"
+		},
+		"scriptSun" : {
+			"path"  : "gamefiles/assets/scripts/sun.as",
+			"class" : "Sun"
 		}
 	},
 	"models" : {

@@ -11,7 +11,6 @@ inline void RegisterEngineAPIObjects(asIScriptEngine* engine){
         sizeof(glm::vec3),
         asOBJ_VALUE | asOBJ_POD | asGetTypeTraits<glm::vec3>()
         );
-
     engine->RegisterObjectProperty(
         "vec3",
         "float x",
@@ -26,5 +25,21 @@ inline void RegisterEngineAPIObjects(asIScriptEngine* engine){
         "vec3",
         "float z",
         asOFFSET(glm::vec3,z)
+        );
+
+    engine->RegisterObjectType(
+        "vec2",
+        sizeof(glm::vec2),
+        asOBJ_VALUE | asOBJ_POD | asGetTypeTraits<glm::vec2>()
+        );
+    engine->RegisterObjectProperty(
+        "vec2",
+        "float x",
+        asOFFSET(glm::vec2,x)
+        );
+    engine->RegisterObjectProperty(
+        "vec2",
+        "float y",
+        asOFFSET(glm::vec2,y)
         );
 }

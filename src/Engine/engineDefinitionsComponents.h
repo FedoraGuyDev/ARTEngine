@@ -63,9 +63,28 @@ struct Camera{
     glm::vec3 GetOffset(){ return glm::vec3(xoffset,yoffset,zoffset); }
     glm::quat GetRotation(){ return glm::quat(rotw,rotx,roty,rotz); }
 };
+struct Light{
+    std::string type = "directional";
+    float r = 1.0f, g = 1.0f, b = 1.0f;
+    float intensity = 1.0f;
+    float range = 10.0f;
+
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE_WITH_DEFAULT(Light,type,r,g,b,intensity,range)
+};
 struct MeshRenderer{
     std::string model_name;
     std::string shader_override;
 
-    NLOHMANN_DEFINE_TYPE_INTRUSIVE(MeshRenderer,model_name,shader_override)
+    std::string animation;
+    float animSpeed = 1.0f;
+    bool animLoop = true;
+
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE_WITH_DEFAULT(MeshRenderer,model_name,shader_override,animation,animSpeed,animLoop)
+
+    float animTime = 0.0f;
+    std::string prevAnimation;
+    float prevTime = 0.0f;
+    bool prevLoop = true;
+    float fadeDuration = 0.0f;
+    float fadeElapsed = 0.0f;
 };
