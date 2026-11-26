@@ -1,4 +1,16 @@
 {
+	"entityScene" : {
+		"components" : [
+			{
+			  "type": "Transform",
+			  "data": {"x": 0, "y": 0, "z": 0, "rotw": 1, "rotx": 0, "roty": 0, "rotz": 0, "scax": 1, "scay": 1, "scaz": 1}
+			},
+			{
+				"type" : "MeshRenderer",
+				"data" : {"model_name" : "scene", "shader_override" : ""}
+			}
+		]
+	},
 	"entityTest" : {
 		"components" : [
 			{
@@ -34,14 +46,14 @@
 	"entitySun" : {
 		"components" : [
 			{ "type": "Transform", "data": {"x":0,"y":0,"z":0,"rotw":0.92,"rotx":-0.38,"roty":0,"rotz":0,"scax":1,"scay":1,"scaz":1} },
-			{ "type": "Light", "data": {"type":"directional","r":1,"g":0.95,"b":0.85,"intensity":1.0} },
+			{ "type": "Light", "data": {"type":"directional","r":0.988,"g":0.976,"b":0.851,"intensity":1.0} },
 			{ "type" : "Script", "data" : {"script_name" : "scriptSun", "script_mainclass" : "Sun"}}
 		]
 	},
 	"entityLamp" : {
 		"components" : [
 			{ "type": "Transform", "data": {"x":0,"y":0,"z":0,"rotw":1,"rotx":0,"roty":0,"rotz":0,"scax":1,"scay":1,"scaz":1} },
-			{ "type": "Light", "data": {"type":"point","r":1,"g":0.6,"b":0.2,"intensity":2.0,"range":12} }
+			{ "type": "Light", "data": {"type":"point","r":1,"g":0.0,"b":0.0,"intensity":2.0,"range":12} }
 		]
 	}
 }

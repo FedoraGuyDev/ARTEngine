@@ -9,7 +9,7 @@
 
 #include "glad/glad.h"
 #include "TinyglTF/tiny_gltf_v3.h"
-#include "TinyglTF/stb_image.h"
+#include "stbImage/stb_image.h"
 #include "JsonNlohmann/json.hpp"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>

@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1795233543 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1795453137 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -942,6 +942,8 @@
 	"GLAD/glad.h"
 	"SDL3/SDL.h"
 	"GLM/glm.hpp"
+	"AL/al.h"
+	"AL/alc.h"
 	"EnTT/entt.hpp"
 	"TinyglTF/tiny_gltf_v3.h"
 	"engineWindow.h"
@@ -957,6 +959,7 @@
 	"engineAssetManager.h"
 	"engineShaderLoad.h"
 	"engineUpdateComponents.h"
+	"engineAudio.h"
 	"utilsJson.h"
 	"utilsString.h"
 	"utilsUDP.hpp"
@@ -3335,7 +3338,7 @@
 1793683323 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshader.h
 	"GLAD/glad.h"
 
-1795233591 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
+1795412787 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\enginewindow.cpp
 	"engineWindow.h"
 	<iostream>
 	<string>
@@ -8049,7 +8052,7 @@
 	<fstream>
 	<string>
 
-1795230385 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionsassets.h
+1795413008 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionsassets.h
 	<string>
 	<vector>
 	"GLM/glm.hpp"
@@ -8057,7 +8060,7 @@
 	"AngelScript/angelscript.h"
 	"engineShader.h"
 
-1795230424 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionscomponents.h
+1795719303 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionscomponents.h
 	<string>
 	<unordered_map>
 	"GLAD/glad.h"
@@ -8644,7 +8647,7 @@
 	<string>
 	"JsonNlohmann/json.hpp"
 
-1795230385 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.cpp
+1795413008 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineassetloader.cpp
 	<string>
 	<vector>
 	<unordered_map>
@@ -11618,7 +11621,7 @@
 	<stdio.h>
 	<float.h>
 
-1795232170 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsgltf.h
+1795414912 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilsgltf.h
 	<string>
 	<vector>
 	<unordered_map>
@@ -11628,7 +11631,7 @@
 	<algorithm>
 	"glad/glad.h"
 	"TinyglTF/tiny_gltf_v3.h"
-	"TinyglTF/stb_image.h"
+	"stbImage/stb_image.h"
 	"JsonNlohmann/json.hpp"
 	<glm/glm.hpp>
 	<glm/gtc/matrix_transform.hpp>
@@ -11702,9 +11705,11 @@
 
 1795208364 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.h
 
-1795232170 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.cpp
+1795637830 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.cpp
 	"engineUpdateComponents.h"
+	<algorithm>
 	<iostream>
+	<vector>
 	<string>
 	<unordered_map>
 	"GLAD/glad.h"
@@ -11719,6 +11724,7 @@
 	"engineShader.h"
 	"engineAnimation.h"
 	"engineLighting.h"
+	"engineShadow.h"
 
 1793834875 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\tinygltf\stb_image.h
 	"stb_image.h"
@@ -11826,4 +11832,59 @@
 	"GLM/glm.hpp"
 	"GLM/gtc/quaternion.hpp"
 	"engineDefinitionsComponents.h"
+
+1793834875 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\stbimage\stb_image.h
+	"stb_image.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<assert.h>
+	<stdint.h>
+	<emmintrin.h>
+	<intrin.h>
+	<arm_neon.h>
+
+1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\al\al.h
+
+1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\al\alc.h
+
+1795414912 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineaudio.h
+
+1795415154 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineaudio.cpp
+	"engineAudio.h"
+	"AL/al.h"
+	"AL/alc.h"
+	"stbVorbis/stb_vorbis.c"
+	<iostream>
+
+1795414272 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\stbvorbis\stb_vorbis.c
+	<stdio.h>
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<math.h>
+	<limits.h>
+	<malloc.h>
+	<alloca.h>
+	<crtdbg.h>
+
+1795649223 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshadow.h
+	"GLM/glm.hpp"
+	"engineShader.h"
+
+1795649223 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineshadow.cpp
+	"engineShadow.h"
+	<cmath>
+	<iostream>
+	<memory>
+	"GLAD/glad.h"
+	"GLM/gtc/matrix_transform.hpp"
 

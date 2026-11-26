@@ -104,7 +104,6 @@ void LoadAssetModel(std::string name){
     AssetModel asset;
     asset.path = path;
 
-    ///Esqueleto y animaciones (si el modelo las trae). Va antes de la geometria.
     std::vector<int> nodeToBone;
     asset.hasSkeleton = ModelLoadSkeleton(model, asset.skeleton, nodeToBone);
     if(asset.hasSkeleton) ModelLoadAnimations(model, nodeToBone, asset.animations);
@@ -141,11 +140,16 @@ void LoadAssetModel(std::string name){
         part.skinned = (key.second == 1);
 
         if(matIndex >= 0 && matIndex < (int)model.materials_count){
+            const tg3_material& mat = model.materials[matIndex];
+            if(tg3_str_equals_cstr(mat.alpha_mode, "MASK")) part.alphaMode = 1;
+            else if(tg3_str_equals_cstr(mat.alpha_mode, "BLEND")) part.alphaMode = 2;
+            part.alphaCutoff = (float)mat.alpha_cutoff;
+            part.doubleSided = mat.double_sided != 0;
+
             const tg3_pbr_metallic_roughness& pbr = model.materials[matIndex].pbr_metallic_roughness;
             for(int i = 0; i < 4;i++) part.color[i] = (float)pbr.base_color_factor[i];
             part.texture = ModelLoadTexture(model,pbr.base_color_texture.index,baseDir,texCache);
 
-            ///glTF no trae "brillo" sino rugosidad: la convertimos a los parametros de Blinn-Phong
             const float rough = std::min(std::max((float)pbr.roughness_factor, 0.05f), 1.0f);
             part.shininess = std::min(std::max(2.0f / (rough * rough * rough * rough) - 2.0f, 4.0f), 256.0f);
             part.specular  = (1.0f - rough) * 0.6f + 0.04f;
@@ -159,19 +163,19 @@ void LoadAssetModel(std::string name){
 
         glBindBuffer(GL_ARRAY_BUFFER, part.VBO);
         glBufferData(GL_ARRAY_BUFFER, g.data.size() * sizeof(float), g.data.data(), GL_STATIC_DRAW);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, part.EBO);   // queda guardado dentro del VAO
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, part.EBO);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, g.indices.size() * sizeof(unsigned int), g.indices.data(), GL_STATIC_DRAW);
 
         const GLsizei stride = MODEL_VERTEX_FLOATS * sizeof(float);
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, stride, (void*)0);                      // posicion
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, stride, (void*)0);
         glEnableVertexAttribArray(0);
-        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, stride, (void*)(3 * sizeof(float)));    // normal
+        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, stride, (void*)(3 * sizeof(float)));
         glEnableVertexAttribArray(1);
-        glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, stride, (void*)(6 * sizeof(float)));    // uv
+        glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, stride, (void*)(6 * sizeof(float)));
         glEnableVertexAttribArray(2);
-        glVertexAttribPointer(3, 4, GL_FLOAT, GL_FALSE, stride, (void*)(8 * sizeof(float)));    // indices de huesos (como float)
+        glVertexAttribPointer(3, 4, GL_FLOAT, GL_FALSE, stride, (void*)(8 * sizeof(float)));
         glEnableVertexAttribArray(3);
-        glVertexAttribPointer(4, 4, GL_FLOAT, GL_FALSE, stride, (void*)(12 * sizeof(float)));   // pesos
+        glVertexAttribPointer(4, 4, GL_FLOAT, GL_FALSE, stride, (void*)(12 * sizeof(float)));
         glEnableVertexAttribArray(4);
         glBindVertexArray(0);
 
@@ -179,7 +183,7 @@ void LoadAssetModel(std::string name){
     }
 
     for(unsigned int t : texCache){
-        if(t != 0 && t != ~0u) asset.textures.push_back(t);     // para borrarlas en UnloadAssetModel
+        if(t != 0 && t != ~0u) asset.textures.push_back(t);
     }
 
     tg3_model_free(&model);

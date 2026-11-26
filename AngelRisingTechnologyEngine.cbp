@@ -74,6 +74,8 @@
 		<Unit filename="src/Engine/engineAssetManager.h" />
 		<Unit filename="src/Engine/engineAssetUnloader.cpp" />
 		<Unit filename="src/Engine/engineAssetUnloader.h" />
+		<Unit filename="src/Engine/engineAudio.cpp" />
+		<Unit filename="src/Engine/engineAudio.h" />
 		<Unit filename="src/Engine/engineComponents.h" />
 		<Unit filename="src/Engine/engineComponentsEvents.h" />
 		<Unit filename="src/Engine/engineDefineComponentsEvents.h" />
@@ -89,6 +91,8 @@
 		<Unit filename="src/Engine/engineShader.cpp" />
 		<Unit filename="src/Engine/engineShader.h" />
 		<Unit filename="src/Engine/engineShaderLoad.h" />
+		<Unit filename="src/Engine/engineShadow.cpp" />
+		<Unit filename="src/Engine/engineShadow.h" />
 		<Unit filename="src/Engine/engineUpdateComponents.cpp" />
 		<Unit filename="src/Engine/engineUpdateComponents.h" />
 		<Unit filename="src/Engine/engineWindow.cpp" />

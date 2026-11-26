@@ -16,6 +16,9 @@
 	"models" : {
 		"robot" : {
 			"path" : "gamefiles/assets/models/robot.glb"
+		},
+		"scene" : {
+			"path" : "gamefiles/assets/models/scene.glb"
 		}
 	}
 }

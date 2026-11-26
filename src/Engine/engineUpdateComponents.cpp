@@ -1,6 +1,8 @@
 #include "engineUpdateComponents.h"
 
+#include <algorithm>
 #include <iostream>
+#include <vector>
 #include <string>
 #include <unordered_map>
 
@@ -19,6 +21,7 @@
 #include "engineShader.h"
 #include "engineAnimation.h"
 #include "engineLighting.h"
+#include "engineShadow.h"
 
 extern entt::registry EntityRegistry;
 
@@ -71,7 +74,7 @@ void UpdateAnimations(float dt){
 void UpdateDrawMeshes(float aspect){
     ///Get Active Camera
     glm::mat4 viewMat(1.0f), projMat(1.0f);
-    glm::vec3 camPos(0.0f);
+    glm::vec3 camPos(0.0f), camForward(0.0f, 0.0f, -1.0f);
     bool hasCamera = false;
 
     auto camView = EntityRegistry.view<Transform, Camera>();
@@ -87,6 +90,7 @@ void UpdateDrawMeshes(float aspect){
         glm::vec3 up = rot * glm::vec3(0,1,0);
         viewMat = glm::lookAt(pos,pos+forwrd,up);
         camPos = pos;
+        camForward = forwrd;
 
         if(cam.orthographic){
             float h = cam.orthoSize, w = h * aspect;
@@ -99,6 +103,7 @@ void UpdateDrawMeshes(float aspect){
     }
     if(!hasCamera) return;
 
+    ///Luces de la escena, empaquetadas una sola vez por frame
     std::vector<LightInput> sceneLights;
     auto lightView = EntityRegistry.view<Transform, Light>();
     for(auto e : lightView){
@@ -113,18 +118,76 @@ void UpdateDrawMeshes(float aspect){
     LightsPack(sceneLights, camPos, lightBlock);
     const glm::vec3 ambientColor = glm::pow(glm::vec3(0.25f, 0.25f, 0.3f), glm::vec3(2.2f));
 
+    auto modelMatrix = [](const Transform& t){
+        return glm::translate(glm::mat4(1.0f), glm::vec3(t.x, t.y, t.z))
+             * glm::mat4_cast(glm::quat(t.rotw, t.rotx, t.roty, t.rotz))
+             * glm::scale(glm::mat4(1.0f), glm::vec3(t.scax, t.scay, t.scaz));
+    };
+
+    ///Sombras: solo la primera luz y solo si es direccional (LightsPack deja las direccionales primero)
+    ///shortcut: una sola luz proyecta sombra, el shadow map cubre una zona fija alrededor de la camara; las partes BLEND no proyectan
+    glm::mat4 lightSpace(1.0f);
+    bool shadowOn = false;
+    if(lightBlock.count > 0 && lightBlock.pos[0].w < 0.5f){
+        lightSpace = ShadowLightMatrix(glm::vec3(lightBlock.pos[0]), camPos + camForward * (ENGINE_SHADOW_RADIUS * 0.5f));
+        if(ShadowBegin()){
+            Shader* sh = ShadowShader();
+            glUniformMatrix4fv(glGetUniformLocation(sh->GetID(), "lightSpace"), 1, GL_FALSE, glm::value_ptr(lightSpace));
+            glUniform1i(glGetUniformLocation(sh->GetID(), "uTexture"), 0);
+
+            std::vector<glm::mat4> shadowBones;
+            auto casters = EntityRegistry.view<Transform, MeshRenderer>();
+            for(auto entity : casters){
+                MeshRenderer& mr = casters.get<MeshRenderer>(entity);
+                auto modelIt = AssetMapModel.find(mr.model_name);
+                if(modelIt == AssetMapModel.end()) continue;
+
+                const glm::mat4 model = modelMatrix(casters.get<Transform>(entity));
+                glUniformMatrix4fv(glGetUniformLocation(sh->GetID(), "model"), 1, GL_FALSE, glm::value_ptr(model));
+
+                const bool hasBones = AnimBuildBones(mr, modelIt->second, shadowBones);
+                if(hasBones) glUniformMatrix4fv(glGetUniformLocation(sh->GetID(), "bones"), (GLsizei)shadowBones.size(), GL_FALSE, glm::value_ptr(shadowBones[0]));
+
+                for(const AssetModelPart& part : modelIt->second.parts){
+                    if(part.alphaMode == 2) continue;
+                    glUniform1f(glGetUniformLocation(sh->GetID(), "uAlphaCutoff"), part.alphaMode == 1 ? part.alphaCutoff : -1.0f);
+                    glUniform1i(glGetUniformLocation(sh->GetID(), "uSkinned"), (part.skinned && hasBones) ? 1 : 0);
+                    glUniform4fv(glGetUniformLocation(sh->GetID(), "uColor"), 1, part.color);
+                    glUniform1i(glGetUniformLocation(sh->GetID(), "uHasTexture"), part.texture != 0 ? 1 : 0);
+                    if(part.texture != 0){
+                        glActiveTexture(GL_TEXTURE0);
+                        glBindTexture(GL_TEXTURE_2D, part.texture);
+                    }
+                    glBindVertexArray(part.VAO);
+                    glDrawElements(GL_TRIANGLES, part.indexCount, GL_UNSIGNED_INT, 0);
+                }
+            }
+            ShadowEnd();
+            shadowOn = true;
+        }
+    }
+
+    ///El shadow map siempre va en la unidad 1 (aunque no haya sombras, asi el sampler del shader nunca comparte unidad con la textura normal)
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, ShadowTexture());
+    glActiveTexture(GL_TEXTURE0);
+
     Shader* currentShader = nullptr;
 
-    auto view = EntityRegistry.view<Transform,MeshRenderer>();
-    for(auto entity : view){
-        Transform& comp_transform = view.get<Transform>(entity);
-        MeshRenderer& comp_meshrenderer = view.get<MeshRenderer>(entity);
+    // blend = false: partes opacas y con mascara | blend = true: solo las transparentes
+    auto drawEntity = [&](entt::entity entity, bool blend){
+        Transform& comp_transform = EntityRegistry.get<Transform>(entity);
+        MeshRenderer& comp_meshrenderer = EntityRegistry.get<MeshRenderer>(entity);
 
         auto modelIt = AssetMapModel.find(comp_meshrenderer.model_name);
-        if(modelIt == AssetMapModel.end()) continue;
+        if(modelIt == AssetMapModel.end()) return;
+
+        bool any = false;
+        for(const AssetModelPart& part : modelIt->second.parts) any = any || ((part.alphaMode == 2) == blend);
+        if(!any) return;
 
         auto shaderIt = AssetMapShader.find(comp_meshrenderer.shader_override.empty() ? "StandardShader" : comp_meshrenderer.shader_override);
-        if(shaderIt == AssetMapShader.end()) continue;
+        if(shaderIt == AssetMapShader.end()) return;
         Shader* shader = &shaderIt->second;
 
         if(shader != currentShader){
@@ -134,19 +197,25 @@ void UpdateDrawMeshes(float aspect){
             glUniformMatrix4fv(glGetUniformLocation(shader->GetID(), "projection"), 1, GL_FALSE, glm::value_ptr(projMat));
             glUniform1i(glGetUniformLocation(shader->GetID(), "uTexture"), 0);
 
+            ///Iluminacion: camara, luz ambiente y luces
             glUniform3fv(glGetUniformLocation(shader->GetID(), "uCameraPos"), 1, glm::value_ptr(camPos));
             glUniform3fv(glGetUniformLocation(shader->GetID(), "uAmbient"), 1, glm::value_ptr(ambientColor));
             glUniform1i(glGetUniformLocation(shader->GetID(), "uLightCount"), lightBlock.count);
             glUniform4fv(glGetUniformLocation(shader->GetID(), "uLightPos[0]"), lightBlock.count, glm::value_ptr(lightBlock.pos[0]));
             glUniform4fv(glGetUniformLocation(shader->GetID(), "uLightColor[0]"), lightBlock.count, glm::value_ptr(lightBlock.color[0]));
+
+            ///Sombras
+            glUniform1i(glGetUniformLocation(shader->GetID(), "uShadowMap"), 1);
+            glUniform1i(glGetUniformLocation(shader->GetID(), "uShadowOn"), shadowOn ? 1 : 0);
+            glUniformMatrix4fv(glGetUniformLocation(shader->GetID(), "uLightSpace"), 1, GL_FALSE, glm::value_ptr(lightSpace));
+            glUniform1f(glGetUniformLocation(shader->GetID(), "uShadowNormalBias"), 1.5f * 2.0f * ENGINE_SHADOW_RADIUS / ENGINE_SHADOW_SIZE);
         }
 
-        glm::mat4 model = glm::translate(glm::mat4(1.0f),glm::vec3(comp_transform.x,comp_transform.y,comp_transform.z))
-                                        * glm::mat4_cast(glm::quat(comp_transform.rotw,comp_transform.rotx,comp_transform.roty,comp_transform.rotz))
-                                        * glm::scale(glm::mat4(1.0f),glm::vec3(comp_transform.scax,comp_transform.scay,comp_transform.scaz));
+        glm::mat4 model = modelMatrix(comp_transform);
 
         glUniformMatrix4fv(glGetUniformLocation(shader->GetID(),"model"),1,GL_FALSE,glm::value_ptr(model));
 
+        ///Matrices de huesos de esta entidad (solo si el modelo tiene esqueleto)
         static std::vector<glm::mat4> bones;
         const bool hasBones = AnimBuildBones(comp_meshrenderer, modelIt->second, bones);
         if(hasBones){
@@ -154,6 +223,10 @@ void UpdateDrawMeshes(float aspect){
         }
 
         for(const AssetModelPart& part : modelIt->second.parts){
+            if((part.alphaMode == 2) != blend) continue;
+
+            if(part.doubleSided) glDisable(GL_CULL_FACE); else glEnable(GL_CULL_FACE);
+            glUniform1f(glGetUniformLocation(shader->GetID(), "uAlphaCutoff"), part.alphaMode == 1 ? part.alphaCutoff : -1.0f);
             glUniform1i(glGetUniformLocation(shader->GetID(), "uSkinned"), (part.skinned && hasBones) ? 1 : 0);
             glUniform1f(glGetUniformLocation(shader->GetID(), "uShininess"), part.shininess);
             glUniform1f(glGetUniformLocation(shader->GetID(), "uSpecular"), part.specular);
@@ -166,6 +239,37 @@ void UpdateDrawMeshes(float aspect){
             glBindVertexArray(part.VAO);
             glDrawElements(GL_TRIANGLES, part.indexCount, GL_UNSIGNED_INT, 0);
         }
+    };
+
+    ///Pasada 1: opacos y con mascara. De paso se anotan las entidades que tienen partes transparentes.
+    struct Transparent{ float dist; entt::entity entity; };
+    std::vector<Transparent> transparent;
+
+    auto view = EntityRegistry.view<Transform,MeshRenderer>();
+    for(auto entity : view){
+        drawEntity(entity, false);
+
+        auto modelIt = AssetMapModel.find(view.get<MeshRenderer>(entity).model_name);
+        if(modelIt == AssetMapModel.end()) continue;
+        for(const AssetModelPart& part : modelIt->second.parts){
+            if(part.alphaMode == 2){
+                const Transform& t = view.get<Transform>(entity);
+                transparent.push_back({glm::distance(camPos, glm::vec3(t.x,t.y,t.z)), entity});
+                break;
+            }
+        }
+    }
+
+    ///Pasada 2: transparentes, de lejos a cerca, sin escribir profundidad.
+    ///shortcut: se ordena por entidad, no por triangulo; partes transparentes que se cruzan pueden verse mal, subir si hace falta
+    if(!transparent.empty()){
+        std::sort(transparent.begin(), transparent.end(), [](const Transparent& a, const Transparent& b){ return a.dist > b.dist; });
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        glDepthMask(GL_FALSE);
+        for(const Transparent& t : transparent) drawEntity(t.entity, true);
+        glDepthMask(GL_TRUE);
+        glDisable(GL_BLEND);
     }
     glBindVertexArray(0);
 }

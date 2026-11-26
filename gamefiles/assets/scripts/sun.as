@@ -4,10 +4,10 @@ class Sun{
 
     void OnUpdate(float deltaTime) {
         if(KeyboardIsPressed(Keyboard::F)){
-            TransformRotate(0,1,0);
+            TransformRotate(1,0,0);
         }
         if(KeyboardIsPressed(Keyboard::G)){
-            TransformRotate(0,-1,0);
+            TransformRotate(-1,0,0);
         }
     }
 

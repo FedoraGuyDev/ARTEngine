@@ -5,14 +5,20 @@ class EntityTest{
     float pitch = 0;
 
     void OnStart() {
-
     }
 
     void OnUpdate(float deltaTime) {
-        float speed = 5.0 * deltaTime;
-        float turn  = 90.0 * deltaTime;
+        float speed = 5.0f * deltaTime;
+        float sens  = 0.15f;
 
-        float rad = yaw * PI / 180.0;
+        vec2 mousedelta = MouseGetDelta();
+        yaw   -= mousedelta.x * sens;
+        pitch -= mousedelta.y * sens;
+        if(pitch >  89.0f) pitch =  89.0f;
+        if(pitch < -89.0f) pitch = -89.0f;
+        TransformSetRotation(pitch, yaw, 0);
+
+        float rad = yaw * PI / 180.0f;
         float fx = -sin(rad);  float fz = -cos(rad);
         float rx =  cos(rad);  float rz = -sin(rad);
 
@@ -23,16 +29,8 @@ class EntityTest{
 
         if(KeyboardIsPressed(Keyboard::SPACE))  TransformMove(0,  speed, 0);
         if(KeyboardIsPressed(Keyboard::LSHIFT)) TransformMove(0, -speed, 0);
-
-        vec2 mousedelta = MouseGetDelta();
-
-        yaw += turn * mousedelta.x;
-        pitch += turn * mousedelta.y;
-
-        TransformSetRotation(pitch, yaw, 0);
     }
 
-    void OnDestroy(){
-        
+    void OnDestroy() {
     }
 }

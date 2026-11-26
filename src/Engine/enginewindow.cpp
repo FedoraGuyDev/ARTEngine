@@ -13,6 +13,8 @@ void Window::Initialize(int width, int height, std::string name){
         return;
     }
     //Set SDL hints
+    SDL_GL_SetAttribute(SDL_GL_MULTISAMPLEBUFFERS, 1);
+    SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, 4);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
@@ -65,8 +67,8 @@ void Window::PollEvents() {
             m_shouldClose = true;
         }
         if(event.type == SDL_EVENT_MOUSE_MOTION){
-            m_MouseDeltaX -= event.motion.xrel;
-            m_MouseDeltaY -= event.motion.yrel;
+            m_MouseDeltaX += event.motion.xrel;
+            m_MouseDeltaY += event.motion.yrel;
         }
     }
 }

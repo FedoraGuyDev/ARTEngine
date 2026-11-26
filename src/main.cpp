@@ -26,11 +26,18 @@
 #include "SDL3/SDL.h"
 #include "GLM/glm.hpp"
 
+///AL
+#include "AL/al.h"
+#include "AL/alc.h"
+
 ///EnTT
 #include "EnTT/entt.hpp"
 
 ///TinyglTF
 #include "TinyglTF/tiny_gltf_v3.h"
+
+///ReactPhysics3D
+#include "ReactPhysics3D/reactphysics3d.h"
 
 ///ARTENGINE
 #include "engineWindow.h"
@@ -49,6 +56,8 @@
 #include "engineShaderLoad.h"
 
 #include "engineUpdateComponents.h"
+
+#include "engineAudio.h"
 
 #include "utilsJson.h"
 #include "utilsString.h"
@@ -104,6 +113,10 @@ const char* shaderVersion = "";
 udp::Socket loggerSock;
 std::string loggerUUID = "";
 
+///Physics World
+reactphysics3d::PhysicsWorld* phyWorld;
+reactphysics3d::PhysicsCommon phyCommon;
+
 int main(){
     std::cout << "[ARTENGINE] Starting ARTEngine" << std::endl;
 
@@ -119,6 +132,9 @@ int main(){
         std::cout << "[AngelScript] Something went wrong trying to initialize AngelScript Engine... :C" << std::endl;
         return 0;
     }
+
+    ///Start Physics World
+    phyWorld = phyCommon.createPhysicsWorld();
 
     ///AngelScript Set Message Callback
     ASengine->SetMessageCallback(asFUNCTION(MessageCallback),0,asCALL_CDECL);
@@ -143,6 +159,9 @@ int main(){
 
     ///EnTT Define Components Events
     DefineComponentsEvents();
+
+    ///Audio Start
+    AudioInit();
 
     ///Load Game Manifest
     if(!utilLoadJson("gamefiles/game_manifest.json",GameManifests)){
@@ -171,6 +190,9 @@ int main(){
         std::cout << "[ARTENGINE] Closing ARTENGINE due to an error on initializing Window.. :C" << std::endl;
         return 0;
     }
+    ///If in the Game Manifest is mentioned that the window can change the size it activates it
+    SDL_SetWindowResizable(window.GetHandle(),GameManifests["window_resize"]);
+
     ///If in the Game Manifest is mentioned that the game has the mouse blocked it activates it
     window.SetMouseCaptured(GameManifests["block_mouse"].get<bool>());
 
@@ -202,10 +224,17 @@ int main(){
         glClearColor(0.0f,0.2235f,0.4275f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        UpdateDrawMeshes(1);
+        int window_w, window_h;
+        SDL_GetWindowSizeInPixels(window.GetHandle(), &window_w, &window_h);
+        if(window_h > 0){
+            glViewport(0, 0, window_w, window_h);
+            UpdateDrawMeshes((float)window_w / window_h);
+        }
 
         window.SwapBuffers();
         window.PollEvents();
     }
+
+    AudioShutdown();
     return 0;
 }

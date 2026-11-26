@@ -88,3 +88,16 @@ struct MeshRenderer{
     float fadeDuration = 0.0f;
     float fadeElapsed = 0.0f;
 };
+
+struct RigidBodyCollider{
+
+};
+struct RigidBody{
+    std::string body_type;
+    float mass = 1.0f;
+    float linearDamping = 0.0f;
+    float angularDamping = 0.0f;
+    bool useGravity = true;
+
+
+};
