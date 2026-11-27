@@ -2,6 +2,7 @@
 
 #include <string>
 #include <unordered_map>
+#include <array>
 
 #include "GLAD/glad.h"
 #include "GLM/glm.hpp"
@@ -12,6 +13,7 @@
 #include "AngelScript/angelscript.h"
 #include "JsonNlohmann/json.hpp"
 #include "EnTT/entt.hpp"
+#include "ReactPhysics3D/reactphysics3d.h"
 
 struct Name{
     std::string name;
@@ -89,15 +91,35 @@ struct MeshRenderer{
     float fadeElapsed = 0.0f;
 };
 
-struct RigidBodyCollider{
+struct RigidBodyShape{
+    std::string shape = "box";
+    std::array<float,3> shapesize = {1,1,1};
+    float radius = 0.5f;
+    float height = 1.0f;
+    std::array<float,3> offset = {0,0,0};
+    std::array<float,3> rotation = {0,0,0};
+    float bounciness = 0.5f;
+    float friction = 0.3f;
+    bool isTrigger = false;
+
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE_WITH_DEFAULT(RigidBodyShape,shape,shapesize,radius,height,offset,rotation,bounciness,friction,isTrigger)
 
 };
 struct RigidBody{
-    std::string body_type;
+    std::string body_type = "dynamic";
     float mass = 1.0f;
     float linearDamping = 0.0f;
     float angularDamping = 0.0f;
     bool useGravity = true;
+    bool lockRotX = false, lockRotY = false, lockRotZ = false;
+    std::vector<RigidBodyShape> shapes;
 
+    reactphysics3d::RigidBody* body = nullptr;
+    std::vector<reactphysics3d::CollisionShape*> collisionShapes;
+    std::vector<reactphysics3d::Collider*> colliders;
+    float lastX = 0, lastY = 0, lastZ = 0;
+    float lastRotX = 0, lastRotY = 0, lastRotZ = 0, lastRotW = 1;
+    float lastScaleX = 1, lastScaleY = 1, lastScaleZ = 1;
 
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE_WITH_DEFAULT(RigidBody,body_type,mass,linearDamping,angularDamping,useGravity,lockRotX,lockRotY,lockRotZ,shapes)
 };

@@ -25,11 +25,6 @@ inline void SetComponent(std::string& name, entt::entity entity, nlohmann::json&
 
     std::visit([&](auto& component){
         using T = std::decay_t<decltype(component)>;
-/*
-        auto& newComponent = EntityRegistry.emplace<T>(entity);
-
-        newComponent = data.get<T>();*/
-
         T value = data.get<T>();
         EntityRegistry.emplace<T>(entity,value);
     },

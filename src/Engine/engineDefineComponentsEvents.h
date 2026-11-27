@@ -10,4 +10,7 @@ extern entt::registry EntityRegistry;
 inline void DefineComponentsEvents(){
     EntityRegistry.on_construct<Script>().connect<&OnScriptConstructed>();
     EntityRegistry.on_destroy<Script>().connect<&OnScriptDestroyed>();
+
+    EntityRegistry.on_construct<RigidBody>().connect<&OnRigidBodyConstructed>();
+    EntityRegistry.on_destroy<RigidBody>().connect<&OnRigidBodyDestroyed>();
 }

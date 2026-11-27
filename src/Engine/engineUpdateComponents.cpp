@@ -103,7 +103,6 @@ void UpdateDrawMeshes(float aspect){
     }
     if(!hasCamera) return;
 
-    ///Luces de la escena, empaquetadas una sola vez por frame
     std::vector<LightInput> sceneLights;
     auto lightView = EntityRegistry.view<Transform, Light>();
     for(auto e : lightView){
@@ -124,8 +123,6 @@ void UpdateDrawMeshes(float aspect){
              * glm::scale(glm::mat4(1.0f), glm::vec3(t.scax, t.scay, t.scaz));
     };
 
-    ///Sombras: solo la primera luz y solo si es direccional (LightsPack deja las direccionales primero)
-    ///shortcut: una sola luz proyecta sombra, el shadow map cubre una zona fija alrededor de la camara; las partes BLEND no proyectan
     glm::mat4 lightSpace(1.0f);
     bool shadowOn = false;
     if(lightBlock.count > 0 && lightBlock.pos[0].w < 0.5f){
@@ -167,14 +164,12 @@ void UpdateDrawMeshes(float aspect){
         }
     }
 
-    ///El shadow map siempre va en la unidad 1 (aunque no haya sombras, asi el sampler del shader nunca comparte unidad con la textura normal)
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, ShadowTexture());
     glActiveTexture(GL_TEXTURE0);
 
     Shader* currentShader = nullptr;
 
-    // blend = false: partes opacas y con mascara | blend = true: solo las transparentes
     auto drawEntity = [&](entt::entity entity, bool blend){
         Transform& comp_transform = EntityRegistry.get<Transform>(entity);
         MeshRenderer& comp_meshrenderer = EntityRegistry.get<MeshRenderer>(entity);
@@ -197,7 +192,6 @@ void UpdateDrawMeshes(float aspect){
             glUniformMatrix4fv(glGetUniformLocation(shader->GetID(), "projection"), 1, GL_FALSE, glm::value_ptr(projMat));
             glUniform1i(glGetUniformLocation(shader->GetID(), "uTexture"), 0);
 
-            ///Iluminacion: camara, luz ambiente y luces
             glUniform3fv(glGetUniformLocation(shader->GetID(), "uCameraPos"), 1, glm::value_ptr(camPos));
             glUniform3fv(glGetUniformLocation(shader->GetID(), "uAmbient"), 1, glm::value_ptr(ambientColor));
             glUniform1i(glGetUniformLocation(shader->GetID(), "uLightCount"), lightBlock.count);
@@ -215,7 +209,6 @@ void UpdateDrawMeshes(float aspect){
 
         glUniformMatrix4fv(glGetUniformLocation(shader->GetID(),"model"),1,GL_FALSE,glm::value_ptr(model));
 
-        ///Matrices de huesos de esta entidad (solo si el modelo tiene esqueleto)
         static std::vector<glm::mat4> bones;
         const bool hasBones = AnimBuildBones(comp_meshrenderer, modelIt->second, bones);
         if(hasBones){
@@ -241,7 +234,6 @@ void UpdateDrawMeshes(float aspect){
         }
     };
 
-    ///Pasada 1: opacos y con mascara. De paso se anotan las entidades que tienen partes transparentes.
     struct Transparent{ float dist; entt::entity entity; };
     std::vector<Transparent> transparent;
 
@@ -260,8 +252,6 @@ void UpdateDrawMeshes(float aspect){
         }
     }
 
-    ///Pasada 2: transparentes, de lejos a cerca, sin escribir profundidad.
-    ///shortcut: se ordena por entidad, no por triangulo; partes transparentes que se cruzan pueden verse mal, subir si hace falta
     if(!transparent.empty()){
         std::sort(transparent.begin(), transparent.end(), [](const Transparent& a, const Transparent& b){ return a.dist > b.dist; });
         glEnable(GL_BLEND);

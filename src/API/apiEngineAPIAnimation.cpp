@@ -13,8 +13,6 @@ extern entt::entity script_update_actual_entity;
 extern entt::registry EntityRegistry;
 extern std::unordered_map<std::string, AssetModel> AssetMapModel;
 
-///Cambia la animacion de la entidad que esta ejecutando el script.
-///Si ya esta sonando esa animacion no hace nada, asi que se puede llamar en cada OnUpdate.
 void APIPlayAnimation(const std::string& name, bool loop, float fade){
     if(EntityRegistry.all_of<MeshRenderer>(script_update_actual_entity)){
         AnimPlay(EntityRegistry.get<MeshRenderer>(script_update_actual_entity), name, loop, fade);

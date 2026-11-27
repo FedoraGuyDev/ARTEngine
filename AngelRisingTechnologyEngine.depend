@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1795453137 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1795720088 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -946,6 +946,7 @@
 	"AL/alc.h"
 	"EnTT/entt.hpp"
 	"TinyglTF/tiny_gltf_v3.h"
+	"ReactPhysics3D/reactphysics3d.h"
 	"engineWindow.h"
 	"engineShader.h"
 	"engineAngelScriptCallback.h"
@@ -8060,9 +8061,10 @@
 	"AngelScript/angelscript.h"
 	"engineShader.h"
 
-1795719303 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionscomponents.h
+1795752819 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinitionscomponents.h
 	<string>
 	<unordered_map>
+	<array>
 	"GLAD/glad.h"
 	"GLM/glm.hpp"
 	"GLM/gtc/matrix_transform.hpp"
@@ -8071,6 +8073,7 @@
 	"AngelScript/angelscript.h"
 	"JsonNlohmann/json.hpp"
 	"EnTT/entt.hpp"
+	"ReactPhysics3D/reactphysics3d.h"
 
 1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\gtc\quaternion.hpp
 	"../gtc/constants.hpp"
@@ -8257,11 +8260,11 @@
 
 1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\gtc\quaternion_simd.inl
 
-1795226708 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponents.h
+1795752819 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponents.h
 	<variant>
 	"engineDefinitionsComponents.h"
 
-1795226708 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineregistercomponents.h
+1795752819 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineregistercomponents.h
 	"utilsComponents.h"
 	"engineDefinitionsComponents.h"
 
@@ -8704,11 +8707,12 @@
 	"engineComponentsEvents.h"
 	"engineDefinitionsComponents.h"
 
-1795232534 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
+1795754819 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
 	<iostream>
 	<unordered_map>
 	"AngelScript/angelscript.h"
 	"EnTT/entt.hpp"
+	"ReactPhysics3D/reactphysics3d.h"
 	"engineDefinitionsComponents.h"
 	"engineDefinitionsAssets.h"
 
@@ -11827,7 +11831,7 @@
 	"engineLighting.h"
 	<algorithm>
 
-1795226708 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginelighting.h
+1795752819 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginelighting.h
 	<vector>
 	"GLM/glm.hpp"
 	"GLM/gtc/quaternion.hpp"
@@ -11887,4 +11891,663 @@
 	<memory>
 	"GLAD/glad.h"
 	"GLM/gtc/matrix_transform.hpp"
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\reactphysics3d.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/body/Body.h>
+	<reactphysics3d/body/RigidBody.h>
+	<reactphysics3d/engine/PhysicsCommon.h>
+	<reactphysics3d/engine/PhysicsWorld.h>
+	<reactphysics3d/engine/Material.h>
+	<reactphysics3d/engine/EventListener.h>
+	<reactphysics3d/collision/shapes/CollisionShape.h>
+	<reactphysics3d/collision/shapes/BoxShape.h>
+	<reactphysics3d/collision/shapes/SphereShape.h>
+	<reactphysics3d/collision/shapes/CapsuleShape.h>
+	<reactphysics3d/collision/shapes/ConvexMeshShape.h>
+	<reactphysics3d/collision/shapes/ConcaveMeshShape.h>
+	<reactphysics3d/collision/shapes/HeightFieldShape.h>
+	<reactphysics3d/collision/ConvexMesh.h>
+	<reactphysics3d/collision/shapes/AABB.h>
+	<reactphysics3d/collision/Collider.h>
+	<reactphysics3d/collision/RaycastInfo.h>
+	<reactphysics3d/collision/TriangleMesh.h>
+	<reactphysics3d/collision/ConvexMesh.h>
+	<reactphysics3d/collision/HeightField.h>
+	<reactphysics3d/collision/TriangleVertexArray.h>
+	<reactphysics3d/collision/PolygonVertexArray.h>
+	<reactphysics3d/collision/VertexArray.h>
+	<reactphysics3d/collision/CollisionCallback.h>
+	<reactphysics3d/collision/OverlapCallback.h>
+	<reactphysics3d/constraint/BallAndSocketJoint.h>
+	<reactphysics3d/constraint/SliderJoint.h>
+	<reactphysics3d/constraint/HingeJoint.h>
+	<reactphysics3d/constraint/FixedJoint.h>
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/utils/Message.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\configuration.h
+	<cstdint>
+	<limits>
+	<cfloat>
+	<utility>
+	<sstream>
+	<string>
+	<cmath>
+	<reactphysics3d/decimal.h>
+	<reactphysics3d/containers/Pair.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\decimal.h
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\containers\pair.h
+	<reactphysics3d/containers/containers_common.h>
+	<cstring>
+	<iterator>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\containers\containers_common.h
+	<cstddef>
+	<functional>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\mathematics\mathematics.h
+	<reactphysics3d/mathematics/Matrix3x3.h>
+	<reactphysics3d/mathematics/Matrix2x2.h>
+	<reactphysics3d/mathematics/Quaternion.h>
+	<reactphysics3d/mathematics/Vector3.h>
+	<reactphysics3d/mathematics/Vector2.h>
+	<reactphysics3d/mathematics/Transform.h>
+	<reactphysics3d/mathematics/Ray.h>
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/mathematics/mathematics_functions.h>
+	<cstdio>
+	<cassert>
+	<cmath>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\mathematics\matrix3x3.h
+	<cassert>
+	<reactphysics3d/mathematics/Vector3.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\mathematics\vector3.h
+	<cassert>
+	<cmath>
+	<algorithm>
+	<reactphysics3d/decimal.h>
+	<reactphysics3d/mathematics/mathematics_common.h>
+	<reactphysics3d/configuration.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\mathematics\mathematics_common.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/decimal.h>
+	<cassert>
+	<cmath>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\mathematics\matrix2x2.h
+	<cassert>
+	<reactphysics3d/mathematics/Vector2.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\mathematics\vector2.h
+	<cassert>
+	<reactphysics3d/mathematics/mathematics_functions.h>
+	<reactphysics3d/decimal.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\mathematics\mathematics_functions.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/decimal.h>
+	<reactphysics3d/mathematics/Vector3.h>
+	<algorithm>
+	<cassert>
+	<cmath>
+	<reactphysics3d/containers/Array.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\containers\array.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/memory/MemoryAllocator.h>
+	<cassert>
+	<cstring>
+	<iterator>
+	<memory>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\memory\memoryallocator.h
+	<cstring>
+	<reactphysics3d/configuration.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\mathematics\quaternion.h
+	<reactphysics3d/decimal.h>
+	<reactphysics3d/mathematics/Vector3.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\mathematics\transform.h
+	<reactphysics3d/mathematics/Vector3.h>
+	<reactphysics3d/mathematics/Quaternion.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\mathematics\ray.h
+	<reactphysics3d/mathematics/Vector3.h>
+
+1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\body\body.h
+	<cassert>
+	<reactphysics3d/engine/Entity.h>
+	<reactphysics3d/collision/shapes/AABB.h>
+	<reactphysics3d/mathematics/Transform.h>
+	<reactphysics3d/configuration.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\engine\entity.h
+	<reactphysics3d/configuration.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\shapes\aabb.h
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/configuration.h>
+
+1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\body\rigidbody.h
+	<cassert>
+	<reactphysics3d/body/Body.h>
+	<reactphysics3d/mathematics/mathematics.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\engine\physicscommon.h
+	<reactphysics3d/memory/MemoryManager.h>
+	<reactphysics3d/engine/PhysicsWorld.h>
+	<reactphysics3d/collision/shapes/SphereShape.h>
+	<reactphysics3d/collision/shapes/BoxShape.h>
+	<reactphysics3d/collision/shapes/CapsuleShape.h>
+	<reactphysics3d/collision/shapes/HeightFieldShape.h>
+	<reactphysics3d/collision/shapes/ConvexMeshShape.h>
+	<reactphysics3d/collision/shapes/ConcaveMeshShape.h>
+	<reactphysics3d/collision/TriangleMesh.h>
+	<reactphysics3d/collision/ConvexMesh.h>
+	<reactphysics3d/collision/HeightField.h>
+	<reactphysics3d/utils/DefaultLogger.h>
+	<reactphysics3d/collision/PolygonVertexArray.h>
+	<reactphysics3d/collision/VertexArray.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\memory\memorymanager.h
+	<reactphysics3d/memory/DefaultAllocator.h>
+	<reactphysics3d/memory/PoolAllocator.h>
+	<reactphysics3d/memory/HeapAllocator.h>
+	<reactphysics3d/memory/SingleFrameAllocator.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\memory\defaultallocator.h
+	<reactphysics3d/memory/MemoryAllocator.h>
+	<reactphysics3d/configuration.h>
+	<cstdlib>
+	<cassert>
+	<iostream>
+	<stdlib.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\memory\poolallocator.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/memory/MemoryAllocator.h>
+	<mutex>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\memory\heapallocator.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/memory/MemoryAllocator.h>
+	<cassert>
+	<mutex>
+	<reactphysics3d/containers/Map.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\containers\map.h
+	<reactphysics3d/memory/MemoryAllocator.h>
+	<reactphysics3d/mathematics/mathematics_functions.h>
+	<reactphysics3d/containers/Pair.h>
+	<cstring>
+	<stdexcept>
+	<functional>
+	<limits>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\memory\singleframeallocator.h
+	<reactphysics3d/memory/MemoryAllocator.h>
+	<reactphysics3d/configuration.h>
+	<mutex>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\engine\physicsworld.h
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/constraint/Joint.h>
+	<reactphysics3d/memory/MemoryManager.h>
+	<reactphysics3d/engine/EntityManager.h>
+	<reactphysics3d/components/BodyComponents.h>
+	<reactphysics3d/components/RigidBodyComponents.h>
+	<reactphysics3d/components/TransformComponents.h>
+	<reactphysics3d/components/ColliderComponents.h>
+	<reactphysics3d/components/JointComponents.h>
+	<reactphysics3d/components/BallAndSocketJointComponents.h>
+	<reactphysics3d/components/FixedJointComponents.h>
+	<reactphysics3d/components/HingeJointComponents.h>
+	<reactphysics3d/components/SliderJointComponents.h>
+	<reactphysics3d/collision/CollisionCallback.h>
+	<reactphysics3d/collision/OverlapCallback.h>
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/utils/Logger.h>
+	<reactphysics3d/systems/ConstraintSolverSystem.h>
+	<reactphysics3d/systems/CollisionDetectionSystem.h>
+	<reactphysics3d/systems/ContactSolverSystem.h>
+	<reactphysics3d/systems/DynamicsSystem.h>
+	<reactphysics3d/engine/Islands.h>
+	<reactphysics3d/utils/DebugRenderer.h>
+	<sstream>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\constraint\joint.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/body/RigidBody.h>
+	<reactphysics3d/mathematics/mathematics.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\engine\entitymanager.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/containers/Deque.h>
+	<reactphysics3d/engine/Entity.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\containers\deque.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/memory/MemoryAllocator.h>
+	<cassert>
+	<cmath>
+	<cstring>
+	<iterator>
+	<memory>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\components\bodycomponents.h
+	<reactphysics3d/mathematics/Transform.h>
+	<reactphysics3d/engine/Entity.h>
+	<reactphysics3d/components/Components.h>
+	<reactphysics3d/containers/Map.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\components\components.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/engine/Entity.h>
+	<reactphysics3d/containers/Map.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\components\rigidbodycomponents.h
+	<reactphysics3d/mathematics/Transform.h>
+	<reactphysics3d/mathematics/Matrix3x3.h>
+	<reactphysics3d/engine/Entity.h>
+	<reactphysics3d/components/Components.h>
+	<reactphysics3d/containers/Map.h>
+	<reactphysics3d/containers/Set.h>
+	<iostream>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\containers\set.h
+	<reactphysics3d/memory/MemoryAllocator.h>
+	<reactphysics3d/mathematics/mathematics_functions.h>
+	<cstring>
+	<stdexcept>
+	<functional>
+	<limits>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\components\transformcomponents.h
+	<reactphysics3d/mathematics/Transform.h>
+	<reactphysics3d/engine/Entity.h>
+	<reactphysics3d/components/Components.h>
+	<reactphysics3d/containers/Map.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\components\collidercomponents.h
+	<reactphysics3d/mathematics/Transform.h>
+	<reactphysics3d/engine/Entity.h>
+	<reactphysics3d/containers/Map.h>
+	<reactphysics3d/collision/shapes/AABB.h>
+	<reactphysics3d/components/Components.h>
+	<reactphysics3d/engine/Material.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\engine\material.h
+	<cassert>
+	<cmath>
+	<reactphysics3d/configuration.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\components\jointcomponents.h
+	<reactphysics3d/mathematics/Transform.h>
+	<reactphysics3d/engine/Entity.h>
+	<reactphysics3d/components/Components.h>
+	<reactphysics3d/containers/Map.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\components\ballandsocketjointcomponents.h
+	<reactphysics3d/mathematics/Transform.h>
+	<reactphysics3d/mathematics/Matrix3x3.h>
+	<reactphysics3d/engine/Entity.h>
+	<reactphysics3d/components/Components.h>
+	<reactphysics3d/containers/Map.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\components\fixedjointcomponents.h
+	<reactphysics3d/mathematics/Transform.h>
+	<reactphysics3d/mathematics/Matrix3x3.h>
+	<reactphysics3d/engine/Entity.h>
+	<reactphysics3d/components/Components.h>
+	<reactphysics3d/containers/Map.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\components\hingejointcomponents.h
+	<reactphysics3d/mathematics/Transform.h>
+	<reactphysics3d/mathematics/Matrix3x3.h>
+	<reactphysics3d/mathematics/Matrix2x2.h>
+	<reactphysics3d/engine/Entity.h>
+	<reactphysics3d/components/Components.h>
+	<reactphysics3d/containers/Map.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\components\sliderjointcomponents.h
+	<reactphysics3d/mathematics/Transform.h>
+	<reactphysics3d/mathematics/Matrix3x3.h>
+	<reactphysics3d/mathematics/Matrix2x2.h>
+	<reactphysics3d/engine/Entity.h>
+	<reactphysics3d/components/Components.h>
+	<reactphysics3d/containers/Map.h>
+
+1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\collisioncallback.h
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/collision/ContactPair.h>
+	<reactphysics3d/constraint/ContactPoint.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\contactpair.h
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/engine/OverlappingPairs.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\engine\overlappingpairs.h
+	<reactphysics3d/collision/Collider.h>
+	<reactphysics3d/containers/Map.h>
+	<reactphysics3d/containers/Pair.h>
+	<reactphysics3d/containers/Set.h>
+	<reactphysics3d/containers/containers_common.h>
+	<reactphysics3d/utils/Profiler.h>
+	<reactphysics3d/components/ColliderComponents.h>
+	<reactphysics3d/components/BodyComponents.h>
+	<reactphysics3d/components/RigidBodyComponents.h>
+	<cstddef>
+
+1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\collider.h
+	<reactphysics3d/body/Body.h>
+	<reactphysics3d/collision/shapes/CollisionShape.h>
+	<reactphysics3d/engine/Material.h>
+	<reactphysics3d/utils/Logger.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\shapes\collisionshape.h
+	<cassert>
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/utils/Profiler.h>
+	<reactphysics3d/containers/Array.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\utils\profiler.h
+	<reactphysics3d/configuration.h>
+	<fstream>
+	<chrono>
+	<reactphysics3d/containers/Array.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\utils\logger.h
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/containers/Map.h>
+	<string>
+	<iostream>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\constraint\contactpoint.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/collision/ContactPointInfo.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\contactpointinfo.h
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/configuration.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\overlapcallback.h
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/collision/ContactPair.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\systems\constraintsolversystem.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/systems/SolveBallAndSocketJointSystem.h>
+	<reactphysics3d/systems/SolveFixedJointSystem.h>
+	<reactphysics3d/systems/SolveHingeJointSystem.h>
+	<reactphysics3d/systems/SolveSliderJointSystem.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\systems\solveballandsocketjointsystem.h
+	<reactphysics3d/utils/Profiler.h>
+	<reactphysics3d/components/RigidBodyComponents.h>
+	<reactphysics3d/components/JointComponents.h>
+	<reactphysics3d/components/BallAndSocketJointComponents.h>
+	<reactphysics3d/components/TransformComponents.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\systems\solvefixedjointsystem.h
+	<reactphysics3d/utils/Profiler.h>
+	<reactphysics3d/components/RigidBodyComponents.h>
+	<reactphysics3d/components/JointComponents.h>
+	<reactphysics3d/components/FixedJointComponents.h>
+	<reactphysics3d/components/TransformComponents.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\systems\solvehingejointsystem.h
+	<reactphysics3d/utils/Profiler.h>
+	<reactphysics3d/components/RigidBodyComponents.h>
+	<reactphysics3d/components/JointComponents.h>
+	<reactphysics3d/components/HingeJointComponents.h>
+	<reactphysics3d/components/TransformComponents.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\systems\solvesliderjointsystem.h
+	<reactphysics3d/utils/Profiler.h>
+	<reactphysics3d/components/RigidBodyComponents.h>
+	<reactphysics3d/components/JointComponents.h>
+	<reactphysics3d/components/SliderJointComponents.h>
+	<reactphysics3d/components/TransformComponents.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\systems\collisiondetectionsystem.h
+	<reactphysics3d/body/Body.h>
+	<reactphysics3d/systems/BroadPhaseSystem.h>
+	<reactphysics3d/collision/shapes/CollisionShape.h>
+	<reactphysics3d/collision/ContactPointInfo.h>
+	<reactphysics3d/constraint/ContactPoint.h>
+	<reactphysics3d/collision/ContactManifoldInfo.h>
+	<reactphysics3d/collision/ContactManifold.h>
+	<reactphysics3d/collision/ContactPair.h>
+	<reactphysics3d/engine/OverlappingPairs.h>
+	<reactphysics3d/engine/OverlappingPairs.h>
+	<reactphysics3d/collision/narrowphase/NarrowPhaseInput.h>
+	<reactphysics3d/collision/narrowphase/CollisionDispatch.h>
+	<reactphysics3d/containers/Map.h>
+	<reactphysics3d/containers/Set.h>
+	<reactphysics3d/components/ColliderComponents.h>
+	<reactphysics3d/components/TransformComponents.h>
+	<reactphysics3d/collision/HalfEdgeStructure.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\systems\broadphasesystem.h
+	<reactphysics3d/collision/broadphase/DynamicAABBTree.h>
+	<reactphysics3d/containers/LinkedList.h>
+	<reactphysics3d/containers/Set.h>
+	<reactphysics3d/components/ColliderComponents.h>
+	<reactphysics3d/components/TransformComponents.h>
+	<reactphysics3d/components/RigidBodyComponents.h>
+	<cstring>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\broadphase\dynamicaabbtree.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/collision/shapes/AABB.h>
+	<reactphysics3d/containers/Set.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\containers\linkedlist.h
+	<reactphysics3d/memory/MemoryAllocator.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\contactmanifoldinfo.h
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/engine/OverlappingPairs.h>
+
+1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\contactmanifold.h
+	<reactphysics3d/collision/Collider.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\narrowphase\narrowphaseinput.h
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/collision/narrowphase/NarrowPhaseInfoBatch.h>
+	<reactphysics3d/collision/narrowphase/CollisionDispatch.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\narrowphase\narrowphaseinfobatch.h
+	<reactphysics3d/engine/OverlappingPairs.h>
+	<reactphysics3d/collision/ContactPointInfo.h>
+	<reactphysics3d/configuration.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\narrowphase\collisiondispatch.h
+	<reactphysics3d/collision/narrowphase/SphereVsSphereAlgorithm.h>
+	<reactphysics3d/collision/narrowphase/SphereVsConvexPolyhedronAlgorithm.h>
+	<reactphysics3d/collision/narrowphase/SphereVsCapsuleAlgorithm.h>
+	<reactphysics3d/collision/narrowphase/CapsuleVsCapsuleAlgorithm.h>
+	<reactphysics3d/collision/narrowphase/CapsuleVsConvexPolyhedronAlgorithm.h>
+	<reactphysics3d/collision/narrowphase/ConvexPolyhedronVsConvexPolyhedronAlgorithm.h>
+	<reactphysics3d/collision/shapes/CollisionShape.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\narrowphase\spherevsspherealgorithm.h
+	<reactphysics3d/collision/narrowphase/NarrowPhaseAlgorithm.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\narrowphase\narrowphasealgorithm.h
+	<reactphysics3d/configuration.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\narrowphase\spherevsconvexpolyhedronalgorithm.h
+	<reactphysics3d/collision/narrowphase/NarrowPhaseAlgorithm.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\narrowphase\spherevscapsulealgorithm.h
+	<reactphysics3d/collision/narrowphase/NarrowPhaseAlgorithm.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\narrowphase\capsulevscapsulealgorithm.h
+	<reactphysics3d/collision/narrowphase/NarrowPhaseAlgorithm.h>
+	<reactphysics3d/configuration.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\narrowphase\capsulevsconvexpolyhedronalgorithm.h
+	<reactphysics3d/collision/narrowphase/NarrowPhaseAlgorithm.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\narrowphase\convexpolyhedronvsconvexpolyhedronalgorithm.h
+	<reactphysics3d/collision/narrowphase/NarrowPhaseAlgorithm.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\halfedgestructure.h
+	<reactphysics3d/mathematics/mathematics.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\systems\contactsolversystem.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/mathematics/Vector3.h>
+	<reactphysics3d/mathematics/Matrix3x3.h>
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/engine/Material.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\systems\dynamicssystem.h
+	<reactphysics3d/utils/Profiler.h>
+	<reactphysics3d/components/BodyComponents.h>
+	<reactphysics3d/components/RigidBodyComponents.h>
+	<reactphysics3d/components/TransformComponents.h>
+	<reactphysics3d/components/ColliderComponents.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\engine\islands.h
+	<reactphysics3d/configuration.h>
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/engine/Entity.h>
+	<reactphysics3d/constraint/Joint.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\utils\debugrenderer.h
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/containers/Map.h>
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/engine/EventListener.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\engine\eventlistener.h
+	<reactphysics3d/collision/CollisionCallback.h>
+	<reactphysics3d/collision/OverlapCallback.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\shapes\sphereshape.h
+	<reactphysics3d/collision/shapes/ConvexShape.h>
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/collision/shapes/AABB.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\shapes\convexshape.h
+	<reactphysics3d/collision/shapes/CollisionShape.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\shapes\boxshape.h
+	<reactphysics3d/collision/shapes/ConvexPolyhedronShape.h>
+	<reactphysics3d/mathematics/mathematics.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\shapes\convexpolyhedronshape.h
+	<reactphysics3d/collision/shapes/ConvexShape.h>
+	<reactphysics3d/collision/HalfEdgeStructure.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\shapes\capsuleshape.h
+	<reactphysics3d/collision/shapes/ConvexShape.h>
+	<reactphysics3d/mathematics/mathematics.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\shapes\heightfieldshape.h
+	<reactphysics3d/collision/shapes/ConcaveShape.h>
+	<reactphysics3d/collision/HeightField.h>
+	<reactphysics3d/collision/shapes/AABB.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\shapes\concaveshape.h
+	<reactphysics3d/collision/shapes/CollisionShape.h>
+	<reactphysics3d/collision/shapes/TriangleShape.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\shapes\triangleshape.h
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/collision/shapes/AABB.h>
+	<reactphysics3d/collision/shapes/ConvexPolyhedronShape.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\heightfield.h
+	<cassert>
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/collision/shapes/AABB.h>
+	<reactphysics3d/collision/shapes/TriangleShape.h>
+	<reactphysics3d/collision/Collider.h>
+	<reactphysics3d/collision/HalfEdgeStructure.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\shapes\convexmeshshape.h
+	<reactphysics3d/collision/shapes/ConvexPolyhedronShape.h>
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/collision/ConvexMesh.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\convexmesh.h
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/collision/shapes/AABB.h>
+	"HalfEdgeStructure.h"
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\shapes\concavemeshshape.h
+	<reactphysics3d/collision/shapes/ConcaveShape.h>
+	<reactphysics3d/collision/broadphase/DynamicAABBTree.h>
+	<reactphysics3d/containers/Array.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\trianglemesh.h
+	<cassert>
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/memory/MemoryAllocator.h>
+	<reactphysics3d/collision/broadphase/DynamicAABBTree.h>
+	<reactphysics3d/containers/Map.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\utils\defaultlogger.h
+	<reactphysics3d/utils/Logger.h>
+	<reactphysics3d/containers/Array.h>
+	<reactphysics3d/containers/Map.h>
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<iomanip>
+	<mutex>
+	<ctime>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\polygonvertexarray.h
+	<reactphysics3d/configuration.h>
+	<cassert>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\vertexarray.h
+	<reactphysics3d/configuration.h>
+	<cassert>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\raycastinfo.h
+	<reactphysics3d/mathematics/Vector3.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\collision\trianglevertexarray.h
+	<reactphysics3d/configuration.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\constraint\ballandsocketjoint.h
+	<reactphysics3d/constraint/Joint.h>
+	<reactphysics3d/mathematics/mathematics.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\constraint\sliderjoint.h
+	<reactphysics3d/mathematics/mathematics.h>
+	<reactphysics3d/body/RigidBody.h>
+	<reactphysics3d/constraint/Joint.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\constraint\hingejoint.h
+	<reactphysics3d/constraint/Joint.h>
+	<reactphysics3d/mathematics/mathematics.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\constraint\fixedjoint.h
+	<reactphysics3d/constraint/Joint.h>
+	<reactphysics3d/mathematics/mathematics.h>
+
+1787546260 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\reactphysics3d\utils\message.h
+	<string>
 
