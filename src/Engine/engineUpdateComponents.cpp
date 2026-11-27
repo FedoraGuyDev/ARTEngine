@@ -30,6 +30,8 @@ extern entt::entity script_update_actual_entity;
 
 extern std::unordered_map<std::string, AssetModel> AssetMapModel;
 extern std::unordered_map<std::string, Shader> AssetMapShader;
+extern reactphysics3d::PhysicsWorld* phyWorld;
+extern reactphysics3d::PhysicsCommon phyCommon;
 
 void UpdateScripts(float dt){
     auto view = EntityRegistry.view<Script>();
@@ -262,4 +264,55 @@ void UpdateDrawMeshes(float aspect){
         glDisable(GL_BLEND);
     }
     glBindVertexArray(0);
+}
+
+void UpdatePhysics(float dt){
+    if(!phyWorld) return;
+
+    auto view = EntityRegistry.view<Transform, RigidBody>();
+
+    for(auto e : view){
+        Transform& t = view.get<Transform>(e);
+        RigidBody& rb = view.get<RigidBody>(e);
+        if(!rb.body) continue;
+
+        const bool moved = t.x != rb.lastX || t.y != rb.lastY || t.z != rb.lastZ
+                        || t.rotx != rb.lastRotX || t.roty != rb.lastRotY || t.rotz != rb.lastRotZ || t.rotw != rb.lastRotW;
+        if(!moved) continue;
+
+        rb.body->setTransform(reactphysics3d::Transform(
+            reactphysics3d::Vector3(t.x, t.y, t.z),
+            reactphysics3d::Quaternion(t.rotx, t.roty, t.rotz, t.rotw)));
+
+        if(rb.body->getType() == reactphysics3d::BodyType::DYNAMIC){
+            rb.body->setLinearVelocity(reactphysics3d::Vector3::zero());
+            rb.body->setAngularVelocity(reactphysics3d::Vector3::zero());
+        }
+        rb.lastX = t.x; rb.lastY = t.y; rb.lastZ = t.z;
+        rb.lastRotX = t.rotx; rb.lastRotY = t.roty; rb.lastRotZ = t.rotz; rb.lastRotW = t.rotw;
+    }
+
+    static float accumulator = 0.0f;
+    const float step = 1.0f / 60.0f;
+    accumulator += std::min(dt, 0.25f);
+    while(accumulator >= step){
+        phyWorld->update(step);
+        accumulator -= step;
+    }
+
+    for(auto e : view){
+        Transform& t = view.get<Transform>(e);
+        RigidBody& rb = view.get<RigidBody>(e);
+        if(!rb.body || rb.body->getType() != reactphysics3d::BodyType::DYNAMIC) continue;
+
+        const reactphysics3d::Transform& bt = rb.body->getTransform();
+        const reactphysics3d::Vector3 p = bt.getPosition();
+        const reactphysics3d::Quaternion q = bt.getOrientation();
+
+        t.x = p.x; t.y = p.y; t.z = p.z;
+        t.rotx = q.x; t.roty = q.y; t.rotz = q.z; t.rotw = q.w;
+
+        rb.lastX = p.x; rb.lastY = p.y; rb.lastZ = p.z;
+        rb.lastRotX = q.x; rb.lastRotY = q.y; rb.lastRotZ = q.z; rb.lastRotW = q.w;
+    }
 }

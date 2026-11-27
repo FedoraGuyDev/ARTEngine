@@ -8,6 +8,30 @@
 			{
 				"type" : "MeshRenderer",
 				"data" : {"model_name" : "scene", "shader_override" : ""}
+			},
+			{
+				"type" : "RigidBody",
+				"data" : {
+					"body_type" : "static",
+					"mass" : 1.0,
+					"linearDamping" : 0.05,
+					"angularDamping" : 0.05,
+					"useGravity" : false,
+					"lockRotX" : false,
+					"lockRotY" : false,
+					"lockRotZ" : false,
+					"shapes" : [
+						{
+							"shape" : "box",
+							"shapesize" : [6, 1, 6],
+							"offset" : [0, 0, 0],
+							"rotation" : [0, 0, 0],
+							"bounciness" : 0.3,
+							"friction" : 0.5,
+							"isTrigger" : false
+						}
+					]
+				}
 			}
 		]
 	},
@@ -24,6 +48,30 @@
 			{
 				"type" : "Script",
 				"data" : {"script_name" : "scriptRobot", "script_mainclass" : "Robot"}
+			},
+			{
+				"type" : "RigidBody",
+				"data" : {
+					"body_type" : "dynamic",
+					"mass" : 1.0,
+					"linearDamping" : 0.05,
+					"angularDamping" : 0.05,
+					"useGravity" : true,
+					"lockRotX" : false,
+					"lockRotY" : false,
+					"lockRotZ" : false,
+					"shapes" : [
+						{
+							"shape" : "box",
+							"shapesize" : [1, 1, 1],
+							"offset" : [0, 1, 0],
+							"rotation" : [0, 0, 0],
+							"bounciness" : 0.3,
+							"friction" : 0.5,
+							"isTrigger" : false
+						}
+					]
+				}
 			}
 		]
 	},
@@ -40,6 +88,30 @@
 			{
 				"type" : "Script",
 				"data" : {"script_name" : "scriptTest", "script_mainclass" : "EntityTest"}
+			},
+			{
+				"type" : "RigidBody",
+				"data" : {
+					"body_type" : "dynamic",
+					"mass" : 1.0,
+					"linearDamping" : 0.05,
+					"angularDamping" : 0.05,
+					"useGravity" : false,
+					"lockRotX" : false,
+					"lockRotY" : false,
+					"lockRotZ" : false,
+					"shapes" : [
+						{
+							"shape" : "box",
+							"shapesize" : [1, 1, 1],
+							"offset" : [0, 0, 0],
+							"rotation" : [0, 0, 0],
+							"bounciness" : 0.3,
+							"friction" : 0.5,
+							"isTrigger" : false
+						}
+					]
+				}
 			}
 		]
 	},

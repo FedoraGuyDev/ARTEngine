@@ -926,7 +926,7 @@
 	<GL/gl.h>
 	<GL/glext.h>
 
-1795720088 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
+1795799953 source:d:\cpp projects\angelrisingtechnologyengine\src\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -8264,11 +8264,11 @@
 	<variant>
 	"engineDefinitionsComponents.h"
 
-1795752819 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineregistercomponents.h
+1795800166 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineregistercomponents.h
 	"utilsComponents.h"
 	"engineDefinitionsComponents.h"
 
-1790906153 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilscomponents.h
+1795761053 d:\cpp projects\angelrisingtechnologyengine\src\utils\utilscomponents.h
 	<entt/entt.hpp>
 	<JsonNlohmann/json.hpp>
 	<string>
@@ -8702,14 +8702,15 @@
 	"AngelScript/angelscript.h"
 	"EnTT/entt.hpp"
 
-1789074605 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinecomponentsevents.h
+1795761053 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginedefinecomponentsevents.h
 	"EnTT/entt.hpp"
 	"engineComponentsEvents.h"
 	"engineDefinitionsComponents.h"
 
-1795754819 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
+1795761053 d:\cpp projects\angelrisingtechnologyengine\src\engine\enginecomponentsevents.h
 	<iostream>
 	<unordered_map>
+	<algorithm>
 	"AngelScript/angelscript.h"
 	"EnTT/entt.hpp"
 	"ReactPhysics3D/reactphysics3d.h"
@@ -11707,9 +11708,9 @@
 1787546259 d:\cpp projects\angelrisingtechnologyengine\thirdparty\include\\glm\gtc\type_ptr.inl
 	<cstring>
 
-1795208364 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.h
+1795799953 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.h
 
-1795637830 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.cpp
+1795799985 source:d:\cpp projects\angelrisingtechnologyengine\src\engine\engineupdatecomponents.cpp
 	"engineUpdateComponents.h"
 	<algorithm>
 	<iostream>
@@ -11797,7 +11798,7 @@
 	<uuid/uuid.h>
 	<CoreFoundation/CFUUID.h>
 
-1795208364 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapianimation.cpp
+1795798564 source:d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapianimation.cpp
 	"apiEngineAPIAnimation.h"
 	<string>
 	<unordered_map>
@@ -11809,7 +11810,7 @@
 1795208364 d:\cpp projects\angelrisingtechnologyengine\src\api\apiengineapianimation.h
 	<string>
 
-1795208364 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineanimation.h
+1795798564 d:\cpp projects\angelrisingtechnologyengine\src\engine\engineanimation.h
 	<string>
 	<vector>
 	"GLM/glm.hpp"
